@@ -3,6 +3,19 @@
 
 ideas/
 
+Debug/
+Debug Multithreaded/
+Debug Multithreaded DLL/
+Unicode Debug/
+Unicode Debug Multithreaded/
+Unicode Debug Multithreaded DLL/
+Release/
+Release Multithreaded/
+Release Multithreaded DLL/
+Unicode Release/
+Unicode Release Multithreaded/
+Unicode Release Multithreaded DLL/
+
 # directories (by pattern)
 
 # files (by name)
@@ -31,6 +44,7 @@ list_changes.cmd
 *.sbr
 *.scc
 *.so
+*.suo
 *.swp
 *.vcproj*.user
 *.vcxproj*.user
