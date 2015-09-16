@@ -1,19 +1,37 @@
 
 # directories (by name)
 
+ideas/
+
 # directories (by pattern)
 
 # files (by name)
 
+list_changes.cmd
+
 # files (by pattern)
 
 *~
+*.a
+*.app
+*.dll
+*.dylib
+*.exe
+*.gch
 *.ilk
+*.lib
 *.ncb
+*.o
 *.obj
+*.opensdf
+*.out
 *.pch
 *.pdb
+*.sdf
+*.sbr
 *.scc
-*.vcproj.user
-*.vcxproj.user
+*.so
+*.swp
+*.vcproj*.user
+*.vcxproj*.user
 
