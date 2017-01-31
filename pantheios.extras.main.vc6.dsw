@@ -63,7 +63,7 @@ Package=<4>
 
 ###############################################################################
 
-Project: "example_MFC_main"=.\examples\cpp\example.MFC.main\vc6\example_MFC_main.dsp - Package Owner=<4>
+Project: "example.cpp.wmain"=.\examples\cpp\example.cpp.wmain\vc6\example.cpp.wmain.dsp - Package Owner=<4>
 
 Package=<5>
 {{{

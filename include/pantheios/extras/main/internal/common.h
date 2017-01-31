@@ -5,11 +5,11 @@
  *              Pantheios.Extras.Main library.
  *
  * Created:     6th January 2011
- * Updated:     17th September 2015
+ * Updated:     10th January 2017
  *
  * Home:        http://www.pantheios.org/
  *
- * Copyright (c) 2011-2015, Matthew Wilson and Synesis Software
+ * Copyright (c) 2011-2017, Matthew Wilson and Synesis Software
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -49,18 +49,18 @@
 #define PANTHEIOS_EXTRAS_MAIN_INCL_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON
 
 /* /////////////////////////////////////////////////////////////////////////
- * Version information
+ * version information
  */
 
 #ifndef PANTHEIOS_DOCUMENTATION_SKIP_SECTION
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_MAJOR    1
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_MINOR    0
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_REVISION 9
-# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_EDIT     10
+# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_EDIT     11
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
- * Includes
+ * includes
  */
 
 #include <pantheios/pantheios.h>
@@ -68,7 +68,7 @@
 #include <pantheios/extras/main/internal/stlsoft.h>
 
 /* /////////////////////////////////////////////////////////////////////////
- * Compatibility checks
+ * compatibility checks
  */
 
 #if PANTHEIOS_VER < 0x010001d7
@@ -76,7 +76,7 @@
 #endif /* !PANTHEIOS_NO_NAMESPACE */
 
 /* /////////////////////////////////////////////////////////////////////////
- * Version information
+ * version information
  */
 
 /** \def PANTHEIOS_EXTRAS_MAIN_VER_MAJOR
@@ -102,16 +102,17 @@
 # define PANTHEIOS_EXTRAS_MAIN_VER_0_1_1_ALPHA_4            0x00010104
 # define PANTHEIOS_EXTRAS_MAIN_VER_0_1_1_ALPHA_5            0x00010105
 # define PANTHEIOS_EXTRAS_MAIN_VER_0_1_1                    0x000101ff
+# define PANTHEIOS_EXTRAS_MAIN_VER_0_1_2                    0x000102ff
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 #define PANTHEIOS_EXTRAS_MAIN_VER_MAJOR                     0
 #define PANTHEIOS_EXTRAS_MAIN_VER_MINOR                     1
-#define PANTHEIOS_EXTRAS_MAIN_VER_REVISION                  1
+#define PANTHEIOS_EXTRAS_MAIN_VER_REVISION                  2
 
-#define PANTHEIOS_EXTRAS_MAIN_VER                           PANTHEIOS_EXTRAS_MAIN_VER_0_1_1
+#define PANTHEIOS_EXTRAS_MAIN_VER                           PANTHEIOS_EXTRAS_MAIN_VER_0_1_2
 
 /* /////////////////////////////////////////////////////////////////////////
- * Inclusion
+ * inclusion
  */
 
 #ifdef STLSOFT_CF_PRAGMA_ONCE_SUPPORT

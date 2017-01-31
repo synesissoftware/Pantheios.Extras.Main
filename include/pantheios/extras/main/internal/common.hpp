@@ -5,11 +5,11 @@
  *              Pantheios.Extras.Main library for C++ compilation.
  *
  * Created:     6th January 2011
- * Updated:     10th September 2015
+ * Updated:     10th January 2017
  *
  * Home:        http://www.pantheios.org/
  *
- * Copyright (c) 2011-2015, Matthew Wilson and Synesis Software
+ * Copyright (c) 2011-2017, Matthew Wilson and Synesis Software
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -49,24 +49,24 @@
 #define PANTHEIOS_EXTRAS_MAIN_INCL_PANTHEIOS_EXTRAS_MAIN_INTERNAL_HPP_COMMON
 
 /* /////////////////////////////////////////////////////////////////////////
- * Version information
+ * version information
  */
 
 #ifndef PANTHEIOS_DOCUMENTATION_SKIP_SECTION
 # define PANTHEIOS_MAIN_EXTRAS_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_HPP_COMMON_MAJOR    1
 # define PANTHEIOS_MAIN_EXTRAS_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_HPP_COMMON_MINOR    0
 # define PANTHEIOS_MAIN_EXTRAS_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_HPP_COMMON_REVISION 2
-# define PANTHEIOS_MAIN_EXTRAS_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_HPP_COMMON_EDIT     4
+# define PANTHEIOS_MAIN_EXTRAS_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_HPP_COMMON_EDIT     5
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
- * Includes
+ * includes
  */
 
 #include <pantheios/extras/main/internal/common.h>
 
 /* /////////////////////////////////////////////////////////////////////////
- * Compatibility checks
+ * compatibility checks
  */
 
 #if defined(PANTHEIOS_NO_NAMESPACE)
@@ -74,7 +74,7 @@
 #endif /* !PANTHEIOS_NO_NAMESPACE */
 
 /* /////////////////////////////////////////////////////////////////////////
- * Namespace
+ * namespace
  */
 
 /** The <strong>Pantheios</strong> root namespace - <code>pantheios</code>.
@@ -104,7 +104,7 @@ namespace main
 } // namespace pantheios
 
 /* /////////////////////////////////////////////////////////////////////////
- * Inclusion
+ * inclusion
  */
 
 #ifdef STLSOFT_CF_PRAGMA_ONCE_SUPPORT

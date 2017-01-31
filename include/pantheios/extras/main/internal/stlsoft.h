@@ -4,11 +4,11 @@
  * Purpose:     "Entry point" include into the STLSoft libraries.
  *
  * Created:     6th January 2011
- * Updated:     10th September 2015
+ * Updated:     27th January 2017
  *
  * Home:        http://www.pantheios.org/
  *
- * Copyright (c) 2011-2015, Matthew Wilson and Synesis Software
+ * Copyright (c) 2011-2017, Matthew Wilson and Synesis Software
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -47,18 +47,18 @@
 #define PANTHEIOS_EXTRAS_MAIN_INCL_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_STLSOFT
 
 /* /////////////////////////////////////////////////////////////////////////
- * Version information
+ * version information
  */
 
 #ifndef PANTHEIOS_DOCUMENTATION_SKIP_SECTION
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_STLSOFT_MAJOR     1
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_STLSOFT_MINOR     0
-# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_STLSOFT_REVISION  4
-# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_STLSOFT_EDIT      6
+# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_STLSOFT_REVISION  5
+# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_STLSOFT_EDIT      8
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
- * Includes
+ * includes
  */
 
 #ifndef STLSOFT_INCL_STLSOFT_H_STLSOFT
@@ -66,25 +66,35 @@
 #endif /* !STLSOFT_INCL_STLSOFT_H_STLSOFT */
 
 /* /////////////////////////////////////////////////////////////////////////
- * Compatibility checks
+ * compatibility checks
  */
 
-/* STLSoft 1.9 check */
+/* STLSoft version checks */
 
-#if !defined(_STLSOFT_VER) || \
-    _STLSOFT_VER < 0x010978ff
-# error Requires STLSoft 1.9.120, or later. (www.stlsoft.org)
-#endif /* STLSoft version */
+#if 0
+#elif !defined(_STLSOFT_VER) && \
+      !defined(STLSOFT_VER)
 
-/* STLSoft 1.10 check */
+# error Requires _STLSOFT_VER or STLSOFT_VER to be defined
+#elif defined(_STLSOFT)
 
-#if _STLSOFT_VER < 0x010a0000 && \
-    defined(_STLSOFT_1_10_VER) && \
-    _STLSOFT_1_10_VER < 0x010a0113
+# if _STLSOFT_VER < 0x010982ff 
 
-# error If you're using STLSoft 1.10 alpha you must use at least version 1.10.1 alpha 19
+#  error Requires STLSoft 1.9.130, or later. (www.stlsoft.org)
+# endif
 
-#endif /* STLSoft 1.10.1 alpha 1 - alpha 8 */
+# if 0
+# elif _STLSOFT_VER >= _STLSOFT_VER_1_10_1_B01
+
+# else
+#  if _STLSOFT_VER < 0x010a0000 && \
+      defined(_STLSOFT_1_10_VER) && \
+      _STLSOFT_1_10_VER < 0x010a0113
+
+# error If you are using STLSoft 1.10 alpha you must use at least version 1.10.1 alpha 19
+#  endif
+# endif
+#endif
 
 #if defined(__cplusplus) && \
     defined(_STLSOFT_NO_NAMESPACE)
@@ -92,7 +102,7 @@
 #endif /* _STLSOFT_NO_NAMESPACE */
 
 /* /////////////////////////////////////////////////////////////////////////
- * Inclusion
+ * inclusion
  */
 
 #ifdef STLSOFT_CF_PRAGMA_ONCE_SUPPORT

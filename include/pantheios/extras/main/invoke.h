@@ -4,11 +4,11 @@
  * Purpose:     Definition of the pantheios_extras_main_invoke() function.
  *
  * Created:     29th December 2010
- * Updated:     10th September 2015
+ * Updated:     27th January 2017
  *
  * Home:        http://www.pantheios.org/
  *
- * Copyright (c) 2010-2015, Matthew Wilson and Synesis Software
+ * Copyright (c) 2010-2017, Matthew Wilson and Synesis Software
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -49,18 +49,18 @@
 #define PANTHEIOS_EXTRAS_MAIN_INCL_PANTHEIOS_EXTRAS_MAIN_H_INVOKE
 
 /* /////////////////////////////////////////////////////////////////////////
- * Version information
+ * version information
  */
 
 #ifndef PANTHEIOS_DOCUMENTATION_SKIP_SECTION
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_H_INVOKE_MAJOR     1
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_H_INVOKE_MINOR     2
-# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_H_INVOKE_REVISION  2
-# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_H_INVOKE_EDIT      10
+# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_H_INVOKE_REVISION  3
+# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_H_INVOKE_EDIT      13
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
- * Includes
+ * includes
  */
 
 /* Pantheios.Extras.Main header files */
@@ -125,9 +125,10 @@ pantheios_extras_main_invoke(
 )
 {
 #ifndef PANTHEIOS_NO_NAMESPACE
-    // If this is used in a C++ compilation unit, we need to 'use' the
-    // requisite symbols for the following code to be able to see them
-    // and compile as it does in C compilation.
+    /* If this is used in a C++ compilation unit, we need to 'use' the
+     * requisite symbols for the following code to be able to see them
+     * and compile as it does in C compilation.
+     */
     using namespace pantheios;
     using namespace pantheios::util;
 #endif /* PANTHEIOS_NO_NAMESPACE */
@@ -138,7 +139,7 @@ pantheios_extras_main_invoke(
 
     if(r < 0)
     {
-        char const* const reason = pantheios_getInitCodeString(r);
+        char const* const reason            =   pantheios_getInitCodeString(r);
         size_t            lenProgramName;
 
         if( NULL != programName &&
@@ -160,6 +161,9 @@ pantheios_extras_main_invoke(
 
             programName     =   pn.ptr;
             lenProgramName  =   pn.len;
+#else
+
+            lenProgramName  =   0;
 #endif
         }
         else
@@ -192,7 +196,7 @@ pantheios_extras_main_invoke(
 }
 
 /* /////////////////////////////////////////////////////////////////////////
- * Inclusion
+ * inclusion
  */
 
 #ifdef STLSOFT_CF_PRAGMA_ONCE_SUPPORT

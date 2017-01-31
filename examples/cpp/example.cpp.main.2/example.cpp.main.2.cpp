@@ -4,13 +4,13 @@
  * Purpose:     Implementation file for the example.cpp.main.2 library.
  *
  * Created:     5th January 2011
- * Updated:     10th September 2015
+ * Updated:     10th January 2017
  *
  * Status:      Wizard-generated
  *
  * License:     (Licensed under the Synesis Software Open License)
  *
- *              Copyright (c) 2011-2015, Synesis Software Pty Ltd.
+ *              Copyright (c) 2011-2017, Synesis Software Pty Ltd.
  *              All rights reserved.
  *
  *              www:        http://www.synesis.com.au/software
@@ -31,7 +31,7 @@
 #include <stdlib.h>
 
 /* /////////////////////////////////////////////////////////////////////////
- * Globals
+ * globals
  */
 
 PANTHEIOS_EXTERN_C PAN_CHAR_T const PANTHEIOS_FE_PROCESS_IDENTITY[] = PANTHEIOS_LITERAL_STRING("example.cpp.main.2");

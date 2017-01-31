@@ -1,16 +1,16 @@
 /* /////////////////////////////////////////////////////////////////////////
- * File:        example.cpp.main.1.cpp
+ * File:        example.cpp.wmain.cpp
  *
- * Purpose:     Implementation file for the example.cpp.main.1 library.
+ * Purpose:     Implementation file for the example.cpp.wmain library.
  *
- * Created:     5th January 2011
+ * Created:     13th October 2015
  * Updated:     10th January 2017
  *
  * Status:      Wizard-generated
  *
  * License:     (Licensed under the Synesis Software Open License)
  *
- *              Copyright (c) 2011-2017, Synesis Software Pty Ltd.
+ *              Copyright (c) 2015, Synesis Software Pty Ltd.
  *              All rights reserved.
  *
  *              www:        http://www.synesis.com.au/software
@@ -49,53 +49,9 @@
  * globals
  */
 
-PANTHEIOS_EXTERN_C PAN_CHAR_T const PANTHEIOS_FE_PROCESS_IDENTITY[] = PANTHEIOS_LITERAL_STRING("example.cpp.main.1");
+PANTHEIOS_EXTERN_C PAN_CHAR_T const PANTHEIOS_FE_PROCESS_IDENTITY[] = PANTHEIOS_LITERAL_STRING("example.cpp.wmain");
 
 /* ////////////////////////////////////////////////////////////////////// */
-
-#ifndef USE_wmain
-
-int main0(int argc, char** argv)
-{
-    /* do the "main" business of main() here, without worrying about
-     * initialising Pantheios libraries
-     */
-
-    /* in this case, we simply throw a given type of exception, as
-     * requested by the user
-     */
-
-    if(argc == 2)
-    {
-        if(0 == strcmp(argv[1], "memory"))
-        {
-            throw std::bad_alloc();
-        }
-        else
-        if(0 == strcmp(argv[1], "root"))
-        {
-            throw std::runtime_error("oops!");
-        }
-        else
-        {
-            throw 1.0;
-        }
-    }
-
-    printf(
-        "USAGE: %s {memory|root|other}\n"
-    ,   argv[0]
-    );
-
-    return EXIT_SUCCESS;
-}
-
-int main(int argc, char** argv)
-{
-    return pantheios::extras::main::invoke(argc, argv, main0);
-}
-
-#else // ? USE_wmain
 
 int main0(int argc, wchar_t** argv)
 {
@@ -136,7 +92,5 @@ int wmain(int argc, wchar_t** argv)
 {
     return pantheios::extras::main::invoke(argc, argv, main0);
 }
-
-#endif // !USE_wmain
 
 /* ///////////////////////////// end of file //////////////////////////// */

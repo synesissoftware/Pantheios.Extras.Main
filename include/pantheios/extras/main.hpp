@@ -4,11 +4,11 @@
  * Purpose:     Main C++ header for the Pantheios.Extras.Main library.
  *
  * Created:     29th December 2010
- * Updated:     10th September 2015
+ * Updated:     10th January 2017
  *
  * Home:        http://www.pantheios.org/
  *
- * Copyright (c) 2010-2015, Matthew Wilson and Synesis Software
+ * Copyright (c) 2010-2017, Matthew Wilson and Synesis Software
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -48,18 +48,18 @@
 #define PANTHEIOS_EXTRAS_MAIN_INCL_PANTHEIOS_EXTRAS_HPP_MAIN
 
 /* /////////////////////////////////////////////////////////////////////////
- * Version information
+ * version information
  */
 
 #ifndef PANTHEIOS_DOCUMENTATION_SKIP_SECTION
 # define PANTHEIOS_MAIN_EXTRAS_VER_PANTHEIOS_EXTRAS_HPP_MAIN_MAJOR    1
 # define PANTHEIOS_MAIN_EXTRAS_VER_PANTHEIOS_EXTRAS_HPP_MAIN_MINOR    0
 # define PANTHEIOS_MAIN_EXTRAS_VER_PANTHEIOS_EXTRAS_HPP_MAIN_REVISION 2
-# define PANTHEIOS_MAIN_EXTRAS_VER_PANTHEIOS_EXTRAS_HPP_MAIN_EDIT     4
+# define PANTHEIOS_MAIN_EXTRAS_VER_PANTHEIOS_EXTRAS_HPP_MAIN_EDIT     5
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
- * Includes
+ * includes
  */
 
 #include <pantheios/extras/main/internal/common.hpp>
@@ -67,7 +67,7 @@
 #include <pantheios/extras/main/invoke.hpp>
 
 /* /////////////////////////////////////////////////////////////////////////
- * Inclusion
+ * inclusion
  */
 
 #ifdef STLSOFT_CF_PRAGMA_ONCE_SUPPORT

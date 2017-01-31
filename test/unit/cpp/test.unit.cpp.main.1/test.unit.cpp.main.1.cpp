@@ -4,13 +4,13 @@
  * Purpose:     Implementation file for the test.unit.cpp.main.1 library.
  *
  * Created:     11th January 2011
- * Updated:     10th September 2015
+ * Updated:     10th January 2017
  *
  * Status:      Wizard-generated
  *
  * License:     (Licensed under the Synesis Software Open License)
  *
- *              Copyright (c) 2011-2015, Synesis Software Pty Ltd.
+ *              Copyright (c) 2011-2017, Synesis Software Pty Ltd.
  *              All rights reserved.
  *
  *              www:        http://www.synesis.com.au/software
@@ -74,7 +74,7 @@ namespace
 #include <pantheios/extras/main.hpp>
 
 /* /////////////////////////////////////////////////////////////////////////
- * Includes
+ * includes
  */
 
 /* xTests header files */
@@ -87,7 +87,7 @@ namespace
 #include <stdlib.h>
 
 /* /////////////////////////////////////////////////////////////////////////
- * Forward declarations
+ * forward declarations
  */
 
 namespace
@@ -115,7 +115,7 @@ extern "C" PAN_CHAR_T const PANTHEIOS_FE_PROCESS_IDENTITY[] = PANTHEIOS_LITERAL_
 static char const STUB_FILE_NAME[] = "test.unit.cpp.main.1.stub_file";
 
 /* /////////////////////////////////////////////////////////////////////////
- * Main
+ * main
  */
 
 int main(int argc, char **argv)
@@ -153,7 +153,7 @@ int main(int argc, char **argv)
 }
 
 /* /////////////////////////////////////////////////////////////////////////
- * Test function implementations
+ * test function implementations
  */
 
 namespace
