@@ -18,6 +18,10 @@ Unicode Release Multithreaded DLL/
 
 # directories (by pattern)
 
+/_internal/
+
+/doc/
+
 /ipch/
 
 # files (by name)
@@ -39,6 +43,7 @@ list_changes.cmd
 *.o
 *.obj
 *.opensdf
+*.opt
 *.out
 *.pch
 *.pdb
