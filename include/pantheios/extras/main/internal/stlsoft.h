@@ -78,28 +78,32 @@
       !defined(STLSOFT_VER)
 
 # error Requires _STLSOFT_VER or STLSOFT_VER to be defined
-#elif defined(_STLSOFT)
+#elif defined(_STLSOFT_VER)
 
-# if _STLSOFT_VER < 0x010982ff 
+# if _STLSOFT_VER < 0x010a0000
 
-#  error Requires STLSoft 1.9.130, or later. (www.stlsoft.org)
-# endif
+#  if _STLSOFT_VER < 0x010987ff
 
-# if 0
-# elif _STLSOFT_VER >= _STLSOFT_VER_1_10_1_B01
-
-# else
-#  if _STLSOFT_VER < 0x010a0000 && \
-      defined(_STLSOFT_1_10_VER) && \
-      _STLSOFT_1_10_VER < 0x010a0113
-
-# error If you are using STLSoft 1.10 alpha you must use at least version 1.10.1 alpha 19
+#   error Requires STLSoft 1.9.135, or later; 1.10 or later is recommended. (www.stlsoft.org)
 #  endif
+# else /* ? 0x010a0000 */
+
+#  if _STLSOFT_VER < 0x010a019b
+
+#   error Requires 1.10.1 beta-27, or later. (www.stlsoft.org)
+#  endif
+# endif /* 0x010a0000 */
+#elif defined(STLSOFT_VER)
+
+# if STLSOFT_VER < 0x010b0000
+
+#  error Invalid STLSoft version. (www.stlsoft.org)
 # endif
 #endif
 
 #if defined(__cplusplus) && \
     defined(_STLSOFT_NO_NAMESPACE)
+
 # error Pantheios.Extras.Main requires that STLSoft`s namespace has not been disabled in C++ compilation
 #endif /* _STLSOFT_NO_NAMESPACE */
 
