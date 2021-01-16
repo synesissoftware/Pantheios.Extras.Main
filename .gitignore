@@ -28,6 +28,8 @@ Unicode Release Multithreaded DLL/
 
 list_changes.cmd
 
+sh.exe.stackdump
+
 # files (by pattern)
 
 *~
