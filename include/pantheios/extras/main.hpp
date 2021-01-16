@@ -4,11 +4,12 @@
  * Purpose:     Main C++ header for the Pantheios.Extras.Main library.
  *
  * Created:     29th December 2010
- * Updated:     10th January 2017
+ * Updated:     17th January 2021
  *
  * Home:        http://www.pantheios.org/
  *
- * Copyright (c) 2010-2017, Matthew Wilson and Synesis Software
+ * Copyright (c) 2019-2021, Matthew Wilson and Synesis Information Systems
+ * Copyright (c) 2010-2019, Matthew Wilson and Synesis Software
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -20,9 +21,10 @@
  * - Redistributions in binary form must reproduce the above copyright
  *   notice, this list of conditions and the following disclaimer in the
  *   documentation and/or other materials provided with the distribution.
- * - Neither the name(s) of Matthew Wilson and Synesis Software nor the
- *   names of any contributors may be used to endorse or promote products
- *   derived from this software without specific prior written permission.
+ * - Neither the name(s) of Matthew Wilson and Synesis Information Systems
+ *   nor the names of any contributors may be used to endorse or promote
+ *   products derived from this software without specific prior written
+ *   permission.
  *
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
  * IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
@@ -55,7 +57,7 @@
 # define PANTHEIOS_MAIN_EXTRAS_VER_PANTHEIOS_EXTRAS_HPP_MAIN_MAJOR    1
 # define PANTHEIOS_MAIN_EXTRAS_VER_PANTHEIOS_EXTRAS_HPP_MAIN_MINOR    0
 # define PANTHEIOS_MAIN_EXTRAS_VER_PANTHEIOS_EXTRAS_HPP_MAIN_REVISION 2
-# define PANTHEIOS_MAIN_EXTRAS_VER_PANTHEIOS_EXTRAS_HPP_MAIN_EDIT     5
+# define PANTHEIOS_MAIN_EXTRAS_VER_PANTHEIOS_EXTRAS_HPP_MAIN_EDIT     6
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
