@@ -18,6 +18,8 @@ Unicode Release Multithreaded DLL/
 
 # directories (by pattern)
 
+/ipch/
+
 # files (by name)
 
 list_changes.cmd
