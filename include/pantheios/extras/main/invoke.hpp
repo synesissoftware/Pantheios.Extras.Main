@@ -999,8 +999,7 @@ invoke(
 # pragma once
 #endif /* STLSOFT_CF_PRAGMA_ONCE_SUPPORT */
 
-/* ////////////////////////////////////////////////////////////////////// */
-
 #endif /* !PANTHEIOS_EXTRAS_MAIN_INCL_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE */
 
 /* ///////////////////////////// end of file //////////////////////////// */
+
