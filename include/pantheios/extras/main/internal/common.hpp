@@ -113,8 +113,7 @@ namespace main
 # pragma once
 #endif /* STLSOFT_CF_PRAGMA_ONCE_SUPPORT */
 
-/* ////////////////////////////////////////////////////////////////////// */
-
 #endif /* !PANTHEIOS_EXTRAS_MAIN_INCL_PANTHEIOS_EXTRAS_MAIN_INTERNAL_HPP_COMMON */
 
 /* ///////////////////////////// end of file //////////////////////////// */
+
