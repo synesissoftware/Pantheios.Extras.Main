@@ -10,7 +10,7 @@
  * Home:        http://www.pantheios.org/
  *
  * Copyright (c) 2019-2021, Matthew Wilson and Synesis Information Systems
- * Copyright (c) 2010-2019, Matthew Wilson and Synesis Software
+ * Copyright (c) 2011-2019, Matthew Wilson and Synesis Software
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -57,8 +57,8 @@
 #ifndef PANTHEIOS_DOCUMENTATION_SKIP_SECTION
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_MAJOR    1
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_MINOR    0
-# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_REVISION 9
-# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_EDIT     12
+# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_REVISION 11
+# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_EDIT     14
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
@@ -73,8 +73,8 @@
  * compatibility checks
  */
 
-#if PANTHEIOS_VER < 0x010001d7
-# error Pantheios.Extras.Main required Pantheios 1.0.1 beta 215, or later
+#if PANTHEIOS_VER < 0x010001db
+# error Pantheios.Extras.Main required Pantheios 1.0.1 beta 219, or later
 #endif /* !PANTHEIOS_NO_NAMESPACE */
 
 /* /////////////////////////////////////////////////////////////////////////
@@ -105,13 +105,14 @@
 # define PANTHEIOS_EXTRAS_MAIN_VER_0_1_1_ALPHA_5            0x00010105
 # define PANTHEIOS_EXTRAS_MAIN_VER_0_1_1                    0x000101ff
 # define PANTHEIOS_EXTRAS_MAIN_VER_0_1_2                    0x000102ff
+# define PANTHEIOS_EXTRAS_MAIN_VER_0_1_3                    0x000103ff
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 #define PANTHEIOS_EXTRAS_MAIN_VER_MAJOR                     0
 #define PANTHEIOS_EXTRAS_MAIN_VER_MINOR                     1
-#define PANTHEIOS_EXTRAS_MAIN_VER_REVISION                  2
+#define PANTHEIOS_EXTRAS_MAIN_VER_REVISION                  3
 
-#define PANTHEIOS_EXTRAS_MAIN_VER                           PANTHEIOS_EXTRAS_MAIN_VER_0_1_2
+#define PANTHEIOS_EXTRAS_MAIN_VER                           PANTHEIOS_EXTRAS_MAIN_VER_0_1_3
 
 /* /////////////////////////////////////////////////////////////////////////
  * inclusion
@@ -121,8 +122,7 @@
 # pragma once
 #endif /* STLSOFT_CF_PRAGMA_ONCE_SUPPORT */
 
-/* ////////////////////////////////////////////////////////////////////// */
-
 #endif /* !PANTHEIOS_EXTRAS_MAIN_INCL_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON */
 
 /* ///////////////////////////// end of file //////////////////////////// */
+
