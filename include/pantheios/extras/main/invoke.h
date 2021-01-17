@@ -57,8 +57,8 @@
 #ifndef PANTHEIOS_DOCUMENTATION_SKIP_SECTION
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_H_INVOKE_MAJOR     1
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_H_INVOKE_MINOR     2
-# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_H_INVOKE_REVISION  3
-# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_H_INVOKE_EDIT      14
+# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_H_INVOKE_REVISION  4
+# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_H_INVOKE_EDIT      15
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
@@ -158,8 +158,15 @@ pantheios_extras_main_invoke(
             using namespace ::stlsoft;
             using namespace ::platformstl;
 # endif
+# if _STLSOFT_VER < 0x010a019a
 
-            stlsoft_C_string_slice_a_t const pn = platformstl_C_get_executable_name_from_path(argv[0]);
+            typedef stlsoft_C_string_slice_a_t      slice_t;
+#else
+
+            typedef stlsoft_C_string_slice_m_t      slice_t;
+#endif
+
+            slice_t const pn = platformstl_C_get_executable_name_from_path(argv[0]);
 
             programName     =   pn.ptr;
             lenProgramName  =   pn.len;
