@@ -4,13 +4,13 @@
  * Purpose:     Implementation file for the example.c.main.1 library.
  *
  * Created:     5th January 2011
- * Updated:     10th January 2017
+ * Updated:     18th October 2019
  *
  * Status:      Wizard-generated
  *
  * License:     (Licensed under the Synesis Software Open License)
  *
- *              Copyright (c) 2011-2017, Synesis Software Pty Ltd.
+ *              Copyright (c) 2011-2019, Synesis Software Pty Ltd.
  *              All rights reserved.
  *
  *              www:        http://www.synesis.com.au/software
@@ -47,6 +47,10 @@ int main0(int argc, char** argv)
     /* suppress argc+argv here since they're unused; you will probably need them in your programs */
     STLSOFT_SUPPRESS_UNUSED(argc);
     STLSOFT_SUPPRESS_UNUSED(argv);
+
+
+    pantheios_logputs(PANTHEIOS_SEV_DEBUG, PANTHEIOS_LITERAL_STRING("in main()"));
+
 
     return EXIT_SUCCESS;
 }
