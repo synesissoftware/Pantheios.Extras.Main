@@ -4,13 +4,13 @@
  * Purpose:     Implementation file for the example.cpp.wmain library.
  *
  * Created:     13th October 2015
- * Updated:     10th January 2017
+ * Updated:     9th February 2021
  *
  * Status:      Wizard-generated
  *
  * License:     (Licensed under the Synesis Software Open License)
  *
- *              Copyright (c) 2015, Synesis Software Pty Ltd.
+ *              Copyright (c) 2015-2021, Synesis Software Pty Ltd.
  *              All rights reserved.
  *
  *              www:        http://www.synesis.com.au/software
@@ -63,14 +63,14 @@ int main0(int argc, wchar_t** argv)
      * requested by the user
      */
 
-    if(argc == 2)
+    if (argc == 2)
     {
-        if(0 == wcscmp(argv[1], L"memory"))
+        if (0 == wcscmp(argv[1], L"memory"))
         {
             throw std::bad_alloc();
         }
         else
-        if(0 == wcscmp(argv[1], L"root"))
+        if (0 == wcscmp(argv[1], L"root"))
         {
             throw std::runtime_error("oops!");
         }
@@ -94,3 +94,4 @@ int wmain(int argc, wchar_t** argv)
 }
 
 /* ///////////////////////////// end of file //////////////////////////// */
+

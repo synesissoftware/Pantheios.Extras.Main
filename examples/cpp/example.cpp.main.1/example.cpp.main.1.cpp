@@ -4,13 +4,13 @@
  * Purpose:     Implementation file for the example.cpp.main.1 library.
  *
  * Created:     5th January 2011
- * Updated:     10th January 2017
+ * Updated:     9th February 2021
  *
  * Status:      Wizard-generated
  *
  * License:     (Licensed under the Synesis Software Open License)
  *
- *              Copyright (c) 2011-2017, Synesis Software Pty Ltd.
+ *              Copyright (c) 2011-2021, Synesis Software Pty Ltd.
  *              All rights reserved.
  *
  *              www:        http://www.synesis.com.au/software
@@ -65,14 +65,14 @@ int main0(int argc, char** argv)
      * requested by the user
      */
 
-    if(argc == 2)
+    if (argc == 2)
     {
-        if(0 == strcmp(argv[1], "memory"))
+        if (0 == strcmp(argv[1], "memory"))
         {
             throw std::bad_alloc();
         }
         else
-        if(0 == strcmp(argv[1], "root"))
+        if (0 == strcmp(argv[1], "root"))
         {
             throw std::runtime_error("oops!");
         }
@@ -107,14 +107,14 @@ int main0(int argc, wchar_t** argv)
      * requested by the user
      */
 
-    if(argc == 2)
+    if (argc == 2)
     {
-        if(0 == wcscmp(argv[1], L"memory"))
+        if (0 == wcscmp(argv[1], L"memory"))
         {
             throw std::bad_alloc();
         }
         else
-        if(0 == wcscmp(argv[1], L"root"))
+        if (0 == wcscmp(argv[1], L"root"))
         {
             throw std::runtime_error("oops!");
         }
@@ -140,3 +140,4 @@ int wmain(int argc, wchar_t** argv)
 #endif // !USE_wmain
 
 /* ///////////////////////////// end of file //////////////////////////// */
+

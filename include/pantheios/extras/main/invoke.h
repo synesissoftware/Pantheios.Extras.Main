@@ -4,7 +4,7 @@
  * Purpose:     Definition of the pantheios_extras_main_invoke() function.
  *
  * Created:     29th December 2010
- * Updated:     17th January 2021
+ * Updated:     9th February 2021
  *
  * Home:        http://www.pantheios.org/
  *
@@ -58,7 +58,7 @@
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_H_INVOKE_MAJOR     1
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_H_INVOKE_MINOR     2
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_H_INVOKE_REVISION  4
-# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_H_INVOKE_EDIT      15
+# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_H_INVOKE_EDIT      16
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
@@ -139,19 +139,19 @@ pantheios_extras_main_invoke(
 
     STLSOFT_SUPPRESS_UNUSED(reserved);
 
-    if(r < 0)
+    if (r < 0)
     {
         char const* const reason            =   pantheios_getInitCodeString(r);
         size_t            lenProgramName;
 
-        if( NULL != programName &&
+        if (NULL != programName &&
             '\0' == programName[0])
         {
             programName     =   NULL;
             lenProgramName  =   0;
         }
 
-        if(NULL == programName)
+        if (NULL == programName)
         {
 #if STLSOFT_LEAD_VER >= 0x010a0000
 # ifndef PLATFORMSTL_NO_NAMESPACE
@@ -183,7 +183,7 @@ pantheios_extras_main_invoke(
         pantheios_onBailOut4(PANTHEIOS_SEV_ALERT, "failed to initialise Pantheios diagnostic logging library", programName, reason);
 
     /* NOTE: Can this be removed, since pantheios_onBailOut4 writes to stderr? Only when pantheios_onBailOut4() include program name in stderr output. */
-        if(NULL == programName)
+        if (NULL == programName)
         {
             fprintf(stderr, "failed to initialise program: failed to initialise Pantheios diagnostic logging library: %s\n", reason);
         }

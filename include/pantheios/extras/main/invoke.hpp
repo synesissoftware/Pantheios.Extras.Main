@@ -4,7 +4,7 @@
  * Purpose:     Definition of the pantheios::extras::main::invoke overloads.
  *
  * Created:     29th December 2010
- * Updated:     17th January 2021
+ * Updated:     9th February 2021
  *
  * Home:        http://www.pantheios.org/
  *
@@ -58,7 +58,7 @@
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE_MAJOR       1
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE_MINOR       5
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE_REVISION    2
-# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE_EDIT        31
+# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE_EDIT        32
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
@@ -338,7 +338,7 @@ namespace ximpl_invoke
     ,   size_t const        msgLen
     )
     {
-        if(NULL == programName_m)
+        if (NULL == programName_m)
         {
             fprintf(stderr, "%.*s\n", int(msgLen), msg);
         }
@@ -380,7 +380,7 @@ namespace ximpl_invoke
         pantheios::util::onBailOut(severity, "failed to initialise Pantheios diagnostic logging library", programName_m, reason);
 
         /* NOTE: Can this be removed, since pantheios_onBailOut4() writes to stderr? Only when pantheios_onBailOut4() include program name in stderr output. */
-        if(NULL == programName_m)
+        if (NULL == programName_m)
         {
             fprintf(stderr, "failed to initialise program: failed to initialise Pantheios diagnostic logging library: %s\n", reason);
         }
@@ -554,7 +554,7 @@ namespace ximpl_invoke
 
         int r = pantheios::init();
 
-        if(r < 0)
+        if (r < 0)
         {
             char const* const reason = pantheios::getInitCodeString(r);
 
@@ -566,7 +566,7 @@ namespace ximpl_invoke
         {
             stlsoft::scoped_handle<void>  scoper1(pantheios::uninit);
 
-            if(NULL == programName_given)
+            if (NULL == programName_given)
             {
                 PAN_CHAR_T const* const programName = pantheios_getProcessIdentity();
 
@@ -574,11 +574,11 @@ namespace ximpl_invoke
                 char    programName_m[1001];
 #  ifdef PANTHEIOS_USING_SAFE_STR_FUNCTIONS
                 size_t  cch;
-                if(0 == ::wcstombs_s(&cch, programName_m, STLSOFT_NUM_ELEMENTS(programName_m), programName, STLSOFT_NUM_ELEMENTS(programName_m) - 1u))
+                if (0 == ::wcstombs_s(&cch, programName_m, STLSOFT_NUM_ELEMENTS(programName_m), programName, STLSOFT_NUM_ELEMENTS(programName_m) - 1u))
 #  else /* ? PANTHEIOS_USING_SAFE_STR_FUNCTIONS */
                 size_t  cch = ::wcstombs(programName_m, programName, STLSOFT_NUM_ELEMENTS(programName_m) - 1u);
 
-                if(static_cast<size_t>(-1) != cch)
+                if (static_cast<size_t>(-1) != cch)
 #  endif /* PANTHEIOS_USING_SAFE_STR_FUNCTIONS */
                 {
                     programName_m[cch] = '\0';
@@ -607,9 +607,9 @@ namespace ximpl_invoke
     {
         char const* const programName_given = programName;
 
-        if(NULL == programName)
+        if (NULL == programName)
         {
-            if(NULL != arg0) // this check only in case conversion from wide fails
+            if (NULL != arg0) // this check only in case conversion from wide fails
             {
 # if STLSOFT_LEAD_VER >= 0x010a0000
                 programName = platformstl_ns_qual(get_executable_name_from_path)(arg0).ptr;
@@ -633,7 +633,7 @@ namespace ximpl_invoke
     {
         ximpl_invoke::main_invoker  invoker(argc, argv, pfnMain);
 
-        if( NULL != programName &&
+        if (NULL != programName &&
             '\0' == programName[0])
         {
             programName = NULL;
@@ -668,13 +668,13 @@ namespace ximpl_invoke
     {
         ximpl_invoke::wmain_invoker invoker(argc, argv, pfnMain);
 
-        if( NULL != programName &&
+        if (NULL != programName &&
             '\0' == programName[0])
         {
             programName = NULL;
         }
 
-        if(NULL != programName)
+        if (NULL != programName)
         {
             return verify_name_and_invoke_m_(invoker, programName, NULL);
         }
@@ -684,11 +684,11 @@ namespace ximpl_invoke
             char                    arg0_[1 + _MAX_PATH];
 #  ifdef PANTHEIOS_USING_SAFE_STR_FUNCTIONS
             size_t                  cch;
-            if(0 == ::wcstombs_s(&cch, arg0_, STLSOFT_NUM_ELEMENTS(arg0_), arg0, STLSOFT_NUM_ELEMENTS(arg0_) - 1u))
+            if (0 == ::wcstombs_s(&cch, arg0_, STLSOFT_NUM_ELEMENTS(arg0_), arg0, STLSOFT_NUM_ELEMENTS(arg0_) - 1u))
 #  else /* ? PANTHEIOS_USING_SAFE_STR_FUNCTIONS */
             size_t const            cch     =   ::wcstombs(arg0_, arg0, STLSOFT_NUM_ELEMENTS(arg0_) - 1u);
 
-            if(static_cast<size_t>(-1) != cch)
+            if (static_cast<size_t>(-1) != cch)
 #  endif /* PANTHEIOS_USING_SAFE_STR_FUNCTIONS */
             {
                 arg0_[cch] = '\0';
@@ -709,22 +709,22 @@ namespace ximpl_invoke
     ,   wchar_t const*          programName
     )
     {
-        if( NULL != programName &&
+        if (NULL != programName &&
             '\0' == programName[0])
         {
             programName = NULL;
         }
 
-        if(NULL != programName)
+        if (NULL != programName)
         {
             char    programName_m[1001];
 #  ifdef PANTHEIOS_USING_SAFE_STR_FUNCTIONS
             size_t  cch;
-            if(0 == ::wcstombs_s(&cch, programName_m, STLSOFT_NUM_ELEMENTS(programName_m), programName, STLSOFT_NUM_ELEMENTS(programName_m) - 1u))
+            if (0 == ::wcstombs_s(&cch, programName_m, STLSOFT_NUM_ELEMENTS(programName_m), programName, STLSOFT_NUM_ELEMENTS(programName_m) - 1u))
 #  else /* ? PANTHEIOS_USING_SAFE_STR_FUNCTIONS */
             size_t  cch = ::wcstombs(programName_m, programName, STLSOFT_NUM_ELEMENTS(programName_m) - 1u);
 
-            if(static_cast<size_t>(-1) != cch)
+            if (static_cast<size_t>(-1) != cch)
 #  endif /* PANTHEIOS_USING_SAFE_STR_FUNCTIONS */
             {
                 programName_m[cch] = '\0';

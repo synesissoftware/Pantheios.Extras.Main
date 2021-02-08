@@ -4,13 +4,13 @@
  * Purpose:     Implementation file for the test.unit.cpp.main.1 library.
  *
  * Created:     11th January 2011
- * Updated:     10th January 2017
+ * Updated:     9th February 2021
  *
  * Status:      Wizard-generated
  *
  * License:     (Licensed under the Synesis Software Open License)
  *
- *              Copyright (c) 2011-2017, Synesis Software Pty Ltd.
+ *              Copyright (c) 2011-2021, Synesis Software Pty Ltd.
  *              All rights reserved.
  *
  *              www:        http://www.synesis.com.au/software
@@ -127,7 +127,7 @@ int main(int argc, char **argv)
 
   stderr_stub = ::fopen(STUB_FILE_NAME, "w");
 
-  if(XTESTS_START_RUNNER("test.unit.cpp.main.1", verbosity))
+  if (XTESTS_START_RUNNER("test.unit.cpp.main.1", verbosity))
   {
     XTESTS_RUN_CASE(test_1_0);
     XTESTS_RUN_CASE(test_1_1);
@@ -284,3 +284,4 @@ static void test_1_9()
 } // anonymous namespace
 
 /* ///////////////////////////// end of file //////////////////////////// */
+
