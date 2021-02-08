@@ -780,13 +780,13 @@ namespace ximpl_invoke
  * \param argc The <code>argc</code> parameter of <code>main()</code>.
  * \param argv The <code>argv</code> parameter of <code>main()</code>.
  * \param pfnMain The <code>main()</code>-like function to be invoked.
- * \param programName Optional program name. May be <code>NULL</code>.
+ * \param programName Optional program name. May be <code>nullptr</code>.
  *
  * \return <code>EXIT_FAILURE</code> if the Pantheios library cannot be
  *   initialised; otherwise, the return value of <code>pfnMain</code>.
  *
- * \pre (NULL != argv)
- * \pre (NULL != pfnMain)
+ * \pre (nullptr != argv)
+ * \pre (nullptr != pfnMain)
  */
 inline
 int
@@ -822,13 +822,13 @@ invoke(
  * \param argc The <code>argc</code> parameter of <code>main()</code>.
  * \param argv The <code>argv</code> parameter of <code>main()</code>.
  * \param pfnMain The <code>main()</code>-like function to be invoked.
- * \param programName Optional program name. May be <code>NULL</code>.
+ * \param programName Optional program name. May be <code>nullptr</code>.
  *
  * \return <code>EXIT_FAILURE</code> if the Pantheios library cannot be
  *   initialised; otherwise, the return value of <code>pfnMain</code>.
  *
- * \pre (NULL != argv)
- * \pre (NULL != pfnMain)
+ * \pre (nullptr != argv)
+ * \pre (nullptr != pfnMain)
  */
 inline
 int
@@ -870,8 +870,8 @@ invoke(
  * \return <code>EXIT_FAILURE</code> if the Pantheios library cannot be
  *   initialised; otherwise, the return value of <code>pfnMain</code>.
  *
- * \pre (NULL != argv)
- * \pre (NULL != pfnMain)
+ * \pre (nullptr != argv)
+ * \pre (nullptr != pfnMain)
  */
 inline
 int
@@ -912,8 +912,8 @@ invoke(
  * \return <code>EXIT_FAILURE</code> if the Pantheios library cannot be
  *   initialised; otherwise, the return value of <code>pfnMain</code>.
  *
- * \pre (NULL != argv)
- * \pre (NULL != pfnMain)
+ * \pre (nullptr != argv)
+ * \pre (nullptr != pfnMain)
  */
 inline
 int
