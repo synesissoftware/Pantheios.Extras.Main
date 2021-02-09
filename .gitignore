@@ -1,6 +1,8 @@
 
 # directories (by name)
 
+build/
+
 ideas/
 
 Debug/
@@ -17,6 +19,11 @@ Release Multithreaded DLL/
 Unicode Release/
 Unicode Release Multithreaded/
 Unicode Release Multithreaded DLL/
+
+ipch/
+
+Win32/
+x64/
 
 # directories (by pattern)
 
