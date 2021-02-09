@@ -58,7 +58,7 @@
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE_MAJOR       1
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE_MINOR       5
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE_REVISION    2
-# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE_EDIT        32
+# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE_EDIT        33
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
@@ -932,6 +932,7 @@ invoke(
  */
 
 #ifndef PANTHEIOS_DOCUMENTATION_SKIP_SECTION
+
 # ifdef PANTHEIOS_USE_WIDE_STRINGS
 
 inline
@@ -949,10 +950,10 @@ invoke(
 inline
 int
 invoke(
-    int                 argc
-,   wchar_t**           argv
-,   int (STLSOFT_CDECL* pfnMain)(int, wchar_t**)
-,   wchar_t const*      programName
+    int                     argc
+,   wchar_t**               argv
+,   int (STLSOFT_CDECL*     pfnMain)(int, wchar_t**)
+,   wchar_t const*          programName
 )
 {
     return ximpl_invoke::prepare_invoker_w_(argc, argv, pfnMain, programName);
@@ -972,14 +973,13 @@ invoke(
 inline
 int
 invoke(
-    int                 argc
-,   wchar_t**           argv
-,   int (STLSOFT_CDECL* pfnMain)(int, wchar_t**)
+    int                     argc
+,   wchar_t**               argv
+,   int (STLSOFT_CDECL*     pfnMain)(int, wchar_t**)
 )
 {
     return ximpl_invoke::prepare_invoker_w_(argc, argv, pfnMain, NULL);
 }
-
 # endif /* PANTHEIOS_USE_WIDE_STRINGS */
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 

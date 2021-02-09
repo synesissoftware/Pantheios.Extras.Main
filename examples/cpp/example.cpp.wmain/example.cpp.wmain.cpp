@@ -53,7 +53,7 @@ PANTHEIOS_EXTERN_C PAN_CHAR_T const PANTHEIOS_FE_PROCESS_IDENTITY[] = PANTHEIOS_
 
 /* ////////////////////////////////////////////////////////////////////// */
 
-int main0(int argc, wchar_t** argv)
+int main0(int argc, wchar_t* argv[])
 {
     /* do the "main" business of main() here, without worrying about
      * initialising Pantheios libraries
@@ -88,7 +88,7 @@ int main0(int argc, wchar_t** argv)
     return EXIT_SUCCESS;
 }
 
-int wmain(int argc, wchar_t** argv)
+int wmain(int argc, wchar_t* argv[])
 {
     return pantheios::extras::main::invoke(argc, argv, main0);
 }
