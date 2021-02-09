@@ -4,12 +4,14 @@
 ideas/
 
 Debug/
+DebugMt/
 Debug Multithreaded/
 Debug Multithreaded DLL/
 Unicode Debug/
 Unicode Debug Multithreaded/
 Unicode Debug Multithreaded DLL/
 Release/
+ReleaseMt/
 Release Multithreaded/
 Release Multithreaded DLL/
 Unicode Release/
@@ -39,8 +41,10 @@ sh.exe.stackdump
 *.dylib
 *.exe
 *.gch
+*.idb
 *.ilk
 *.lib
+*.log
 *.ncb
 *.o
 *.obj
@@ -49,12 +53,16 @@ sh.exe.stackdump
 *.out
 *.pch
 *.pdb
+*.res
 *.sdf
 *.sbr
 *.scc
 *.so
 *.suo
 *.swp
+*.tlog
+*.unsuccessfulbuild
+
 *.vcproj*.user
 *.vcxproj*.user
 
