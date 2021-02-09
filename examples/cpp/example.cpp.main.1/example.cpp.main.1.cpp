@@ -124,8 +124,8 @@ int main0(int argc, wchar_t** argv)
         }
     }
 
-    printf(
-        "USAGE: %s {memory|root|other}\n"
+    wprintf(
+        L"USAGE: %s {memory|root|other}\n"
     ,   argv[0]
     );
 
