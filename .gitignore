@@ -37,6 +37,8 @@ x64/
 
 list_changes.cmd
 
+logging-bailout.txt
+
 sh.exe.stackdump
 
 # files (by pattern)
