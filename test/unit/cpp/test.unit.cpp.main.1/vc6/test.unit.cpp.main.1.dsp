@@ -45,7 +45,7 @@ RSC=rc.exe
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /YX /FD /c
-# ADD CPP /nologo /W3 /WX /GR /GX /O2 /I "../../../../../include" /I "$(XTESTS_C_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT_1_10)/include" /I "$(STLSOFT)/include" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_CONSOLE" /YX /FD /c
+# ADD CPP /nologo /W3 /WX /GR /GX /O2 /I "../../../../../include" /I "$(XTESTS_C_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_CONSOLE" /YX /FD /c
 # SUBTRACT CPP /Fr
 # ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /win32
 # ADD MTL /nologo /D "NDEBUG" /mktyplib203 /win32
@@ -72,7 +72,7 @@ LINK32=link.exe
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
 # ADD BASE CPP /nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /YX /FD /GZ /c
-# ADD CPP /nologo /W3 /WX /Gm /GR /GX /Zi /Od /I "../../../../../include" /I "$(XTESTS_C_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT_1_10)/include" /I "$(STLSOFT)/include" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_CONSOLE" /YX /FD /GZ /c
+# ADD CPP /nologo /W3 /WX /Gm /GR /GX /Zi /Od /I "../../../../../include" /I "$(XTESTS_C_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_CONSOLE" /YX /FD /GZ /c
 # SUBTRACT CPP /Fr
 # ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /win32
 # ADD MTL /nologo /D "_DEBUG" /mktyplib203 /win32
@@ -99,9 +99,9 @@ LINK32=link.exe
 # PROP Intermediate_Dir "DebugMt"
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
-# ADD BASE CPP /nologo /W3 /WX /Gm /GR /GX /Zi /Od /I "../../../../../include" /I "$(XTESTS_C_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT_1_10)/include" /I "$(STLSOFT)/include" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_CONSOLE" /YX /FD /GZ /c
+# ADD BASE CPP /nologo /W3 /WX /Gm /GR /GX /Zi /Od /I "../../../../../include" /I "$(XTESTS_C_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_CONSOLE" /YX /FD /GZ /c
 # SUBTRACT BASE CPP /Fr
-# ADD CPP /nologo /W3 /WX /Gm /GR /GX /Zi /Od /I "../../../../../include" /I "$(XTESTS_C_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT_1_10)/include" /I "$(STLSOFT)/include" /D "WIN32" /D "_DEBUG" /D "_UNICODE" /D "UNICODE" /D "_CONSOLE" /YX /FD /GZ /c
+# ADD CPP /nologo /W3 /WX /Gm /GR /GX /Zi /Od /I "../../../../../include" /I "$(XTESTS_C_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /D "WIN32" /D "_DEBUG" /D "_UNICODE" /D "UNICODE" /D "_CONSOLE" /YX /FD /GZ /c
 # SUBTRACT CPP /Fr
 # ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /win32
 # ADD MTL /nologo /D "_DEBUG" /mktyplib203 /win32
@@ -128,9 +128,9 @@ LINK32=link.exe
 # PROP Intermediate_Dir "ReleaseMt"
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
-# ADD BASE CPP /nologo /W3 /WX /GR /GX /O2 /I "../../../../../include" /I "$(XTESTS_C_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT_1_10)/include" /I "$(STLSOFT)/include" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_CONSOLE" /YX /FD /c
+# ADD BASE CPP /nologo /W3 /WX /GR /GX /O2 /I "../../../../../include" /I "$(XTESTS_C_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_CONSOLE" /YX /FD /c
 # SUBTRACT BASE CPP /Fr
-# ADD CPP /nologo /W3 /WX /GR /GX /O2 /I "../../../../../include" /I "$(XTESTS_C_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT_1_10)/include" /I "$(STLSOFT)/include" /D "WIN32" /D "NDEBUG" /D "_UNICODE" /D "UNICODE" /D "_CONSOLE" /YX /FD /c
+# ADD CPP /nologo /W3 /WX /GR /GX /O2 /I "../../../../../include" /I "$(XTESTS_C_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /D "WIN32" /D "NDEBUG" /D "_UNICODE" /D "UNICODE" /D "_CONSOLE" /YX /FD /c
 # SUBTRACT CPP /Fr
 # ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /win32
 # ADD MTL /nologo /D "NDEBUG" /mktyplib203 /win32
@@ -174,7 +174,7 @@ SOURCE=..\test.unit.cpp.main.1.cpp
 # PROP Default_Filter ""
 # Begin Source File
 
-SOURCE="$(STLSOFT_1_10)\include\stlsoft\memory\allocator_features.hpp"
+SOURCE="$(STLSOFT)\include\stlsoft\memory\allocator_features.hpp"
 # End Source File
 # Begin Source File
 
@@ -186,7 +186,7 @@ SOURCE="$(STLSOFT)\include\stlsoft\memory\allocator_features.hpp"
 # End Source File
 # Begin Source File
 
-SOURCE="$(STLSOFT_1_10)\include\stlsoft\memory\allocator_selector.hpp"
+SOURCE="$(STLSOFT)\include\stlsoft\memory\allocator_selector.hpp"
 # End Source File
 # Begin Source File
 
@@ -230,7 +230,7 @@ SOURCE="$(STLSOFT)\include\stlsoft\util\constraints.hpp"
 # End Source File
 # Begin Source File
 
-SOURCE="$(STLSOFT_1_10)\include\stlsoft\quality\contract.h"
+SOURCE="$(STLSOFT)\include\stlsoft\quality\contract.h"
 # End Source File
 # Begin Source File
 
@@ -238,7 +238,7 @@ SOURCE="$(STLSOFT)\include\stlsoft\error\conversion_error.hpp"
 # End Source File
 # Begin Source File
 
-SOURCE="$(STLSOFT_1_10)\include\stlsoft\quality\cover.h"
+SOURCE="$(STLSOFT)\include\stlsoft\quality\cover.h"
 # End Source File
 # Begin Source File
 
@@ -270,7 +270,7 @@ SOURCE="$(STLSOFT)\include\stlsoft\util\std\iterator_helper.hpp"
 # End Source File
 # Begin Source File
 
-SOURCE="$(STLSOFT_1_10)\include\stlsoft\internal\lead_version.h"
+SOURCE="$(STLSOFT)\include\stlsoft\internal\lead_version.h"
 # End Source File
 # Begin Source File
 
@@ -310,7 +310,7 @@ SOURCE="$(STLSOFT)\include\stlsoft\meta\select_first_type_if.hpp"
 # End Source File
 # Begin Source File
 
-SOURCE="$(STLSOFT_1_10)\include\stlsoft\string\shim_string.hpp"
+SOURCE="$(STLSOFT)\include\stlsoft\string\shim_string.hpp"
 # End Source File
 # Begin Source File
 
@@ -334,11 +334,7 @@ SOURCE="$(STLSOFT)\include\stlsoft\stlsoft.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(STLSOFT_1_10)\include\stlsoft\stlsoft_1_10.h"
-# End Source File
-# Begin Source File
-
-SOURCE="$(STLSOFT_1_10)\include\stlsoft\shims\access\string.hpp"
+SOURCE="$(STLSOFT)\include\stlsoft\stlsoft_1_10.h"
 # End Source File
 # Begin Source File
 
@@ -346,7 +342,11 @@ SOURCE="$(STLSOFT)\include\stlsoft\shims\access\string.hpp"
 # End Source File
 # Begin Source File
 
-SOURCE="$(STLSOFT_1_10)\include\stlsoft\string\string_slice.h"
+SOURCE="$(STLSOFT)\include\stlsoft\shims\access\string.hpp"
+# End Source File
+# Begin Source File
+
+SOURCE="$(STLSOFT)\include\stlsoft\string\string_slice.h"
 # End Source File
 # Begin Source File
 
@@ -354,7 +354,7 @@ SOURCE="$(STLSOFT)\include\stlsoft\shims\access\string\std\time.hpp"
 # End Source File
 # Begin Source File
 
-SOURCE="$(STLSOFT_1_10)\include\stlsoft\shims\access\string\std\type_info.hpp"
+SOURCE="$(STLSOFT)\include\stlsoft\shims\access\string\std\type_info.hpp"
 # End Source File
 # Begin Source File
 
@@ -366,7 +366,7 @@ SOURCE="$(STLSOFT)\include\stlsoft\meta\yesno.hpp"
 # PROP Default_Filter ""
 # Begin Source File
 
-SOURCE="$(STLSOFT_1_10)\include\platformstl\filesystem\path_functions.h"
+SOURCE="$(STLSOFT)\include\platformstl\filesystem\path_functions.h"
 # End Source File
 # Begin Source File
 
@@ -374,7 +374,7 @@ SOURCE="$(STLSOFT)\include\platformstl\platformstl.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(STLSOFT_1_10)\include\platformstl\platformstl_1_10.h"
+SOURCE="$(STLSOFT)\include\platformstl\platformstl_1_10.h"
 # End Source File
 # End Group
 # Begin Group "WinSTL"
