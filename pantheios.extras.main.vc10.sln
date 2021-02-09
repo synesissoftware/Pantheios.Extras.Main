@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{77323006-68A9-46B3-8AC5-8E90CB788D46}"
+EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "example.c.main.1", "examples\c\example.c.main.1\vc10\example.c.main.1.vcxproj", "{FE76398B-16F2-EC0C-E932-628A27594A05}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "example.c.main.2", "examples\c\example.c.main.2\vc10\example.c.main.2.vcxproj", "{D56F5282-DC2F-F6B7-6A38-F1F81A032C8F}"
@@ -11,9 +13,19 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "example.cpp.main.2", "examp
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "example.cpp.main.MFC", "examples\cpp\example.cpp.main.MFC\vc10\example.cpp.main.MFC.vcxproj", "{5749A37F-D844-AFD5-5C23-92AAA1192857}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test.unit.cpp.main.1", "test\unit\cpp\test.unit.cpp.main.1\vc10\test.unit.cpp.main.1.vcxproj", "{4CAE02FA-1859-968B-DF35-1AE25987CE90}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "example.cpp.wmain", "examples\cpp\example.cpp.wmain\vc10\example.cpp.wmain.vcxproj", "{3FF90D09-ECBB-8530-5B70-F65629336673}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{8FC95192-A3F4-4684-941E-5A9222645E28}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "component", "component", "{9193BDE8-B5FE-4B6E-9223-BF937522F979}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "performance", "performance", "{B30176FA-CD81-4C60-9A7C-D98F04F7FA4B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scratch", "scratch", "{0BEE787C-7B8F-41BB-8217-DB080EAF6CEE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "unit", "unit", "{CDDE05A5-5A0F-40F9-B3B1-E328E6DDFF5C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test.unit.cpp.wmain.1", "test\unit\cpp\test.unit.cpp.main.1\vc10\test.unit.cpp.main.1.vcxproj", "{4CAE02FA-1859-968B-DF35-1AE25987CE90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -163,26 +175,6 @@ Global
 		{5749A37F-D844-AFD5-5C23-92AAA1192857}.Unicode Release Multithreaded|Win32.Build.0 = Unicode Release Multithreaded|Win32
 		{5749A37F-D844-AFD5-5C23-92AAA1192857}.Unicode Release Multithreaded|x64.ActiveCfg = Unicode Release Multithreaded|x64
 		{5749A37F-D844-AFD5-5C23-92AAA1192857}.Unicode Release Multithreaded|x64.Build.0 = Unicode Release Multithreaded|x64
-		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Debug Multithreaded DLL|Win32.ActiveCfg = Debug Multithreaded|Win32
-		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Debug Multithreaded DLL|x64.ActiveCfg = Debug Multithreaded|x64
-		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Debug Multithreaded|Win32.ActiveCfg = Debug Multithreaded|Win32
-		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Debug Multithreaded|Win32.Build.0 = Debug Multithreaded|Win32
-		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Debug Multithreaded|x64.ActiveCfg = Debug Multithreaded|x64
-		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Debug Multithreaded|x64.Build.0 = Debug Multithreaded|x64
-		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Release Multithreaded DLL|Win32.ActiveCfg = Release Multithreaded|Win32
-		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Release Multithreaded DLL|x64.ActiveCfg = Release Multithreaded|x64
-		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Release Multithreaded|Win32.ActiveCfg = Release Multithreaded|Win32
-		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Release Multithreaded|Win32.Build.0 = Release Multithreaded|Win32
-		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Release Multithreaded|x64.ActiveCfg = Release Multithreaded|x64
-		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Release Multithreaded|x64.Build.0 = Release Multithreaded|x64
-		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Debug Multithreaded wmain|Win32.ActiveCfg = Debug Multithreaded|Win32
-		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Debug Multithreaded wmain|x64.ActiveCfg = Debug Multithreaded|x64
-		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Debug Multithreaded|Win32.ActiveCfg = Debug Multithreaded|Win32
-		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Debug Multithreaded|x64.ActiveCfg = Debug Multithreaded|x64
-		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Release Multithreaded wmain|Win32.ActiveCfg = Release Multithreaded|Win32
-		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Release Multithreaded wmain|x64.ActiveCfg = Release Multithreaded|x64
-		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Release Multithreaded|Win32.ActiveCfg = Release Multithreaded|Win32
-		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Release Multithreaded|x64.ActiveCfg = Release Multithreaded|x64
 		{3FF90D09-ECBB-8530-5B70-F65629336673}.Debug Multithreaded DLL|Win32.ActiveCfg = Unicode Release Multithreaded|Win32
 		{3FF90D09-ECBB-8530-5B70-F65629336673}.Debug Multithreaded DLL|x64.ActiveCfg = Unicode Release Multithreaded|x64
 		{3FF90D09-ECBB-8530-5B70-F65629336673}.Debug Multithreaded|Win32.ActiveCfg = Unicode Debug Multithreaded|Win32
@@ -208,8 +200,41 @@ Global
 		{3FF90D09-ECBB-8530-5B70-F65629336673}.Unicode Release Multithreaded|Win32.Build.0 = Unicode Release Multithreaded|Win32
 		{3FF90D09-ECBB-8530-5B70-F65629336673}.Unicode Release Multithreaded|x64.ActiveCfg = Unicode Release Multithreaded|x64
 		{3FF90D09-ECBB-8530-5B70-F65629336673}.Unicode Release Multithreaded|x64.Build.0 = Unicode Release Multithreaded|x64
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Debug Multithreaded DLL|Win32.ActiveCfg = Debug Multithreaded|Win32
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Debug Multithreaded DLL|x64.ActiveCfg = Debug Multithreaded|x64
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Debug Multithreaded|Win32.ActiveCfg = Debug Multithreaded|Win32
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Debug Multithreaded|Win32.Build.0 = Debug Multithreaded|Win32
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Debug Multithreaded|x64.ActiveCfg = Debug Multithreaded|x64
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Debug Multithreaded|x64.Build.0 = Debug Multithreaded|x64
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Release Multithreaded DLL|Win32.ActiveCfg = Release Multithreaded|Win32
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Release Multithreaded DLL|x64.ActiveCfg = Release Multithreaded|x64
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Release Multithreaded|Win32.ActiveCfg = Release Multithreaded|Win32
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Release Multithreaded|Win32.Build.0 = Release Multithreaded|Win32
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Release Multithreaded|x64.ActiveCfg = Release Multithreaded|x64
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Release Multithreaded|x64.Build.0 = Release Multithreaded|x64
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Debug Multithreaded wmain|Win32.ActiveCfg = Debug Multithreaded|Win32
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Debug Multithreaded wmain|x64.ActiveCfg = Debug Multithreaded|x64
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Debug Multithreaded|Win32.ActiveCfg = Debug Multithreaded|Win32
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Debug Multithreaded|x64.ActiveCfg = Debug Multithreaded|x64
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Release Multithreaded wmain|Win32.ActiveCfg = Release Multithreaded|Win32
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Release Multithreaded wmain|x64.ActiveCfg = Release Multithreaded|x64
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Release Multithreaded|Win32.ActiveCfg = Release Multithreaded|Win32
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Release Multithreaded|x64.ActiveCfg = Release Multithreaded|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FE76398B-16F2-EC0C-E932-628A27594A05} = {77323006-68A9-46B3-8AC5-8E90CB788D46}
+		{3FF90D09-ECBB-8530-5B70-F65629336673} = {77323006-68A9-46B3-8AC5-8E90CB788D46}
+		{D56F5282-DC2F-F6B7-6A38-F1F81A032C8F} = {77323006-68A9-46B3-8AC5-8E90CB788D46}
+		{7150AD3C-B40A-3619-3E11-70DFDDB9430A} = {77323006-68A9-46B3-8AC5-8E90CB788D46}
+		{44748ACC-C92E-1AFF-4A0F-950662094F3C} = {77323006-68A9-46B3-8AC5-8E90CB788D46}
+		{5749A37F-D844-AFD5-5C23-92AAA1192857} = {77323006-68A9-46B3-8AC5-8E90CB788D46}
+		{9193BDE8-B5FE-4B6E-9223-BF937522F979} = {8FC95192-A3F4-4684-941E-5A9222645E28}
+		{B30176FA-CD81-4C60-9A7C-D98F04F7FA4B} = {8FC95192-A3F4-4684-941E-5A9222645E28}
+		{0BEE787C-7B8F-41BB-8217-DB080EAF6CEE} = {8FC95192-A3F4-4684-941E-5A9222645E28}
+		{CDDE05A5-5A0F-40F9-B3B1-E328E6DDFF5C} = {8FC95192-A3F4-4684-941E-5A9222645E28}
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90} = {CDDE05A5-5A0F-40F9-B3B1-E328E6DDFF5C}
 	EndGlobalSection
 EndGlobal

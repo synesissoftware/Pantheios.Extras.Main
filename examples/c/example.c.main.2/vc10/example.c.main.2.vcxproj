@@ -36,6 +36,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <Keyword>MFCProj</Keyword>
+    <ProjectGuid>{D56F5282-DC2F-F6B7-6A38-F1F81A032C8F}</ProjectGuid>
     <ProjectName>example.c.main.2</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
