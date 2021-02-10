@@ -258,10 +258,6 @@ SOURCE="$(STLSOFT)\include\stlsoft\stlsoft.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(STLSOFT)\include\stlsoft\stlsoft_1_10.h"
-# End Source File
-# Begin Source File
-
 SOURCE="$(STLSOFT)\include\stlsoft\string\string_slice.h"
 # End Source File
 # Begin Source File
@@ -279,10 +275,6 @@ SOURCE="$(STLSOFT)\include\platformstl\filesystem\path_functions.h"
 # Begin Source File
 
 SOURCE="$(STLSOFT)\include\platformstl\platformstl.h"
-# End Source File
-# Begin Source File
-
-SOURCE="$(STLSOFT)\include\platformstl\platformstl_1_10.h"
 # End Source File
 # End Group
 # Begin Group "WinSTL"

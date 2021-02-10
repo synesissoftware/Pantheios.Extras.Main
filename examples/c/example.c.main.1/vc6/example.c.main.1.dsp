@@ -44,8 +44,8 @@ RSC=rc.exe
 # PROP Intermediate_Dir "Release"
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
-# ADD BASE CPP /nologo /W3 /GX /O2 /I "$(PANTHEIOS_EXTRAS_MAIN_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /I "$(UNIXEM)/include" /D "WIN32" /D "NDEBUG" /D "STLSOFT_FORCE_C_COMPILATION_IN_BETA" /D "STRICT" /D "_CONSOLE" /YX /FD /c
-# ADD CPP /nologo /W3 /GX /O2 /I "$(PANTHEIOS_EXTRAS_MAIN_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /I "$(UNIXEM)/include" /D "WIN32" /D "NDEBUG" /D "STLSOFT_FORCE_C_COMPILATION_IN_BETA" /D "STRICT" /D "_CONSOLE" /YX /FD /c
+# ADD BASE CPP /nologo /W3 /GX /O2 /I "$(PANTHEIOS_EXTRAS_MAIN_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /I "$(UNIXEM)/include" /D "WIN32" /D "NDEBUG" /D "STLSOFT_FORCE_C_COMPILATION_IN_BETA" /D "STRICT" /D "_CONSOLE" /D "_MBSC" /YX /FD /c
+# ADD CPP /nologo /W3 /GX /O2 /I "$(PANTHEIOS_EXTRAS_MAIN_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /I "$(UNIXEM)/include" /D "WIN32" /D "NDEBUG" /D "STLSOFT_FORCE_C_COMPILATION_IN_BETA" /D "STRICT" /D "_CONSOLE" /D "_MBSC" /YX /FD /c
 # ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /win32
 # ADD MTL /nologo /D "NDEBUG" /mktyplib203 /win32
 # ADD BASE RSC /l 0xc09 /d "NDEBUG"
@@ -54,7 +54,7 @@ BSC32=bscmake.exe
 # ADD BASE BSC32 /nologo
 # ADD BSC32 /nologo
 LINK32=link.exe
-# ADD BASE LINK32 /nologo /subsystem:windows /machine:I386
+# ADD BASE LINK32 advapi32.lib comdlg32.lib gdi32.lib kernel32.lib odbc32.lib odbccp32.lib ole32.lib oleaut32.lib shell32.lib user32.lib uuid.lib winspool.lib ws2_32.lib /nologo /version:0.1 /subsystem:console /map /machine:I386 /libpath:"$(PANTHEIOS_ROOT)/lib" /libpath:"$(UNIXEM)/lib"
 # ADD LINK32 advapi32.lib comdlg32.lib gdi32.lib kernel32.lib odbc32.lib odbccp32.lib ole32.lib oleaut32.lib shell32.lib user32.lib uuid.lib winspool.lib ws2_32.lib /nologo /version:0.1 /subsystem:console /map /machine:I386 /libpath:"$(PANTHEIOS_ROOT)/lib" /libpath:"$(UNIXEM)/lib"
 # SUBTRACT LINK32 /pdb:none
 
@@ -71,8 +71,8 @@ LINK32=link.exe
 # PROP Intermediate_Dir "Debug"
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
-# ADD BASE CPP /nologo /W3 /Gm /GX /Zi /Od /I "$(PANTHEIOS_EXTRAS_MAIN_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /I "$(UNIXEM)/include" /D "WIN32" /D "_DEBUG" /D "STLSOFT_FORCE_C_COMPILATION_IN_BETA" /D "STRICT" /D "_CONSOLE" /YX /FD /GZ /c
-# ADD CPP /nologo /W3 /Gm /GX /Zi /Od /I "$(PANTHEIOS_EXTRAS_MAIN_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /I "$(UNIXEM)/include" /D "WIN32" /D "_DEBUG" /D "STLSOFT_FORCE_C_COMPILATION_IN_BETA" /D "STRICT" /D "_CONSOLE" /YX /FD /GZ /c
+# ADD BASE CPP /nologo /W3 /Gm /GX /Zi /Od /I "$(PANTHEIOS_EXTRAS_MAIN_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /I "$(UNIXEM)/include" /D "WIN32" /D "_DEBUG" /D "STLSOFT_FORCE_C_COMPILATION_IN_BETA" /D "STRICT" /D "_CONSOLE" /D "_MBSC" /YX /FD /GZ /c
+# ADD CPP /nologo /W3 /Gm /GX /Zi /Od /I "$(PANTHEIOS_EXTRAS_MAIN_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /I "$(UNIXEM)/include" /D "WIN32" /D "_DEBUG" /D "STLSOFT_FORCE_C_COMPILATION_IN_BETA" /D "STRICT" /D "_CONSOLE" /D "_MBSC" /YX /FD /GZ /c
 # ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /win32
 # ADD MTL /nologo /D "_DEBUG" /mktyplib203 /win32
 # ADD BASE RSC /l 0xc09 /d "_DEBUG"
@@ -81,7 +81,7 @@ BSC32=bscmake.exe
 # ADD BASE BSC32 /nologo
 # ADD BSC32 /nologo
 LINK32=link.exe
-# ADD BASE LINK32 /nologo /subsystem:windows /debug /machine:I386 /pdbtype:sept
+# ADD BASE LINK32 advapi32.lib comdlg32.lib gdi32.lib kernel32.lib odbc32.lib odbccp32.lib ole32.lib oleaut32.lib shell32.lib user32.lib uuid.lib winspool.lib ws2_32.lib /nologo /version:0.1 /subsystem:console /map /debug /machine:I386 /out:"Debug/example.c.main.1.debug.exe" /pdbtype:sept /libpath:"$(PANTHEIOS_ROOT)/lib" /libpath:"$(UNIXEM)/lib"
 # ADD LINK32 advapi32.lib comdlg32.lib gdi32.lib kernel32.lib odbc32.lib odbccp32.lib ole32.lib oleaut32.lib shell32.lib user32.lib uuid.lib winspool.lib ws2_32.lib /nologo /version:0.1 /subsystem:console /map /debug /machine:I386 /out:"Debug/example.c.main.1.debug.exe" /pdbtype:sept /libpath:"$(PANTHEIOS_ROOT)/lib" /libpath:"$(UNIXEM)/lib"
 # SUBTRACT LINK32 /pdb:none
 
@@ -98,7 +98,7 @@ LINK32=link.exe
 # PROP Intermediate_Dir "DebugU"
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
-# ADD BASE CPP /nologo /W3 /Gm /GX /Zi /Od /I "$(PANTHEIOS_EXTRAS_MAIN_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /I "$(UNIXEM)/include" /D "WIN32" /D "_DEBUG" /D "STLSOFT_FORCE_C_COMPILATION_IN_BETA" /D "STRICT" /D "_CONSOLE" /YX /FD /GZ /c
+# ADD BASE CPP /nologo /W3 /Gm /GX /Zi /Od /I "$(PANTHEIOS_EXTRAS_MAIN_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /I "$(UNIXEM)/include" /D "WIN32" /D "_DEBUG" /D "STLSOFT_FORCE_C_COMPILATION_IN_BETA" /D "STRICT" /D "_CONSOLE" /D "_UNICODE" /D "UNICODE" /YX /FD /GZ /c
 # ADD CPP /nologo /W3 /Gm /GX /Zi /Od /I "$(PANTHEIOS_EXTRAS_MAIN_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /I "$(UNIXEM)/include" /D "WIN32" /D "_DEBUG" /D "STLSOFT_FORCE_C_COMPILATION_IN_BETA" /D "STRICT" /D "_CONSOLE" /D "_UNICODE" /D "UNICODE" /YX /FD /GZ /c
 # ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /win32
 # ADD MTL /nologo /D "_DEBUG" /mktyplib203 /win32
@@ -109,9 +109,7 @@ BSC32=bscmake.exe
 # ADD BSC32 /nologo
 LINK32=link.exe
 # ADD BASE LINK32 advapi32.lib comdlg32.lib gdi32.lib kernel32.lib odbc32.lib odbccp32.lib ole32.lib oleaut32.lib shell32.lib user32.lib uuid.lib winspool.lib ws2_32.lib /nologo /version:0.1 /subsystem:console /map /debug /machine:I386 /out:"Debug/example.c.main.1.debug.exe" /pdbtype:sept /libpath:"$(PANTHEIOS_ROOT)/lib" /libpath:"$(UNIXEM)/lib"
-# SUBTRACT BASE LINK32 /pdb:none
 # ADD LINK32 advapi32.lib comdlg32.lib gdi32.lib kernel32.lib odbc32.lib odbccp32.lib ole32.lib oleaut32.lib shell32.lib user32.lib uuid.lib winspool.lib ws2_32.lib /nologo /version:0.1 /subsystem:console /map /debug /machine:I386 /out:"Debug/example.c.main.1.debug.exe" /pdbtype:sept /libpath:"$(PANTHEIOS_ROOT)/lib" /libpath:"$(UNIXEM)/lib"
-# SUBTRACT LINK32 /pdb:none
 
 !ELSEIF  "$(CFG)" == "example.c.main.1 - Win32 Unicode Release"
 
@@ -126,7 +124,7 @@ LINK32=link.exe
 # PROP Intermediate_Dir "ReleaseU"
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
-# ADD BASE CPP /nologo /W3 /GX /O2 /I "$(PANTHEIOS_EXTRAS_MAIN_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /I "$(UNIXEM)/include" /D "WIN32" /D "NDEBUG" /D "STLSOFT_FORCE_C_COMPILATION_IN_BETA" /D "STRICT" /D "_CONSOLE" /YX /FD /c
+# ADD BASE CPP /nologo /W3 /GX /O2 /I "$(PANTHEIOS_EXTRAS_MAIN_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /I "$(UNIXEM)/include" /D "WIN32" /D "NDEBUG" /D "STLSOFT_FORCE_C_COMPILATION_IN_BETA" /D "STRICT" /D "_CONSOLE" /D "_UNICODE" /D "UNICODE" /YX /FD /c
 # ADD CPP /nologo /W3 /GX /O2 /I "$(PANTHEIOS_EXTRAS_MAIN_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /I "$(UNIXEM)/include" /D "WIN32" /D "NDEBUG" /D "STLSOFT_FORCE_C_COMPILATION_IN_BETA" /D "STRICT" /D "_CONSOLE" /D "_UNICODE" /D "UNICODE" /YX /FD /c
 # ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /win32
 # ADD MTL /nologo /D "NDEBUG" /mktyplib203 /win32
@@ -137,9 +135,7 @@ BSC32=bscmake.exe
 # ADD BSC32 /nologo
 LINK32=link.exe
 # ADD BASE LINK32 advapi32.lib comdlg32.lib gdi32.lib kernel32.lib odbc32.lib odbccp32.lib ole32.lib oleaut32.lib shell32.lib user32.lib uuid.lib winspool.lib ws2_32.lib /nologo /version:0.1 /subsystem:console /map /machine:I386 /libpath:"$(PANTHEIOS_ROOT)/lib" /libpath:"$(UNIXEM)/lib"
-# SUBTRACT BASE LINK32 /pdb:none
 # ADD LINK32 advapi32.lib comdlg32.lib gdi32.lib kernel32.lib odbc32.lib odbccp32.lib ole32.lib oleaut32.lib shell32.lib user32.lib uuid.lib winspool.lib ws2_32.lib /nologo /version:0.1 /subsystem:console /map /machine:I386 /libpath:"$(PANTHEIOS_ROOT)/lib" /libpath:"$(UNIXEM)/lib"
-# SUBTRACT LINK32 /pdb:none
 
 !ENDIF
 
@@ -208,10 +204,6 @@ SOURCE="$(STLSOFT)\include\stlsoft\stlsoft.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(STLSOFT)\include\stlsoft\stlsoft_1_10.h"
-# End Source File
-# Begin Source File
-
 SOURCE="$(STLSOFT)\include\stlsoft\string\string_slice.h"
 # End Source File
 # End Group
@@ -226,10 +218,6 @@ SOURCE="$(STLSOFT)\include\platformstl\filesystem\path_functions.h"
 
 SOURCE="$(STLSOFT)\include\platformstl\platformstl.h"
 # End Source File
-# Begin Source File
-
-SOURCE="$(STLSOFT)\include\platformstl\platformstl_1_10.h"
-# End Source File
 # End Group
 # Begin Group "WinSTL"
 
@@ -237,6 +225,10 @@ SOURCE="$(STLSOFT)\include\platformstl\platformstl_1_10.h"
 # Begin Source File
 
 SOURCE="$(STLSOFT)\include\winstl\winstl.h"
+# End Source File
+# Begin Source File
+
+SOURCE="$(STLSOFT)\include\winstl\api\winstl_win32_winnt_.h"
 # End Source File
 # End Group
 # End Group
@@ -330,6 +322,10 @@ SOURCE="$(PANTHEIOS_ROOT)\include\pantheios\internal\stock_levels.hpp"
 # Begin Source File
 
 SOURCE="$(PANTHEIOS_ROOT)\include\pantheios\internal\string_encoding.h"
+# End Source File
+# Begin Source File
+
+SOURCE="$(PANTHEIOS_ROOT)\include\pantheios\util\string\strnlen.h"
 # End Source File
 # End Group
 # End Group

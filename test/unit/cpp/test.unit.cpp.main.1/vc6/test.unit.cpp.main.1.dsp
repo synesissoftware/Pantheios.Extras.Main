@@ -19,6 +19,8 @@ CFG=test.unit.cpp.main.1 - Win32 Unicode Debug
 !MESSAGE 
 !MESSAGE "test.unit.cpp.main.1 - Win32 Release" (based on "Win32 (x86) Application")
 !MESSAGE "test.unit.cpp.main.1 - Win32 Debug" (based on "Win32 (x86) Application")
+!MESSAGE "test.unit.cpp.main.1 - Win32 Debug Multithreaded" (based on "Win32 (x86) Application")
+!MESSAGE "test.unit.cpp.main.1 - Win32 Release Multithreaded" (based on "Win32 (x86) Application")
 !MESSAGE "test.unit.cpp.main.1 - Win32 Unicode Debug" (based on "Win32 (x86) Application")
 !MESSAGE "test.unit.cpp.main.1 - Win32 Unicode Release" (based on "Win32 (x86) Application")
 !MESSAGE 
@@ -137,12 +139,66 @@ LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /machine:I386 /libpath:"$(PANTHEIOS_ROOT)/lib" /libpath:"$(XTESTS_C_ROOT)/lib"
 # ADD LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /machine:I386 /libpath:"$(PANTHEIOS_ROOT)/lib" /libpath:"$(XTESTS_C_ROOT)/lib"
 
+!ELSEIF  "$(CFG)" == "test.unit.cpp.main.1 - Win32 Unicode Debug"
+
+# PROP BASE Use_MFC 2
+# PROP BASE Use_Debug_Libraries 1
+# PROP BASE Output_Dir "DebugU"
+# PROP BASE Intermediate_Dir "DebugU"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 1
+# PROP Output_Dir "DebugU"
+# PROP Intermediate_Dir "DebugU"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+# ADD BASE CPP /nologo /W3 /WX /Gm /GR /GX /Zi /Od /I "../../../../../include" /I "$(XTESTS_C_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_UNICODE" /D "_UNICODE" /YX /FD /GZ /c
+# ADD CPP /nologo /W3 /WX /Gm /GR /GX /Zi /Od /I "../../../../../include" /I "$(XTESTS_C_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_UNICODE" /D "_UNICODE" /YX /FD /GZ /c
+# ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /win32
+# ADD MTL /nologo /D "_DEBUG" /mktyplib203 /win32
+# ADD BASE RSC /l 0xc09 /d "_DEBUG" /d "_AFXDLL"
+# ADD RSC /l 0xc09 /d "_DEBUG"
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /debug /machine:I386 /pdbtype:sept /libpath:"$(PANTHEIOS_ROOT)/lib" /libpath:"$(XTESTS_C_ROOT)/lib"
+# ADD LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /debug /machine:I386 /pdbtype:sept /libpath:"$(PANTHEIOS_ROOT)/lib" /libpath:"$(XTESTS_C_ROOT)/lib"
+
+!ELSEIF  "$(CFG)" == "test.unit.cpp.main.1 - Win32 Unicode Release"
+
+# PROP BASE Use_MFC 2
+# PROP BASE Use_Debug_Libraries 0
+# PROP BASE Output_Dir "ReleaseU"
+# PROP BASE Intermediate_Dir "ReleaseU"
+# PROP BASE Target_Dir ""
+# PROP Use_MFC 0
+# PROP Use_Debug_Libraries 0
+# PROP Output_Dir "ReleaseU"
+# PROP Intermediate_Dir "ReleaseU"
+# PROP Ignore_Export_Lib 0
+# PROP Target_Dir ""
+# ADD BASE CPP /nologo /W3 /WX /GR /GX /O2 /I "../../../../../include" /I "$(XTESTS_C_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_UNICODE" /D "_UNICODE" /YX /FD /c
+# ADD CPP /nologo /W3 /WX /GR /GX /O2 /I "../../../../../include" /I "$(XTESTS_C_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_UNICODE" /D "_UNICODE" /YX /FD /c
+# ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /win32
+# ADD MTL /nologo /D "NDEBUG" /mktyplib203 /win32
+# ADD BASE RSC /l 0xc09 /d "NDEBUG" /d "_AFXDLL"
+# ADD RSC /l 0xc09 /d "NDEBUG"
+BSC32=bscmake.exe
+# ADD BASE BSC32 /nologo
+# ADD BSC32 /nologo
+LINK32=link.exe
+# ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /machine:I386 /libpath:"$(PANTHEIOS_ROOT)/lib" /libpath:"$(XTESTS_C_ROOT)/lib"
+# ADD LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /machine:I386 /libpath:"$(PANTHEIOS_ROOT)/lib" /libpath:"$(XTESTS_C_ROOT)/lib"
+
 !ENDIF 
 
 # Begin Target
 
 # Name "test.unit.cpp.main.1 - Win32 Release"
 # Name "test.unit.cpp.main.1 - Win32 Debug"
+# Name "test.unit.cpp.main.1 - Win32 Debug Multithreaded"
+# Name "test.unit.cpp.main.1 - Win32 Release Multithreaded"
 # Name "test.unit.cpp.main.1 - Win32 Unicode Debug"
 # Name "test.unit.cpp.main.1 - Win32 Unicode Release"
 # Begin Group "Source Files"
@@ -320,10 +376,6 @@ SOURCE="$(STLSOFT)\include\stlsoft\stlsoft.h"
 # End Source File
 # Begin Source File
 
-SOURCE="$(STLSOFT)\include\stlsoft\stlsoft_1_10.h"
-# End Source File
-# Begin Source File
-
 SOURCE="$(STLSOFT)\include\stlsoft\shims\access\string.hpp"
 # End Source File
 # Begin Source File
@@ -379,23 +431,23 @@ SOURCE="$(STLSOFT)\include\winstl\winstl.h"
 # PROP Default_Filter ""
 # Begin Source File
 
-SOURCE="$(PANTHEIOS_EXTRAS_MAIN_ROOT)\include\pantheios\extras\main\internal\common.h"
+SOURCE=..\..\..\..\..\include\pantheios\extras\main\internal\common.h
 # End Source File
 # Begin Source File
 
-SOURCE="$(PANTHEIOS_EXTRAS_MAIN_ROOT)\include\pantheios\extras\main\internal\common.hpp"
+SOURCE=..\..\..\..\..\include\pantheios\extras\main\internal\common.hpp
 # End Source File
 # Begin Source File
 
-SOURCE="$(PANTHEIOS_EXTRAS_MAIN_ROOT)\include\pantheios\extras\main\invoke.hpp"
+SOURCE=..\..\..\..\..\include\pantheios\extras\main\invoke.hpp
 # End Source File
 # Begin Source File
 
-SOURCE="$(PANTHEIOS_EXTRAS_MAIN_ROOT)\include\pantheios\extras\main.hpp"
+SOURCE=..\..\..\..\..\include\pantheios\extras\main.hpp
 # End Source File
 # Begin Source File
 
-SOURCE="$(PANTHEIOS_EXTRAS_MAIN_ROOT)\include\pantheios\extras\main\internal\stlsoft.h"
+SOURCE=..\..\..\..\..\include\pantheios\extras\main\internal\stlsoft.h
 # End Source File
 # End Group
 # End Group
