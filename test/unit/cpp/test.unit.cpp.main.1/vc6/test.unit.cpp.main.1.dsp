@@ -4,7 +4,7 @@
 
 # TARGTYPE "Win32 (x86) Application" 0x0101
 
-CFG=test.unit.cpp.main.1 - Win32 Debug Multithreaded
+CFG=test.unit.cpp.main.1 - Win32 Unicode Debug
 !MESSAGE This is not a valid makefile. To build this project using NMAKE,
 !MESSAGE use the Export Makefile command and run
 !MESSAGE 
@@ -13,14 +13,14 @@ CFG=test.unit.cpp.main.1 - Win32 Debug Multithreaded
 !MESSAGE You can specify a configuration when running NMAKE
 !MESSAGE by defining the macro CFG on the command line. For example:
 !MESSAGE 
-!MESSAGE NMAKE /f "test.unit.cpp.main.1.mak" CFG="test.unit.cpp.main.1 - Win32 Debug Multithreaded"
+!MESSAGE NMAKE /f "test.unit.cpp.main.1.mak" CFG="test.unit.cpp.main.1 - Win32 Unicode Debug"
 !MESSAGE 
 !MESSAGE Possible choices for configuration are:
 !MESSAGE 
 !MESSAGE "test.unit.cpp.main.1 - Win32 Release" (based on "Win32 (x86) Application")
 !MESSAGE "test.unit.cpp.main.1 - Win32 Debug" (based on "Win32 (x86) Application")
-!MESSAGE "test.unit.cpp.main.1 - Win32 Debug Multithreaded" (based on "Win32 (x86) Application")
-!MESSAGE "test.unit.cpp.main.1 - Win32 Release Multithreaded" (based on "Win32 (x86) Application")
+!MESSAGE "test.unit.cpp.main.1 - Win32 Unicode Debug" (based on "Win32 (x86) Application")
+!MESSAGE "test.unit.cpp.main.1 - Win32 Unicode Release" (based on "Win32 (x86) Application")
 !MESSAGE 
 
 # Begin Project
@@ -44,9 +44,8 @@ RSC=rc.exe
 # PROP Intermediate_Dir "Release"
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
-# ADD BASE CPP /nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /YX /FD /c
-# ADD CPP /nologo /W3 /WX /GR /GX /O2 /I "../../../../../include" /I "$(XTESTS_C_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_CONSOLE" /YX /FD /c
-# SUBTRACT CPP /Fr
+# ADD BASE CPP /nologo /W3 /WX /GR /GX /O2 /I "../../../../../include" /I "$(XTESTS_C_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /YX /FD /c
+# ADD CPP /nologo /W3 /WX /GR /GX /O2 /I "../../../../../include" /I "$(XTESTS_C_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_MBCS" /YX /FD /c
 # ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /win32
 # ADD MTL /nologo /D "NDEBUG" /mktyplib203 /win32
 # ADD BASE RSC /l 0xc09 /d "NDEBUG" /d "_AFXDLL"
@@ -71,9 +70,8 @@ LINK32=link.exe
 # PROP Intermediate_Dir "Debug"
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
-# ADD BASE CPP /nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /YX /FD /GZ /c
-# ADD CPP /nologo /W3 /WX /Gm /GR /GX /Zi /Od /I "../../../../../include" /I "$(XTESTS_C_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_CONSOLE" /YX /FD /GZ /c
-# SUBTRACT CPP /Fr
+# ADD BASE CPP /nologo /W3 /WX /Gm /GR /GX /Zi /Od /I "../../../../../include" /I "$(XTESTS_C_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /YX /FD /GZ /c
+# ADD CPP /nologo /W3 /WX /Gm /GR /GX /Zi /Od /I "../../../../../include" /I "$(XTESTS_C_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /YX /FD /GZ /c
 # ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /win32
 # ADD MTL /nologo /D "_DEBUG" /mktyplib203 /win32
 # ADD BASE RSC /l 0xc09 /d "_DEBUG" /d "_AFXDLL"
@@ -85,24 +83,22 @@ LINK32=link.exe
 # ADD BASE LINK32 /nologo /subsystem:windows /debug /machine:I386 /pdbtype:sept
 # ADD LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /debug /machine:I386 /pdbtype:sept /libpath:"$(PANTHEIOS_ROOT)/lib" /libpath:"$(XTESTS_C_ROOT)/lib"
 
-!ELSEIF  "$(CFG)" == "test.unit.cpp.main.1 - Win32 Debug Multithreaded"
+!ELSEIF  "$(CFG)" == "test.unit.cpp.main.1 - Win32 Unicode Debug"
 
 # PROP BASE Use_MFC 0
 # PROP BASE Use_Debug_Libraries 1
-# PROP BASE Output_Dir "DebugMt"
-# PROP BASE Intermediate_Dir "DebugMt"
+# PROP BASE Output_Dir "DebugU"
+# PROP BASE Intermediate_Dir "DebugU"
 # PROP BASE Ignore_Export_Lib 0
 # PROP BASE Target_Dir ""
 # PROP Use_MFC 0
 # PROP Use_Debug_Libraries 1
-# PROP Output_Dir "DebugMt"
-# PROP Intermediate_Dir "DebugMt"
+# PROP Output_Dir "DebugU"
+# PROP Intermediate_Dir "DebugU"
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
-# ADD BASE CPP /nologo /W3 /WX /Gm /GR /GX /Zi /Od /I "../../../../../include" /I "$(XTESTS_C_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /D "WIN32" /D "_DEBUG" /D "_MBCS" /D "_CONSOLE" /YX /FD /GZ /c
-# SUBTRACT BASE CPP /Fr
-# ADD CPP /nologo /W3 /WX /Gm /GR /GX /Zi /Od /I "../../../../../include" /I "$(XTESTS_C_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /D "WIN32" /D "_DEBUG" /D "_UNICODE" /D "UNICODE" /D "_CONSOLE" /YX /FD /GZ /c
-# SUBTRACT CPP /Fr
+# ADD BASE CPP /nologo /W3 /WX /Gm /GR /GX /Zi /Od /I "../../../../../include" /I "$(XTESTS_C_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_UNICODE" /D "UNICODE" /YX /FD /GZ /c
+# ADD CPP /nologo /W3 /WX /Gm /GR /GX /Zi /Od /I "../../../../../include" /I "$(XTESTS_C_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_UNICODE" /D "UNICODE" /YX /FD /GZ /c
 # ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /win32
 # ADD MTL /nologo /D "_DEBUG" /mktyplib203 /win32
 # ADD BASE RSC /l 0xc09 /d "_DEBUG"
@@ -114,24 +110,22 @@ LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /debug /machine:I386 /pdbtype:sept /libpath:"$(PANTHEIOS_ROOT)/lib" /libpath:"$(XTESTS_C_ROOT)/lib"
 # ADD LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /debug /machine:I386 /pdbtype:sept /libpath:"$(PANTHEIOS_ROOT)/lib" /libpath:"$(XTESTS_C_ROOT)/lib"
 
-!ELSEIF  "$(CFG)" == "test.unit.cpp.main.1 - Win32 Release Multithreaded"
+!ELSEIF  "$(CFG)" == "test.unit.cpp.main.1 - Win32 Unicode Release"
 
 # PROP BASE Use_MFC 0
 # PROP BASE Use_Debug_Libraries 0
-# PROP BASE Output_Dir "ReleaseMt"
-# PROP BASE Intermediate_Dir "ReleaseMt"
+# PROP BASE Output_Dir "ReleaseU"
+# PROP BASE Intermediate_Dir "ReleaseU"
 # PROP BASE Ignore_Export_Lib 0
 # PROP BASE Target_Dir ""
 # PROP Use_MFC 0
 # PROP Use_Debug_Libraries 0
-# PROP Output_Dir "ReleaseMt"
-# PROP Intermediate_Dir "ReleaseMt"
+# PROP Output_Dir "ReleaseU"
+# PROP Intermediate_Dir "ReleaseU"
 # PROP Ignore_Export_Lib 0
 # PROP Target_Dir ""
-# ADD BASE CPP /nologo /W3 /WX /GR /GX /O2 /I "../../../../../include" /I "$(XTESTS_C_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_CONSOLE" /YX /FD /c
-# SUBTRACT BASE CPP /Fr
-# ADD CPP /nologo /W3 /WX /GR /GX /O2 /I "../../../../../include" /I "$(XTESTS_C_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /D "WIN32" /D "NDEBUG" /D "_UNICODE" /D "UNICODE" /D "_CONSOLE" /YX /FD /c
-# SUBTRACT CPP /Fr
+# ADD BASE CPP /nologo /W3 /WX /GR /GX /O2 /I "../../../../../include" /I "$(XTESTS_C_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_UNICODE" /D "UNICODE" /YX /FD /c
+# ADD CPP /nologo /W3 /WX /GR /GX /O2 /I "../../../../../include" /I "$(XTESTS_C_ROOT)/include" /I "$(PANTHEIOS_ROOT)/include" /I "$(STLSOFT)/include" /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /D "_UNICODE" /D "UNICODE" /YX /FD /c
 # ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /win32
 # ADD MTL /nologo /D "NDEBUG" /mktyplib203 /win32
 # ADD BASE RSC /l 0xc09 /d "NDEBUG"
@@ -149,8 +143,8 @@ LINK32=link.exe
 
 # Name "test.unit.cpp.main.1 - Win32 Release"
 # Name "test.unit.cpp.main.1 - Win32 Debug"
-# Name "test.unit.cpp.main.1 - Win32 Debug Multithreaded"
-# Name "test.unit.cpp.main.1 - Win32 Release Multithreaded"
+# Name "test.unit.cpp.main.1 - Win32 Unicode Debug"
+# Name "test.unit.cpp.main.1 - Win32 Unicode Release"
 # Begin Group "Source Files"
 
 # PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
@@ -178,19 +172,11 @@ SOURCE="$(STLSOFT)\include\stlsoft\memory\allocator_features.hpp"
 # End Source File
 # Begin Source File
 
-SOURCE=..\..\..\..\..\..\..\..\..\..\STLSoft\Releases\1.10\STLSoft\include\stlsoft\memory\util\allocator_features.hpp
-# End Source File
-# Begin Source File
-
 SOURCE="$(STLSOFT)\include\stlsoft\memory\allocator_features.hpp"
 # End Source File
 # Begin Source File
 
 SOURCE="$(STLSOFT)\include\stlsoft\memory\allocator_selector.hpp"
-# End Source File
-# Begin Source File
-
-SOURCE=..\..\..\..\..\..\..\..\..\..\STLSoft\Releases\1.10\STLSoft\include\stlsoft\memory\util\allocator_selector.hpp
 # End Source File
 # Begin Source File
 
@@ -371,10 +357,6 @@ SOURCE="$(STLSOFT)\include\platformstl\filesystem\path_functions.h"
 # Begin Source File
 
 SOURCE="$(STLSOFT)\include\platformstl\platformstl.h"
-# End Source File
-# Begin Source File
-
-SOURCE="$(STLSOFT)\include\platformstl\platformstl_1_10.h"
 # End Source File
 # End Group
 # Begin Group "WinSTL"
