@@ -41,7 +41,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scratch", "scratch", "{0BEE
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "unit", "unit", "{CDDE05A5-5A0F-40F9-B3B1-E328E6DDFF5C}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test.unit.cpp.wmain.1", "test\unit\cpp\test.unit.cpp.main.1\vc10\test.unit.cpp.main.1.vcxproj", "{4CAE02FA-1859-968B-DF35-1AE25987CE90}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test.unit.cpp.main.1", "test\unit\cpp\test.unit.cpp.main.1\vc10\test.unit.cpp.main.1.vcxproj", "{4CAE02FA-1859-968B-DF35-1AE25987CE90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
