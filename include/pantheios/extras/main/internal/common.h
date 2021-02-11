@@ -5,7 +5,7 @@
  *              Pantheios.Extras.Main library.
  *
  * Created:     6th January 2011
- * Updated:     17th January 2021
+ * Updated:     11th February 2021
  *
  * Home:        http://www.pantheios.org/
  *
@@ -106,13 +106,14 @@
 # define PANTHEIOS_EXTRAS_MAIN_VER_0_1_1                    0x000101ff
 # define PANTHEIOS_EXTRAS_MAIN_VER_0_1_2                    0x000102ff
 # define PANTHEIOS_EXTRAS_MAIN_VER_0_1_3                    0x000103ff
+# define PANTHEIOS_EXTRAS_MAIN_VER_0_2_0                    0x000200ff
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 #define PANTHEIOS_EXTRAS_MAIN_VER_MAJOR                     0
-#define PANTHEIOS_EXTRAS_MAIN_VER_MINOR                     1
-#define PANTHEIOS_EXTRAS_MAIN_VER_REVISION                  3
+#define PANTHEIOS_EXTRAS_MAIN_VER_MINOR                     2
+#define PANTHEIOS_EXTRAS_MAIN_VER_REVISION                  0
 
-#define PANTHEIOS_EXTRAS_MAIN_VER                           PANTHEIOS_EXTRAS_MAIN_VER_0_1_3
+#define PANTHEIOS_EXTRAS_MAIN_VER                           PANTHEIOS_EXTRAS_MAIN_VER_0_2_0
 
 /* /////////////////////////////////////////////////////////////////////////
  * inclusion

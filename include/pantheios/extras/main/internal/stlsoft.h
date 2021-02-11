@@ -4,7 +4,7 @@
  * Purpose:     "Entry point" include into the STLSoft libraries.
  *
  * Created:     6th January 2011
- * Updated:     17th January 2021
+ * Updated:     11th February 2021
  *
  * Home:        http://www.pantheios.org/
  *
@@ -55,8 +55,8 @@
 #ifndef PANTHEIOS_DOCUMENTATION_SKIP_SECTION
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_STLSOFT_MAJOR     1
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_STLSOFT_MINOR     0
-# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_STLSOFT_REVISION  5
-# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_STLSOFT_EDIT      10
+# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_STLSOFT_REVISION  6
+# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_STLSOFT_EDIT      11
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
@@ -88,9 +88,9 @@
 #  endif
 # else /* ? 0x010a0000 */
 
-#  if _STLSOFT_VER < 0x010a019b
+#  if _STLSOFT_VER < 0x010a019d
 
-#   error Requires 1.10.1 beta-27, or later. (www.stlsoft.org)
+#   error Requires 1.10.1 beta-29, or later. (www.stlsoft.org)
 #  endif
 # endif /* 0x010a0000 */
 #elif defined(STLSOFT_VER)
