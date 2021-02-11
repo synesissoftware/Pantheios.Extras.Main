@@ -46,6 +46,7 @@ sh.exe.stackdump
 *~
 *.a
 *.app
+*.bak
 *.dll
 *.dylib
 *.exe
