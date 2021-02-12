@@ -191,7 +191,7 @@ Global
 		{5749A37F-D844-AFD5-5C23-92AAA1192857}.Unicode Release Multithreaded|x64.ActiveCfg = Unicode Release Multithreaded|x64
 		{5749A37F-D844-AFD5-5C23-92AAA1192857}.Unicode Release Multithreaded|x64.Build.0 = Unicode Release Multithreaded|x64
 		{3FF90D09-ECBB-8530-5B70-F65629336673}.Debug Multithreaded DLL|Win32.ActiveCfg = Unicode Release Multithreaded|Win32
-		{3FF90D09-ECBB-8530-5B70-F65629336673}.Debug Multithreaded DLL|x64.ActiveCfg = Unicode Release Multithreaded|x64
+		{3FF90D09-ECBB-8530-5B70-F65629336673}.Debug Multithreaded DLL|x64.ActiveCfg = Unicode Debug Multithreaded|x64
 		{3FF90D09-ECBB-8530-5B70-F65629336673}.Debug Multithreaded|Win32.ActiveCfg = Unicode Debug Multithreaded|Win32
 		{3FF90D09-ECBB-8530-5B70-F65629336673}.Debug Multithreaded|x64.ActiveCfg = Unicode Debug Multithreaded|x64
 		{3FF90D09-ECBB-8530-5B70-F65629336673}.Release Multithreaded DLL|Win32.ActiveCfg = Unicode Release Multithreaded|Win32
@@ -227,14 +227,18 @@ Global
 		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Release Multithreaded|Win32.Build.0 = Release Multithreaded|Win32
 		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Release Multithreaded|x64.ActiveCfg = Release Multithreaded|x64
 		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Release Multithreaded|x64.Build.0 = Release Multithreaded|x64
-		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Debug Multithreaded wmain|Win32.ActiveCfg = Debug Multithreaded|Win32
-		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Debug Multithreaded wmain|x64.ActiveCfg = Debug Multithreaded|x64
-		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Debug Multithreaded|Win32.ActiveCfg = Debug Multithreaded|Win32
-		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Debug Multithreaded|x64.ActiveCfg = Debug Multithreaded|x64
-		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Release Multithreaded wmain|Win32.ActiveCfg = Release Multithreaded|Win32
-		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Release Multithreaded wmain|x64.ActiveCfg = Release Multithreaded|x64
-		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Release Multithreaded|Win32.ActiveCfg = Release Multithreaded|Win32
-		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Release Multithreaded|x64.ActiveCfg = Release Multithreaded|x64
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Debug Multithreaded wmain|Win32.ActiveCfg = Unicode Debug Multithreaded|Win32
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Debug Multithreaded wmain|x64.ActiveCfg = Unicode Debug Multithreaded|x64
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Debug Multithreaded|Win32.ActiveCfg = Unicode Debug Multithreaded|Win32
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Debug Multithreaded|Win32.Build.0 = Unicode Debug Multithreaded|Win32
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Debug Multithreaded|x64.ActiveCfg = Unicode Debug Multithreaded|x64
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Debug Multithreaded|x64.Build.0 = Unicode Debug Multithreaded|x64
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Release Multithreaded wmain|Win32.ActiveCfg = Unicode Release Multithreaded|Win32
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Release Multithreaded wmain|x64.ActiveCfg = Unicode Release Multithreaded|x64
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Release Multithreaded|Win32.ActiveCfg = Unicode Release Multithreaded|Win32
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Release Multithreaded|Win32.Build.0 = Unicode Release Multithreaded|Win32
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Release Multithreaded|x64.ActiveCfg = Unicode Release Multithreaded|x64
+		{4CAE02FA-1859-968B-DF35-1AE25987CE90}.Unicode Release Multithreaded|x64.Build.0 = Unicode Release Multithreaded|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

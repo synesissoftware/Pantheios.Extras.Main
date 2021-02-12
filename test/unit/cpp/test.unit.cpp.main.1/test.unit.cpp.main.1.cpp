@@ -104,6 +104,20 @@ namespace
   static void test_1_8(void);
   static void test_1_9(void);
 
+#ifdef PANTHEIOS_USE_WIDE_STRINGS
+
+  static void test_1_0_w(void);
+  static void test_1_1_w(void);
+  static void test_1_2_w(void);
+  static void test_1_3_w(void);
+  static void test_1_4_w(void);
+  static void test_1_5_w(void);
+  static void test_1_6_w(void);
+  static void test_1_7_w(void);
+  static void test_1_8_w(void);
+  static void test_1_9_w(void);
+#endif /* PANTHEIOS_USE_WIDE_STRINGS */
+
 } // anonymous namespace
 
 /* /////////////////////////////////////////////////////////////////////////
@@ -140,6 +154,20 @@ int main(int argc, char **argv)
     XTESTS_RUN_CASE(test_1_8);
     XTESTS_RUN_CASE(test_1_9);
 
+#ifdef PANTHEIOS_USE_WIDE_STRINGS
+
+    XTESTS_RUN_CASE(test_1_0_w);
+    XTESTS_RUN_CASE(test_1_1_w);
+    XTESTS_RUN_CASE(test_1_2_w);
+    XTESTS_RUN_CASE(test_1_3_w);
+    XTESTS_RUN_CASE(test_1_4_w);
+    XTESTS_RUN_CASE(test_1_5_w);
+    XTESTS_RUN_CASE(test_1_6_w);
+    XTESTS_RUN_CASE(test_1_7_w);
+    XTESTS_RUN_CASE(test_1_8_w);
+    XTESTS_RUN_CASE(test_1_9_w);
+#endif /* PANTHEIOS_USE_WIDE_STRINGS */
+
     XTESTS_PRINT_RESULTS();
 
     XTESTS_END_RUNNER_UPDATE_EXITCODE(&retCode);
@@ -159,9 +187,16 @@ int main(int argc, char **argv)
 namespace
 {
 
-    static char*    args[]  =   { "arg0", NULL };
-    static int      argc    =   STLSOFT_NUM_ELEMENTS(args) - 1;
-    static char**   argv    =   args;
+    static char*        args[]  =   { "arg0", NULL };
+    static int          argc    =   STLSOFT_NUM_ELEMENTS(args) - 1;
+    static char**       argv    =   args;
+
+#ifdef PANTHEIOS_USE_WIDE_STRINGS
+
+    static wchar_t*     wargs[] =   { L"arg0", NULL };
+    static int          wargc   =   STLSOFT_NUM_ELEMENTS(wargs) - 1;
+    static wchar_t**    wargv   =   wargs;
+#endif /* PANTHEIOS_USE_WIDE_STRINGS */
 
 
 static void test_1_0()
@@ -183,8 +218,6 @@ static void test_1_0()
     XTESTS_TEST_INTEGER_EQUAL(EXIT_SUCCESS, r);
 }
 
-
-
 static void test_1_1()
 {
     struct inner
@@ -199,8 +232,6 @@ static void test_1_1()
 
     XTESTS_TEST_INTEGER_EQUAL(EXIT_FAILURE, r);
 }
-
-
 
 static void test_1_2()
 {
@@ -280,6 +311,121 @@ static void test_1_9()
 {
 }
 
+
+#ifdef PANTHEIOS_USE_WIDE_STRINGS
+
+static void test_1_0_w()
+{
+    struct inner
+    {
+        static int fn(int argc, wchar_t* argv[])
+        {
+            XTESTS_TEST_INTEGER_EQUAL(1, argc);
+            XTESTS_TEST_WIDE_STRING_EQUAL(L"arg0", argv[0]);
+            XTESTS_TEST_POINTER_EQUAL(NULL, argv[1]);
+
+            return EXIT_SUCCESS;
+        }
+    };
+
+    int r = pantheios::extras::main::invoke(wargc, wargv, &inner::fn);
+
+    XTESTS_TEST_INTEGER_EQUAL(EXIT_SUCCESS, r);
+}
+
+static void test_1_1_w()
+{
+    struct inner
+    {
+        static int fn(int, wchar_t* [])
+        {
+          return EXIT_FAILURE;
+        };
+    };
+
+    int r = pantheios::extras::main::invoke(wargc, wargv, &inner::fn);
+
+    XTESTS_TEST_INTEGER_EQUAL(EXIT_FAILURE, r);
+}
+
+static void test_1_2_w()
+{
+    struct inner
+    {
+        static int fn(int, wchar_t* [])
+        {
+            throw std::runtime_error("oops");
+
+            return EXIT_SUCCESS;
+        };
+    };
+
+    int r = pantheios::extras::main::invoke(wargc, wargv, &inner::fn);
+
+    XTESTS_TEST_INTEGER_EQUAL(EXIT_FAILURE, r);
+}
+
+static void test_1_3_w()
+{
+    struct inner
+    {
+        static int fn(int, wchar_t* [])
+        {
+            throw std::bad_alloc();
+
+            return EXIT_SUCCESS;
+        };
+    };
+
+    int r = pantheios::extras::main::invoke(wargc, wargv, &inner::fn);
+
+    XTESTS_TEST_INTEGER_EQUAL(EXIT_FAILURE, r);
+}
+
+static void test_1_4_w()
+{
+    struct inner
+    {
+        static int fn(int, wchar_t* [])
+        {
+            throw 12345;
+
+            return EXIT_SUCCESS;
+        };
+    };
+
+    try
+    {
+        pantheios::extras::main::invoke(wargc, wargv, &inner::fn);
+
+        XTESTS_TEST_FAIL("should not get here");
+    }
+    catch(int& x)
+    {
+        XTESTS_TEST_INTEGER_EQUAL(12345, x);
+    }
+}
+
+static void test_1_5_w()
+{
+}
+
+static void test_1_6_w()
+{
+}
+
+static void test_1_7_w()
+{
+}
+
+static void test_1_8_w()
+{
+}
+
+static void test_1_9_w()
+{
+}
+#endif /* PANTHEIOS_USE_WIDE_STRINGS */
 
 } // anonymous namespace
 
