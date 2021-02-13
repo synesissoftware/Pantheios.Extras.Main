@@ -4,7 +4,7 @@
  * Purpose:     Definition of the pantheios::extras::main::invoke overloads.
  *
  * Created:     29th December 2010
- * Updated:     9th February 2021
+ * Updated:     14th February 2021
  *
  * Home:        http://www.pantheios.org/
  *
@@ -521,7 +521,7 @@ namespace ximpl_invoke
             // In general, the only sensible reaction to receipt of an
             // unknown exception is to die immediately. Since invoke()
             // is (or should be) the outermost scope of the program, we
-            // do not need to forcibly invoke exit, as that's just about 
+            // do not need to forcibly invoke exit, as that's just about
 #  if defined(PANTHEIOS_EXTRAS_MAIN_CATCHALL_ABSORB_UNKNOWN_EXCEPTIONS)
             ;
 #  elif defined(PANTHEIOS_EXTRAS_MAIN_CATCHALL_RETHROW_UNKNOWN_EXCEPTIONS)

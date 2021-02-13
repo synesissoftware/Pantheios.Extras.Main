@@ -27,6 +27,18 @@ Package=<4>
 
 ###############################################################################
 
+Project: "example.c.wmain"=.\examples\c\example.c.wmain\vc6\example.c.wmain.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
 Project: "example.cpp.main.1"=.\examples\cpp\example.cpp.main.1\vc6\example.cpp.main.1.dsp - Package Owner=<4>
 
 Package=<5>

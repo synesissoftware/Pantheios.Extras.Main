@@ -24,7 +24,7 @@
  */
 
 // This is defined for illustrative purposes. You are advised to *not*
-// define this in production code. See Quality Matters, #5: "Exceptions: 
+// define this in production code. See Quality Matters, #5: "Exceptions:
 // The Worst Form of Error Handling, Apart From All The Others" for details
 // (http://quality-matters-to.us/).
 #define PANTHEIOS_EXTRAS_MAIN_USE_CATCHALL

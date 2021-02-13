@@ -4,7 +4,7 @@
  * Purpose:     Implementation file for the example.cpp.wmain library.
  *
  * Created:     13th October 2015
- * Updated:     9th February 2021
+ * Updated:     14th February 2021
  *
  * Status:      Wizard-generated
  *
@@ -24,7 +24,7 @@
  */
 
 // This is defined for illustrative purposes. You are advised to *not*
-// define this in production code. See Quality Matters, #5: "Exceptions: 
+// define this in production code. See Quality Matters, #5: "Exceptions:
 // The Worst Form of Error Handling, Apart From All The Others" for details
 // (http://quality-matters-to.us/).
 #define PANTHEIOS_EXTRAS_MAIN_USE_CATCHALL

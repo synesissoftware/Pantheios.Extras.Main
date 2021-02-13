@@ -4,7 +4,7 @@
  * Purpose:     Implementation file for the test.unit.cpp.main.1 library.
  *
  * Created:     11th January 2011
- * Updated:     9th February 2021
+ * Updated:     14th February 2021
  *
  * Status:      Wizard-generated
  *
@@ -19,7 +19,13 @@
 
 
 /* /////////////////////////////////////////////////////////////////////////
- * Test component header file include(s)
+ * customisation
+ */
+
+#define PANTHEIOS_EXTRAS_MAIN_CATCHALL_RETHROW_UNKNOWN_EXCEPTIONS
+
+/* /////////////////////////////////////////////////////////////////////////
+ * test component header file include(s)
  */
 
 #include <stdio.h>
@@ -28,7 +34,7 @@ namespace pantheios
 {
 namespace util
 {
-  
+
   template<
     typename T0
   , typename T1
@@ -42,7 +48,7 @@ namespace util
   , T3 const&
   )
   {}
-  
+
   template<
     typename T0
   , typename T1

@@ -2,25 +2,31 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{f4249264-515a-4b9e-91d0-2b45c27bae77}</UniqueIdentifier>
+      <UniqueIdentifier>{6a867076-4b36-48e9-a35b-e7998ec636fd}</UniqueIdentifier>
       <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
     </Filter>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{5e906507-7ad1-4c51-9a22-a9f504eb3074}</UniqueIdentifier>
+      <UniqueIdentifier>{757b92f5-7c4d-4c88-899f-8aa0a4de6634}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl</Extensions>
     </Filter>
-    <Filter Include="Header Files\Pantheios Header Files">
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{e55f3e8a-0959-49df-a722-c74a09fcdc60}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Header Files\include">
+      <UniqueIdentifier>{ef54e90f-d77b-4d2b-9fb4-785138d15019}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\pantheios">
       <UniqueIdentifier>{496a5ce6-dcb3-45fb-9c5c-1d8697bcc8b9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Pantheios Header Files\Pantheios::Extras">
+    <Filter Include="Header Files\include\pantheios\extras">
       <UniqueIdentifier>{ae458d23-dd7b-423a-a50a-5b9abb1184b5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Pantheios Header Files\Pantheios::Extras\Pantheios::Extras::Main">
+    <Filter Include="Header Files\include\pantheios\extras\main">
       <UniqueIdentifier>{e82bac9b-206e-48a4-b0a6-1a0315c312ce}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{fbee9e4f-a70a-4501-bb8b-9aba36451a94}</UniqueIdentifier>
-      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    <Filter Include="Header Files\include\pantheios\extras\main\internal">
+      <UniqueIdentifier>{efc32b2a-2c38-42b7-bd6b-15fb5d4ee282}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -30,5 +36,19 @@
     <ClCompile Include="..\test.unit.cpp.main.1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\include\pantheios\extras\main\invoke.hpp">
+      <Filter>Header Files\include\pantheios\extras\main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\include\pantheios\extras\main.hpp">
+      <Filter>Header Files\include\pantheios\extras</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\include\pantheios\extras\main\internal\stlsoft.h">
+      <Filter>Header Files\include\pantheios\extras\main\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\include\pantheios\extras\main\internal\common.h">
+      <Filter>Header Files\include\pantheios\extras\main\internal</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
