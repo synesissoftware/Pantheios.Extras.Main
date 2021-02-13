@@ -15,7 +15,7 @@
     </ProjectConfiguration>
     <ProjectConfiguration Include="Unicode Debug Multithreaded|x64">
       <Configuration>Unicode Debug Multithreaded</Configuration>
-      <Platform>x64</Platform>
+      <Platform>Win32</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Unicode Release Multithreaded wmain|Win32">
       <Configuration>Unicode Release Multithreaded wmain</Configuration>
@@ -35,9 +35,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <Keyword>MFCProj</Keyword>
-    <ProjectGuid>{3FF90D09-ECBB-8530-5B70-F65629336673}</ProjectGuid>
-    <ProjectName>example.cpp.wmain</ProjectName>
+    <ProjectGuid>{E4BB37A9-BD71-4e98-9773-77E77E7E647F}</ProjectGuid>
+    <ProjectName>example.c.wmain</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Label="Configuration">
@@ -180,15 +179,14 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Unicode Release Multithreaded|x64'">
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\example.cpp.wmain.cpp" />
+    <ClCompile Include="..\example.c.wmain.c" />
     <ClCompile Include="..\implicit_link.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\include\pantheios\extras\main.hpp" />
+    <ClInclude Include="..\..\..\..\include\pantheios\extras\main.h" />
     <ClInclude Include="..\..\..\..\include\pantheios\extras\main\internal\common.h" />
-    <ClInclude Include="..\..\..\..\include\pantheios\extras\main\internal\common.hpp" />
     <ClInclude Include="..\..\..\..\include\pantheios\extras\main\internal\stlsoft.h" />
-    <ClInclude Include="..\..\..\..\include\pantheios\extras\main\invoke.hpp" />
+    <ClInclude Include="..\..\..\..\include\pantheios\extras\main\invoke.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

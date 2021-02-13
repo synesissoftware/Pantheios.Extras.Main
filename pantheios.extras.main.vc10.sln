@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "example.c.main.1", "example
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "example.c.main.2", "examples\c\example.c.main.2\vc10\example.c.main.2.vcxproj", "{D56F5282-DC2F-F6B7-6A38-F1F81A032C8F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "example.c.wmain", "examples\c\example.c.wmain\vc10\example.c.wmain.vcxproj", "{E4BB37A9-BD71-4E98-9773-77E77E7E647F}"
+EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "example.cpp.main.1", "examples\cpp\example.cpp.main.1\vc10\example.cpp.main.1.vcxproj", "{7150AD3C-B40A-3619-3E11-70DFDDB9430A}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "example.cpp.main.2", "examples\cpp\example.cpp.main.2\vc10\example.cpp.main.2.vcxproj", "{44748ACC-C92E-1AFF-4A0F-950662094F3C}"
@@ -111,6 +113,30 @@ Global
 		{D56F5282-DC2F-F6B7-6A38-F1F81A032C8F}.Unicode Release Multithreaded|Win32.Build.0 = Unicode Release Multithreaded|Win32
 		{D56F5282-DC2F-F6B7-6A38-F1F81A032C8F}.Unicode Release Multithreaded|x64.ActiveCfg = Unicode Release Multithreaded|x64
 		{D56F5282-DC2F-F6B7-6A38-F1F81A032C8F}.Unicode Release Multithreaded|x64.Build.0 = Unicode Release Multithreaded|x64
+		{E4BB37A9-BD71-4E98-9773-77E77E7E647F}.Debug Multithreaded DLL|Win32.ActiveCfg = Unicode Release Multithreaded|x64
+		{E4BB37A9-BD71-4E98-9773-77E77E7E647F}.Debug Multithreaded DLL|x64.ActiveCfg = Unicode Release Multithreaded|x64
+		{E4BB37A9-BD71-4E98-9773-77E77E7E647F}.Debug Multithreaded|Win32.ActiveCfg = Unicode Debug Multithreaded|Win32
+		{E4BB37A9-BD71-4E98-9773-77E77E7E647F}.Debug Multithreaded|x64.ActiveCfg = Unicode Release Multithreaded|x64
+		{E4BB37A9-BD71-4E98-9773-77E77E7E647F}.Release Multithreaded DLL|Win32.ActiveCfg = Unicode Release Multithreaded|x64
+		{E4BB37A9-BD71-4E98-9773-77E77E7E647F}.Release Multithreaded DLL|x64.ActiveCfg = Unicode Release Multithreaded|x64
+		{E4BB37A9-BD71-4E98-9773-77E77E7E647F}.Release Multithreaded|Win32.ActiveCfg = Unicode Release Multithreaded|Win32
+		{E4BB37A9-BD71-4E98-9773-77E77E7E647F}.Release Multithreaded|x64.ActiveCfg = Unicode Release Multithreaded|x64
+		{E4BB37A9-BD71-4E98-9773-77E77E7E647F}.Unicode Debug Multithreaded wmain|Win32.ActiveCfg = Unicode Debug Multithreaded wmain|Win32
+		{E4BB37A9-BD71-4E98-9773-77E77E7E647F}.Unicode Debug Multithreaded wmain|Win32.Build.0 = Unicode Debug Multithreaded wmain|Win32
+		{E4BB37A9-BD71-4E98-9773-77E77E7E647F}.Unicode Debug Multithreaded wmain|x64.ActiveCfg = Unicode Debug Multithreaded wmain|Win32
+		{E4BB37A9-BD71-4E98-9773-77E77E7E647F}.Unicode Debug Multithreaded wmain|x64.Build.0 = Unicode Debug Multithreaded wmain|Win32
+		{E4BB37A9-BD71-4E98-9773-77E77E7E647F}.Unicode Debug Multithreaded|Win32.ActiveCfg = Unicode Debug Multithreaded|Win32
+		{E4BB37A9-BD71-4E98-9773-77E77E7E647F}.Unicode Debug Multithreaded|Win32.Build.0 = Unicode Debug Multithreaded|Win32
+		{E4BB37A9-BD71-4E98-9773-77E77E7E647F}.Unicode Debug Multithreaded|x64.ActiveCfg = Unicode Debug Multithreaded|Win32
+		{E4BB37A9-BD71-4E98-9773-77E77E7E647F}.Unicode Debug Multithreaded|x64.Build.0 = Unicode Debug Multithreaded|Win32
+		{E4BB37A9-BD71-4E98-9773-77E77E7E647F}.Unicode Release Multithreaded wmain|Win32.ActiveCfg = Unicode Release Multithreaded wmain|Win32
+		{E4BB37A9-BD71-4E98-9773-77E77E7E647F}.Unicode Release Multithreaded wmain|Win32.Build.0 = Unicode Release Multithreaded wmain|Win32
+		{E4BB37A9-BD71-4E98-9773-77E77E7E647F}.Unicode Release Multithreaded wmain|x64.ActiveCfg = Unicode Release Multithreaded wmain|x64
+		{E4BB37A9-BD71-4E98-9773-77E77E7E647F}.Unicode Release Multithreaded wmain|x64.Build.0 = Unicode Release Multithreaded wmain|x64
+		{E4BB37A9-BD71-4E98-9773-77E77E7E647F}.Unicode Release Multithreaded|Win32.ActiveCfg = Unicode Release Multithreaded|Win32
+		{E4BB37A9-BD71-4E98-9773-77E77E7E647F}.Unicode Release Multithreaded|Win32.Build.0 = Unicode Release Multithreaded|Win32
+		{E4BB37A9-BD71-4E98-9773-77E77E7E647F}.Unicode Release Multithreaded|x64.ActiveCfg = Unicode Release Multithreaded|x64
+		{E4BB37A9-BD71-4E98-9773-77E77E7E647F}.Unicode Release Multithreaded|x64.Build.0 = Unicode Release Multithreaded|x64
 		{7150AD3C-B40A-3619-3E11-70DFDDB9430A}.Debug Multithreaded DLL|Win32.ActiveCfg = Debug Multithreaded|Win32
 		{7150AD3C-B40A-3619-3E11-70DFDDB9430A}.Debug Multithreaded DLL|x64.ActiveCfg = Debug Multithreaded|x64
 		{7150AD3C-B40A-3619-3E11-70DFDDB9430A}.Debug Multithreaded|Win32.ActiveCfg = Debug Multithreaded|Win32
@@ -246,6 +272,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{FE76398B-16F2-EC0C-E932-628A27594A05} = {77323006-68A9-46B3-8AC5-8E90CB788D46}
 		{D56F5282-DC2F-F6B7-6A38-F1F81A032C8F} = {77323006-68A9-46B3-8AC5-8E90CB788D46}
+		{E4BB37A9-BD71-4E98-9773-77E77E7E647F} = {77323006-68A9-46B3-8AC5-8E90CB788D46}
 		{7150AD3C-B40A-3619-3E11-70DFDDB9430A} = {77323006-68A9-46B3-8AC5-8E90CB788D46}
 		{44748ACC-C92E-1AFF-4A0F-950662094F3C} = {77323006-68A9-46B3-8AC5-8E90CB788D46}
 		{5749A37F-D844-AFD5-5C23-92AAA1192857} = {77323006-68A9-46B3-8AC5-8E90CB788D46}

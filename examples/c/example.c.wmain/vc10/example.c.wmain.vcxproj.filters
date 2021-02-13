@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{a2e01c1f-0175-48c1-ae57-7a5196fa3967}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{9d418ad8-6ca4-46f6-8ff9-ec5b26fd0c79}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{1168a3c7-51de-4574-ae8b-16fe20ee26d3}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Header Files\include">
+      <UniqueIdentifier>{ef54e90f-d77b-4d2b-9fb4-785138d15019}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\pantheios">
+      <UniqueIdentifier>{496a5ce6-dcb3-45fb-9c5c-1d8697bcc8b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\pantheios\extras">
+      <UniqueIdentifier>{ae458d23-dd7b-423a-a50a-5b9abb1184b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\pantheios\extras\main">
+      <UniqueIdentifier>{e82bac9b-206e-48a4-b0a6-1a0315c312ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include\pantheios\extras\main\internal">
+      <UniqueIdentifier>{efc32b2a-2c38-42b7-bd6b-15fb5d4ee282}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\example.c.wmain.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\implicit_link.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\include\pantheios\extras\main\internal\common.h">
+      <Filter>Header Files\include\pantheios\extras\main\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\pantheios\extras\main\internal\stlsoft.h">
+      <Filter>Header Files\include\pantheios\extras\main\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\pantheios\extras\main.h">
+      <Filter>Header Files\include\pantheios\extras</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\include\pantheios\extras\main\invoke.h">
+      <Filter>Header Files\include\pantheios\extras\main</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

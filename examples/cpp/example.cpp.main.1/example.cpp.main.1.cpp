@@ -4,7 +4,7 @@
  * Purpose:     Implementation file for the example.cpp.main.1 library.
  *
  * Created:     5th January 2011
- * Updated:     9th February 2021
+ * Updated:     14th February 2021
  *
  * Status:      Wizard-generated
  *
@@ -94,7 +94,6 @@ int main(int argc, char** argv)
 {
     return pantheios::extras::main::invoke(argc, argv, main0);
 }
-
 #else // ? USE_wmain
 
 int main0(int argc, wchar_t** argv)
@@ -136,7 +135,6 @@ int wmain(int argc, wchar_t** argv)
 {
     return pantheios::extras::main::invoke(argc, argv, main0);
 }
-
 #endif // !USE_wmain
 
 /* ///////////////////////////// end of file //////////////////////////// */
