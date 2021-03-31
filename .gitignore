@@ -1,9 +1,14 @@
 
 # directories (by name)
 
-build/
+/_build/
+/_internal/
 
-ideas/
+/.vs/
+
+/build/
+/doc/
+/ideas/
 
 Debug/
 DebugMt/
@@ -26,12 +31,6 @@ Win32/
 x64/
 
 # directories (by pattern)
-
-/_internal/
-
-/doc/
-
-/ipch/
 
 # files (by name)
 
@@ -72,8 +71,9 @@ sh.exe.stackdump
 *.suo
 *.swp
 *.tlog
+*.tmp
 *.unsuccessfulbuild
-
 *.vcproj*.user
 *.vcxproj*.user
+*.zip
 
