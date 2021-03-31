@@ -1,6 +1,8 @@
 
 cmake_minimum_required(VERSION 3.0)
 
+project(pantheios.extras.main)
+
 if(WIN32)
 
     message(FATAL_ERROR "Use of CMake on Windows not currently supported")
