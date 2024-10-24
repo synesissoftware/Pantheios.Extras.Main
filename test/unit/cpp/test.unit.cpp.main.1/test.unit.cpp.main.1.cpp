@@ -85,19 +85,19 @@ namespace
 namespace
 {
 
-  static void test_1_0(void);
-  static void test_1_1(void);
-  static void test_1_2(void);
-  static void test_1_3(void);
-  static void test_1_4(void);
+  static void test_returns_EXIT_SUCCESS(void);
+  static void test_returns_EXIT_FAILURE(void);
+  static void test_throws_std_runtime_error(void);
+  static void test_throws_std_bad_alloc(void);
+  static void test_throws_int(void);
 
 #ifdef PANTHEIOS_USE_WIDE_STRINGS
 
-  static void test_1_0_w(void);
-  static void test_1_1_w(void);
-  static void test_1_2_w(void);
-  static void test_1_3_w(void);
-  static void test_1_4_w(void);
+  static void test_returns_EXIT_SUCCESS_w(void);
+  static void test_returns_EXIT_FAILURE_w(void);
+  static void test_throws_std_runtime_error_w(void);
+  static void test_throws_std_bad_alloc_w(void);
+  static void test_throws_int_w(void);
 #endif /* PANTHEIOS_USE_WIDE_STRINGS */
 } // anonymous namespace
 
@@ -125,18 +125,18 @@ int main(int argc, char* argv[])
 
     if (XTESTS_START_RUNNER("test.unit.cpp.main.1", verbosity))
     {
-        XTESTS_RUN_CASE(test_1_0);
-        XTESTS_RUN_CASE(test_1_1);
-        XTESTS_RUN_CASE(test_1_2);
-        XTESTS_RUN_CASE(test_1_3);
-        XTESTS_RUN_CASE(test_1_4);
+        XTESTS_RUN_CASE(test_returns_EXIT_SUCCESS);
+        XTESTS_RUN_CASE(test_returns_EXIT_FAILURE);
+        XTESTS_RUN_CASE(test_throws_std_runtime_error);
+        XTESTS_RUN_CASE(test_throws_std_bad_alloc);
+        XTESTS_RUN_CASE(test_throws_int);
 #ifdef PANTHEIOS_USE_WIDE_STRINGS
 
-        XTESTS_RUN_CASE(test_1_0_w);
-        XTESTS_RUN_CASE(test_1_1_w);
-        XTESTS_RUN_CASE(test_1_2_w);
-        XTESTS_RUN_CASE(test_1_3_w);
-        XTESTS_RUN_CASE(test_1_4_w);
+        XTESTS_RUN_CASE(test_returns_EXIT_SUCCESS_w);
+        XTESTS_RUN_CASE(test_returns_EXIT_FAILURE_w);
+        XTESTS_RUN_CASE(test_throws_std_runtime_error_w);
+        XTESTS_RUN_CASE(test_throws_std_bad_alloc_w);
+        XTESTS_RUN_CASE(test_throws_int_w);
 #endif /* PANTHEIOS_USE_WIDE_STRINGS */
 
         XTESTS_PRINT_RESULTS();
@@ -171,7 +171,7 @@ namespace
 #endif /* PANTHEIOS_USE_WIDE_STRINGS */
 
 
-static void test_1_0()
+static void test_returns_EXIT_SUCCESS()
 {
     struct inner
     {
@@ -190,7 +190,7 @@ static void test_1_0()
     XTESTS_TEST_INTEGER_EQUAL(EXIT_SUCCESS, r);
 }
 
-static void test_1_1()
+static void test_returns_EXIT_FAILURE()
 {
     struct inner
     {
@@ -205,7 +205,7 @@ static void test_1_1()
     XTESTS_TEST_INTEGER_EQUAL(EXIT_FAILURE, r);
 }
 
-static void test_1_2()
+static void test_throws_std_runtime_error()
 {
     struct inner
     {
@@ -222,7 +222,7 @@ static void test_1_2()
     XTESTS_TEST_INTEGER_EQUAL(EXIT_FAILURE, r);
 }
 
-static void test_1_3()
+static void test_throws_std_bad_alloc()
 {
     struct inner
     {
@@ -239,7 +239,7 @@ static void test_1_3()
     XTESTS_TEST_INTEGER_EQUAL(EXIT_FAILURE, r);
 }
 
-static void test_1_4()
+static void test_throws_int()
 {
     struct inner
     {
@@ -264,7 +264,7 @@ static void test_1_4()
 }
 #ifdef PANTHEIOS_USE_WIDE_STRINGS
 
-static void test_1_0_w()
+static void test_returns_EXIT_SUCCESS_w()
 {
     struct inner
     {
@@ -283,7 +283,7 @@ static void test_1_0_w()
     XTESTS_TEST_INTEGER_EQUAL(EXIT_SUCCESS, r);
 }
 
-static void test_1_1_w()
+static void test_returns_EXIT_FAILURE_w()
 {
     struct inner
     {
@@ -298,7 +298,7 @@ static void test_1_1_w()
     XTESTS_TEST_INTEGER_EQUAL(EXIT_FAILURE, r);
 }
 
-static void test_1_2_w()
+static void test_throws_std_runtime_error_w()
 {
     struct inner
     {
@@ -315,7 +315,7 @@ static void test_1_2_w()
     XTESTS_TEST_INTEGER_EQUAL(EXIT_FAILURE, r);
 }
 
-static void test_1_3_w()
+static void test_throws_std_bad_alloc_w()
 {
     struct inner
     {
@@ -332,7 +332,7 @@ static void test_1_3_w()
     XTESTS_TEST_INTEGER_EQUAL(EXIT_FAILURE, r);
 }
 
-static void test_1_4_w()
+static void test_throws_int_w()
 {
     struct inner
     {
