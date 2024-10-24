@@ -149,7 +149,8 @@
  *      object destructors).
  */
 
-#if defined(PANTHEIOS_EXTRAS_MAIN_NO_CATCHALL)
+#if 0
+#elif defined(PANTHEIOS_EXTRAS_MAIN_NO_CATCHALL)
 
  /* 1. */
 # ifdef PANTHEIOS_EXTRAS_MAIN_USE_CATCHALL
