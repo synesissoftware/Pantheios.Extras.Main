@@ -40,7 +40,7 @@ int main0(int argc, char* argv[])
     STLSOFT_SUPPRESS_UNUSED(argv);
 
 
-    pantheios_logputs(PANTHEIOS_SEV_DEBUG, PANTHEIOS_LITERAL_STRING("in main()"));
+    pantheios_logputs(PANTHEIOS_SEV_NOTICE, PANTHEIOS_LITERAL_STRING("in main()"));
 
 
     return EXIT_SUCCESS;
