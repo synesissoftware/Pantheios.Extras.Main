@@ -10,15 +10,25 @@
 
 
 /* /////////////////////////////////////////////////////////////////////////
- * Test component header file include(s)
+ * feature control
+ */
+
+#define PANTHEIOS_EXTRAS_MAIN_USE_CATCHALL
+
+
+/* /////////////////////////////////////////////////////////////////////////
+ * includes
+ */
+
+/* /////////////////////////////////////
+ * hook includes
  */
 
 #include <stdio.h>
 
-namespace pantheios
-{
-namespace util
-{
+namespace pantheios {
+
+namespace util {
 
     template<
         typename T0
@@ -45,7 +55,6 @@ namespace util
     ,   T2 const&
     )
     {}
-
 } /* namespace util */
 } /* namespace pantheios */
 
@@ -55,24 +64,31 @@ namespace
     static FILE* stderr_stub = NULL;
 } /* anonymous namespace */
 
+#include <pantheios/pantheios.h>
+
 # define onBailOut                                          onBailOut_stub
 # ifdef stderr
 #  undef stderr
 # endif
 # define stderr                                             stderr_stub
 
+
+/* /////////////////////////////////////
+ * test component header file include(s)
+ */
+
 #include <pantheios/extras/main.hpp>
 
 
-/* /////////////////////////////////////////////////////////////////////////
- * includes
+/* /////////////////////////////////////
+ * general includes
  */
 
 /* xTests header files */
 #include <xtests/xtests.h>
 
 /* STLSoft header files */
-#include <stlsoft/stlsoft.h>
+#include <stlsoft/smartptr/scoped_handle.hpp>
 
 /* Standard C header files */
 #include <stdlib.h>
@@ -82,6 +98,17 @@ namespace
  * forward declarations
  */
 
+extern "C" {
+
+    void test_throw_int_NO_CATCHALL(void);
+    void test_throw_int_USE_CATCHALL(void);
+#ifdef PANTHEIOS_USE_WIDE_STRINGS
+
+    void test_throw_int_NO_CATCHALL_w(void);
+    void test_throw_int_USE_CATCHALL_w(void);
+#endif /* PANTHEIOS_USE_WIDE_STRINGS */
+} /* extern "C" */
+
 namespace
 {
 
@@ -89,15 +116,12 @@ namespace
   static void test_returns_EXIT_FAILURE(void);
   static void test_throws_std_runtime_error(void);
   static void test_throws_std_bad_alloc(void);
-  static void test_throws_int(void);
-
 #ifdef PANTHEIOS_USE_WIDE_STRINGS
 
   static void test_returns_EXIT_SUCCESS_w(void);
   static void test_returns_EXIT_FAILURE_w(void);
   static void test_throws_std_runtime_error_w(void);
   static void test_throws_std_bad_alloc_w(void);
-  static void test_throws_int_w(void);
 #endif /* PANTHEIOS_USE_WIDE_STRINGS */
 } // anonymous namespace
 
@@ -109,6 +133,7 @@ namespace
 extern "C" PAN_CHAR_T const PANTHEIOS_FE_PROCESS_IDENTITY[] = PANTHEIOS_LITERAL_STRING("test.unit.cpp.main.1");
 
 static char const STUB_FILE_NAME[] = "test.unit.cpp.main.1.stub_file";
+
 
 /* /////////////////////////////////////////////////////////////////////////
  * main
@@ -123,20 +148,25 @@ int main(int argc, char* argv[])
 
     stderr_stub = ::fopen(STUB_FILE_NAME, "w");
 
+    stlsoft::scoped_handle<char const*> scoper_file(STUB_FILE_NAME, ::remove);
+    stlsoft::scoped_handle<FILE*>       scoper_file_handle(stderr_stub, ::fclose);
+
     if (XTESTS_START_RUNNER("test.unit.cpp.main.1", verbosity))
     {
         XTESTS_RUN_CASE(test_returns_EXIT_SUCCESS);
         XTESTS_RUN_CASE(test_returns_EXIT_FAILURE);
         XTESTS_RUN_CASE(test_throws_std_runtime_error);
         XTESTS_RUN_CASE(test_throws_std_bad_alloc);
-        XTESTS_RUN_CASE(test_throws_int);
+        XTESTS_RUN_CASE(test_throw_int_NO_CATCHALL);
+        XTESTS_RUN_CASE(test_throw_int_USE_CATCHALL);
 #ifdef PANTHEIOS_USE_WIDE_STRINGS
 
         XTESTS_RUN_CASE(test_returns_EXIT_SUCCESS_w);
         XTESTS_RUN_CASE(test_returns_EXIT_FAILURE_w);
         XTESTS_RUN_CASE(test_throws_std_runtime_error_w);
         XTESTS_RUN_CASE(test_throws_std_bad_alloc_w);
-        XTESTS_RUN_CASE(test_throws_int_w);
+        XTESTS_RUN_CASE(test_throw_int_NO_CATCHALL_w);
+        XTESTS_RUN_CASE(test_throw_int_USE_CATCHALL_w);
 #endif /* PANTHEIOS_USE_WIDE_STRINGS */
 
         XTESTS_PRINT_RESULTS();
@@ -144,17 +174,12 @@ int main(int argc, char* argv[])
         XTESTS_END_RUNNER_UPDATE_EXITCODE(&retCode);
     }
 
-
-    ::fclose(stderr_stub);
-
-    ::remove(STUB_FILE_NAME);
-
-  return retCode;
+    return retCode;
 }
 
 
 /* /////////////////////////////////////////////////////////////////////////
- * test function implementations
+ * test data
  */
 
 namespace
@@ -169,6 +194,15 @@ namespace
     static int          wargc   =   STLSOFT_NUM_ELEMENTS(wargs) - 1;
     static wchar_t**    wargv   =   wargs;
 #endif /* PANTHEIOS_USE_WIDE_STRINGS */
+} // anonymous namespace
+
+
+/* /////////////////////////////////////////////////////////////////////////
+ * test function implementations
+ */
+
+namespace
+{
 
 
 static void test_returns_EXIT_SUCCESS()
@@ -238,30 +272,6 @@ static void test_throws_std_bad_alloc()
 
     XTESTS_TEST_INTEGER_EQUAL(EXIT_FAILURE, r);
 }
-
-static void test_throws_int()
-{
-    struct inner
-    {
-        static int fn(int, char**)
-        {
-            throw 12345;
-
-            return EXIT_SUCCESS;
-        };
-    };
-
-    try
-    {
-        pantheios::extras::main::invoke(argc, argv, &inner::fn);
-
-        XTESTS_TEST_FAIL("should not get here");
-    }
-    catch (int& x)
-    {
-        XTESTS_TEST_INTEGER_EQUAL(12345, x);
-    }
-}
 #ifdef PANTHEIOS_USE_WIDE_STRINGS
 
 static void test_returns_EXIT_SUCCESS_w()
@@ -330,30 +340,6 @@ static void test_throws_std_bad_alloc_w()
     int r = pantheios::extras::main::invoke(wargc, wargv, &inner::fn);
 
     XTESTS_TEST_INTEGER_EQUAL(EXIT_FAILURE, r);
-}
-
-static void test_throws_int_w()
-{
-    struct inner
-    {
-        static int fn(int, wchar_t* [])
-        {
-            throw 12345;
-
-            return EXIT_SUCCESS;
-        };
-    };
-
-    try
-    {
-        pantheios::extras::main::invoke(wargc, wargv, &inner::fn);
-
-        XTESTS_TEST_FAIL("should not get here");
-    }
-    catch (int& x)
-    {
-        XTESTS_TEST_INTEGER_EQUAL(12345, x);
-    }
 }
 #endif /* PANTHEIOS_USE_WIDE_STRINGS */
 } // anonymous namespace
