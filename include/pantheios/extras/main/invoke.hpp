@@ -778,7 +778,7 @@ namespace ximpl_invoke
   {
     . . . // your "real" main()
   }
-  int main((int argc, char** argv)
+  int main((int argc, char* argv[])
   {
     return <strong>::pantheios::extras::main::invoke</strong>(argc, argv, main0, "myprogram");
   }
@@ -816,11 +816,11 @@ invoke(
  * Consider the following example:
 \htmlonly
 <pre>
-  int <strong>main0</strong>(int argc, char** argv)
+  int <strong>main0</strong>(int argc, char* argv[])
   {
     . . . // your "real" main()
   }
-  int main((int argc, char** argv)
+  int main((int argc, char* argv[])
   {
     return <strong>::pantheios::extras::main::invoke</strong>(argc, argv, main0, "myprogram");
   }
@@ -864,7 +864,7 @@ invoke(
   {
     . . . // your "real" main()
   }
-  int main((int argc, char** argv)
+  int main((int argc, char* argv[])
   {
     return <strong>::pantheios::extras::main::invoke</strong>(argc, argv, main0);
   }
@@ -902,11 +902,11 @@ invoke(
 <pre>
   extern "C" PAN_CHAR_T const PANTHEIOS_FE_PROCESS_IDENTITY[] = "myprogram";
 
-  int <strong>main0</strong>(int argc, char** argv)
+  int <strong>main0</strong>(int argc, char* argv[])
   {
     . . . // your "real" main()
   }
-  int main((int argc, char** argv)
+  int main((int argc, char* argv[])
   {
     return <strong>::pantheios::extras::main::invoke</strong>(argc, argv, main0);
   }
