@@ -130,7 +130,6 @@ int main(int argc, char* argv[])
         XTESTS_RUN_CASE(test_1_2);
         XTESTS_RUN_CASE(test_1_3);
         XTESTS_RUN_CASE(test_1_4);
-
 #ifdef PANTHEIOS_USE_WIDE_STRINGS
 
         XTESTS_RUN_CASE(test_1_0_w);
@@ -164,7 +163,6 @@ namespace
     static char*        args[]  =   { "arg0", NULL };
     static int          argc    =   STLSOFT_NUM_ELEMENTS(args) - 1;
     static char**       argv    =   args;
-
 #ifdef PANTHEIOS_USE_WIDE_STRINGS
 
     static wchar_t*     wargs[] =   { L"arg0", NULL };
@@ -259,12 +257,11 @@ static void test_1_4()
 
         XTESTS_TEST_FAIL("should not get here");
     }
-    catch(int& x)
+    catch (int& x)
     {
         XTESTS_TEST_INTEGER_EQUAL(12345, x);
     }
 }
-
 #ifdef PANTHEIOS_USE_WIDE_STRINGS
 
 static void test_1_0_w()
@@ -353,7 +350,7 @@ static void test_1_4_w()
 
         XTESTS_TEST_FAIL("should not get here");
     }
-    catch(int& x)
+    catch (int& x)
     {
         XTESTS_TEST_INTEGER_EQUAL(12345, x);
     }
