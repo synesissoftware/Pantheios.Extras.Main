@@ -1,22 +1,12 @@
 /* /////////////////////////////////////////////////////////////////////////
- * File:        example.cpp.wmain.cpp
+ * File:    example.cpp.wmain.cpp
  *
- * Purpose:     Implementation file for the example.cpp.wmain library.
+ * Purpose: Implementation file for the example.cpp.wmain library.
  *
- * Created:     13th October 2015
- * Updated:     9th February 2021
- *
- * Status:      Wizard-generated
- *
- * License:     (Licensed under the Synesis Software Open License)
- *
- *              Copyright (c) 2015-2021, Synesis Software Pty Ltd.
- *              All rights reserved.
- *
- *              www:        http://www.synesis.com.au/software
+ * Created: 13th October 2015
+ * Updated: 24th October 2024
  *
  * ////////////////////////////////////////////////////////////////////// */
-
 
 
 /* /////////////////////////////////////////////////////////////////////////

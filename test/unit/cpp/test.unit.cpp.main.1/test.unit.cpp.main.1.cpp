@@ -1,19 +1,10 @@
 /* /////////////////////////////////////////////////////////////////////////
- * File:        test.unit.cpp.main.1.cpp
+ * File:    test.unit.cpp.main.1.cpp
  *
- * Purpose:     Implementation file for the test.unit.cpp.main.1 library.
+ * Purpose: Implementation file for the test.unit.cpp.main.1 library.
  *
- * Created:     11th January 2011
- * Updated:     9th February 2021
- *
- * Status:      Wizard-generated
- *
- * License:     (Licensed under the Synesis Software Open License)
- *
- *              Copyright (c) 2011-2021, Synesis Software Pty Ltd.
- *              All rights reserved.
- *
- *              www:        http://www.synesis.com.au/software
+ * Created: 11th January 2011
+ * Updated: 24th October 2024
  *
  * ////////////////////////////////////////////////////////////////////// */
 
@@ -28,50 +19,50 @@ namespace pantheios
 {
 namespace util
 {
-  
-  template<
-    typename T0
-  , typename T1
-  , typename T2
-  , typename T3
-  >
-  void onBailOut_stub(
-    T0 const&
-  , T1 const&
-  , T2 const&
-  , T3 const&
-  )
-  {}
-  
-  template<
-    typename T0
-  , typename T1
-  , typename T2
-  >
-  void onBailOut_stub(
-    T0 const&
-  , T1 const&
-  , T2 const&
-  )
-  {}
+
+    template<
+        typename T0
+    ,   typename T1
+    ,   typename T2
+    ,   typename T3
+    >
+    void onBailOut_stub(
+        T0 const&
+    ,   T1 const&
+    ,   T2 const&
+    ,   T3 const&
+    )
+    {}
+
+    template<
+        typename T0
+    ,   typename T1
+    ,   typename T2
+    >
+    void onBailOut_stub(
+        T0 const&
+    ,   T1 const&
+    ,   T2 const&
+    )
+    {}
 
 } /* namespace util */
 } /* namespace pantheios */
 
 namespace
 {
-  static FILE* stderr_stub = NULL;
 
+    static FILE* stderr_stub = NULL;
 } /* anonymous namespace */
 
-
-# define onBailOut    onBailOut_stub
+# define onBailOut                                          onBailOut_stub
 # ifdef stderr
 #  undef stderr
 # endif
-# define stderr       stderr_stub
+# define stderr                                             stderr_stub
 
 #include <pantheios/extras/main.hpp>
+
 
 /* /////////////////////////////////////////////////////////////////////////
  * includes
@@ -86,6 +77,7 @@ namespace
 /* Standard C header files */
 #include <stdlib.h>
 
+
 /* /////////////////////////////////////////////////////////////////////////
  * forward declarations
  */
@@ -98,11 +90,6 @@ namespace
   static void test_1_2(void);
   static void test_1_3(void);
   static void test_1_4(void);
-  static void test_1_5(void);
-  static void test_1_6(void);
-  static void test_1_7(void);
-  static void test_1_8(void);
-  static void test_1_9(void);
 
 #ifdef PANTHEIOS_USE_WIDE_STRINGS
 
@@ -111,14 +98,9 @@ namespace
   static void test_1_2_w(void);
   static void test_1_3_w(void);
   static void test_1_4_w(void);
-  static void test_1_5_w(void);
-  static void test_1_6_w(void);
-  static void test_1_7_w(void);
-  static void test_1_8_w(void);
-  static void test_1_9_w(void);
 #endif /* PANTHEIOS_USE_WIDE_STRINGS */
-
 } // anonymous namespace
+
 
 /* /////////////////////////////////////////////////////////////////////////
  * Constants & Globals
@@ -132,53 +114,45 @@ static char const STUB_FILE_NAME[] = "test.unit.cpp.main.1.stub_file";
  * main
  */
 
-int main(int argc, char **argv)
+int main(int argc, char* argv[])
 {
-  int retCode = EXIT_SUCCESS;
-  int verbosity = 2;
+    int retCode = EXIT_SUCCESS;
+    int verbosity = 2;
 
-  XTESTS_COMMANDLINE_PARSEVERBOSITY(argc, argv, &verbosity);
+    XTESTS_COMMANDLINE_PARSEVERBOSITY(argc, argv, &verbosity);
 
-  stderr_stub = ::fopen(STUB_FILE_NAME, "w");
+    stderr_stub = ::fopen(STUB_FILE_NAME, "w");
 
-  if (XTESTS_START_RUNNER("test.unit.cpp.main.1", verbosity))
-  {
-    XTESTS_RUN_CASE(test_1_0);
-    XTESTS_RUN_CASE(test_1_1);
-    XTESTS_RUN_CASE(test_1_2);
-    XTESTS_RUN_CASE(test_1_3);
-    XTESTS_RUN_CASE(test_1_4);
-    XTESTS_RUN_CASE(test_1_5);
-    XTESTS_RUN_CASE(test_1_6);
-    XTESTS_RUN_CASE(test_1_7);
-    XTESTS_RUN_CASE(test_1_8);
-    XTESTS_RUN_CASE(test_1_9);
+    if (XTESTS_START_RUNNER("test.unit.cpp.main.1", verbosity))
+    {
+        XTESTS_RUN_CASE(test_1_0);
+        XTESTS_RUN_CASE(test_1_1);
+        XTESTS_RUN_CASE(test_1_2);
+        XTESTS_RUN_CASE(test_1_3);
+        XTESTS_RUN_CASE(test_1_4);
 
 #ifdef PANTHEIOS_USE_WIDE_STRINGS
 
-    XTESTS_RUN_CASE(test_1_0_w);
-    XTESTS_RUN_CASE(test_1_1_w);
-    XTESTS_RUN_CASE(test_1_2_w);
-    XTESTS_RUN_CASE(test_1_3_w);
-    XTESTS_RUN_CASE(test_1_4_w);
-    XTESTS_RUN_CASE(test_1_5_w);
-    XTESTS_RUN_CASE(test_1_6_w);
-    XTESTS_RUN_CASE(test_1_7_w);
-    XTESTS_RUN_CASE(test_1_8_w);
-    XTESTS_RUN_CASE(test_1_9_w);
+        XTESTS_RUN_CASE(test_1_0_w);
+        XTESTS_RUN_CASE(test_1_1_w);
+        XTESTS_RUN_CASE(test_1_2_w);
+        XTESTS_RUN_CASE(test_1_3_w);
+        XTESTS_RUN_CASE(test_1_4_w);
 #endif /* PANTHEIOS_USE_WIDE_STRINGS */
 
-    XTESTS_PRINT_RESULTS();
+        XTESTS_PRINT_RESULTS();
 
-    XTESTS_END_RUNNER_UPDATE_EXITCODE(&retCode);
-  }
+        XTESTS_END_RUNNER_UPDATE_EXITCODE(&retCode);
+    }
 
-  ::fclose(stderr_stub);
 
-  ::remove(STUB_FILE_NAME);
+    ::fclose(stderr_stub);
+
+    ::remove(STUB_FILE_NAME);
 
   return retCode;
 }
+
 
 /* /////////////////////////////////////////////////////////////////////////
  * test function implementations
@@ -291,27 +265,6 @@ static void test_1_4()
     }
 }
 
-static void test_1_5()
-{
-}
-
-static void test_1_6()
-{
-}
-
-static void test_1_7()
-{
-}
-
-static void test_1_8()
-{
-}
-
-static void test_1_9()
-{
-}
-
-
 #ifdef PANTHEIOS_USE_WIDE_STRINGS
 
 static void test_1_0_w()
@@ -405,29 +358,9 @@ static void test_1_4_w()
         XTESTS_TEST_INTEGER_EQUAL(12345, x);
     }
 }
-
-static void test_1_5_w()
-{
-}
-
-static void test_1_6_w()
-{
-}
-
-static void test_1_7_w()
-{
-}
-
-static void test_1_8_w()
-{
-}
-
-static void test_1_9_w()
-{
-}
 #endif /* PANTHEIOS_USE_WIDE_STRINGS */
-
 } // anonymous namespace
+
 
 /* ///////////////////////////// end of file //////////////////////////// */
 
