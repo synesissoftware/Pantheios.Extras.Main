@@ -204,7 +204,20 @@ include(GNUInstallDirs)
 # ################################################
 # main library
 
-add_subdirectory(src)
+# add_subdirectory(src)
+
+
+add_library(Pantheios.Extras.Main INTERFACE)
+
+target_include_directories(Pantheios.Extras.Main INTERFACE
+	$<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+	$<INSTALL_INTERFACE:include>
+)
+
+install(TARGETS Pantheios.Extras.Main
+	EXPORT project-targets
+	PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+)
 
 
 # ################################################
@@ -244,6 +257,41 @@ endif(BUILD_TESTING)
 
 set(EXPORT_NAME ${PROJECT_NAME})
 
+configure_package_config_file(
+	${CMAKE_CURRENT_SOURCE_DIR}/cmake/${EXPORT_NAME}-config.cmake.in
+	${CMAKE_CURRENT_BINARY_DIR}/cmake/${EXPORT_NAME}-config.cmake
+	INSTALL_DESTINATION ${LIB_INSTALL_DIR}/${EXPORT_NAME}/cmake
+)
+
+write_basic_package_version_file(
+	${CMAKE_CURRENT_BINARY_DIR}/cmake/${EXPORT_NAME}-config-version.cmake
+	VERSION ${PROJECT_VERSION}
+	COMPATIBILITY AnyNewerVersion
+)
+
+export(EXPORT project-targets
+	FILE "${CMAKE_CURRENT_BINARY_DIR}/cmake/${EXPORT_NAME}-targets.cmake"
+	# NAMESPACE "${PROJECT_NAME}::"
+)
+
+install(EXPORT project-targets
+	# NAMESPACE "${PROJECT_NAME}::"
+	FILE "${EXPORT_NAME}-targets.cmake"
+	DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/${EXPORT_NAME}
+)
+
+install(FILES
+	"${CMAKE_CURRENT_BINARY_DIR}/cmake/${EXPORT_NAME}-config.cmake"
+	"${CMAKE_CURRENT_BINARY_DIR}/cmake/${EXPORT_NAME}-config-version.cmake"
+	DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/${EXPORT_NAME}
+)
+
+install(
+	DIRECTORY ${CMAKE_SOURCE_DIR}/include/pantheios/
+	DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/pantheios/
+	FILES_MATCHING
+	PATTERN "*.h*"
+)
 
 
 # ##########################################################
