@@ -1,19 +1,10 @@
 /* /////////////////////////////////////////////////////////////////////////
- * File:        example.cpp.main.MFC.cpp
+ * File:    example.cpp.main.MFC.cpp
  *
- * Purpose:     Implementation file for the example.cpp.main.MFC library.
+ * Purpose: Implementation file for the example.cpp.main.MFC library.
  *
- * Created:     5th January 2011
- * Updated:     9th February 2021
- *
- * Status:      Wizard-generated
- *
- * License:     (Licensed under the Synesis Software Open License)
- *
- *              Copyright (c) 2011-2021, Synesis Software Pty Ltd.
- *              All rights reserved.
- *
- *              www:        http://www.synesis.com.au/software
+ * Created: 5th January 2011
+ * Updated: 24th October 2024
  *
  * ////////////////////////////////////////////////////////////////////// */
 
@@ -43,7 +34,7 @@ PANTHEIOS_EXTERN_C PAN_CHAR_T const PANTHEIOS_FE_PROCESS_IDENTITY[] = PANTHEIOS_
 
 /* ////////////////////////////////////////////////////////////////////// */
 
-int main0(int /* argc */, char** /* argv */)
+int main0(int /* argc */, char* /* argv */[])
 {
     /* do the "main" business of main() here, without worrying about
      * initialising Pantheios libraries
@@ -58,7 +49,7 @@ int main0(int /* argc */, char** /* argv */)
 
 CWinApp app;
 
-int main(int argc, char** argv)
+int main(int argc, char* argv[])
 {
     AfxWinInit(::GetModuleHandle(NULL), NULL, ::GetCommandLine(), 0);
 
