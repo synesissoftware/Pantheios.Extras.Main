@@ -5,11 +5,11 @@
  *          Pantheios.Extras.Main library.
  *
  * Created: 6th January 2011
- * Updated: 24th October 2024
+ * Updated: 31st January 2025
  *
  * Home:    http://www.pantheios.org/
  *
- * Copyright (c) 2019-2024, Matthew Wilson and Synesis Information Systems
+ * Copyright (c) 2019-2025, Matthew Wilson and Synesis Information Systems
  * Copyright (c) 2011-2019, Matthew Wilson and Synesis Software
  * All rights reserved.
  *
@@ -57,8 +57,8 @@
 #ifndef PANTHEIOS_DOCUMENTATION_SKIP_SECTION
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_MAJOR    1
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_MINOR    0
-# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_REVISION 12
-# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_EDIT     15
+# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_REVISION 13
+# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_EDIT     16
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 
@@ -111,13 +111,14 @@
 # define PANTHEIOS_EXTRAS_MAIN_VER_0_1_3                    0x000103ff
 # define PANTHEIOS_EXTRAS_MAIN_VER_0_2_0                    0x000200ff
 # define PANTHEIOS_EXTRAS_MAIN_VER_0_2_1_ALPHA_1            0x00020141
+# define PANTHEIOS_EXTRAS_MAIN_VER_0_2_1_ALPHA_2            0x00020142
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 #define PANTHEIOS_EXTRAS_MAIN_VER_MAJOR                     0
 #define PANTHEIOS_EXTRAS_MAIN_VER_MINOR                     2
 #define PANTHEIOS_EXTRAS_MAIN_VER_REVISION                  1
 
-#define PANTHEIOS_EXTRAS_MAIN_VER                           PANTHEIOS_EXTRAS_MAIN_VER_0_2_1
+#define PANTHEIOS_EXTRAS_MAIN_VER                           PANTHEIOS_EXTRAS_MAIN_VER_0_2_1_ALPHA_2
 
 
 /* /////////////////////////////////////////////////////////////////////////
