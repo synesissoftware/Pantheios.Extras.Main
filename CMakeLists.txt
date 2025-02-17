@@ -5,7 +5,7 @@
 # Purpose:  Top-level CMake lists file for Pantheios.Extras.Main
 #
 # Created:  24th October 2024
-# Updated:  1st February 2025
+# Updated:  17th February 2025
 #
 # ######################################################################## #
 
@@ -41,7 +41,7 @@ string(TOUPPER ${PROJECT_NAME} PROJECT_NAME_UPPER)
 # handle version number
 set(RX_PROJ_TAG "${PROJECT_NAME_UPPER}")
 set(RX_WS "[ \t]")
-file(READ "${CMAKE_SOURCE_DIR}/include/pantheios/extras/Main/internal/common.h" _header_file)
+file(READ "${CMAKE_SOURCE_DIR}/include/pantheios/extras/main/internal/common.h" _header_file)
 string(REGEX MATCH "#${RX_WS}*define${RX_WS}+_?${RX_PROJ_TAG}_VER_MAJOR${RX_WS}+([0-9]+)" MAJOR_DUMMY ${_header_file})
 set(_VERSION_MAJOR ${CMAKE_MATCH_1})
 string(REGEX MATCH "#${RX_WS}*define${RX_WS}+_?${RX_PROJ_TAG}_VER_MINOR${RX_WS}+([0-9]+)" MINOR_DUMMY ${_header_file})
@@ -303,7 +303,7 @@ endif(BUILD_TESTING)
 # ##########################################################
 # export
 
-set(EXPORT_NAME ${PROJECT_NAME})
+set(EXPORT_NAME ${PROJECT_NAME_LOWER})
 
 configure_package_config_file(
 	${CMAKE_CURRENT_SOURCE_DIR}/cmake/${EXPORT_NAME}-config.cmake.in
