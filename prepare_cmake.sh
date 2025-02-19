@@ -8,10 +8,13 @@ MakeCmd=${SIS_CMAKE_COMMAND:-make}
 
 Configuration=Release
 ExamplesDisabled=0
+MSVC_MT=0
 MinGW=0
 RunMake=0
+STLSoftDirGiven=
 TestingDisabled=0
 VerboseMakefile=0
+WideStrings=0
 
 
 # ##########################################################
@@ -40,9 +43,22 @@ while [[ $# -gt 0 ]]; do
 
       MinGW=1
       ;;
+    --msvc-mt)
+
+      MSVC_MT=1
+      ;;
     -m|--run-make)
 
       RunMake=1
+      ;;
+    -s|--stlsoft-root-dir)
+
+      shift
+      STLSoftDirGiven=$1
+      ;;
+    -w|--wide-strings)
+
+      WideStrings=1
       ;;
     --help)
 
@@ -53,8 +69,6 @@ Copyright (c) 2010-2019, Matthew Wilson and Synesis Software
 Creates/reinitialises the CMake build script(s)
 
 $ScriptPath [ ... flags/options ... ]
-
-IMPORTANT: If you have not previously performed a CMake installation of xTests, the library that STLSoft uses for its own tests, you MUST specify the -E and -T flags. Once you have installed STLSoft, you can then configure/build/install STLSoft, and then come back and prepare STLSoft without -E/-T and exercise its examples and tests.
 
 Flags/options:
 
@@ -76,24 +90,36 @@ Flags/options:
 
     -T
     --disable-testing
-        disables building of tests (by setting BUILD_TESTING=OFF). This is
-        necessary, for example, when installing on a system that does not
-        (yet) have xTests - which itself depends on STLSOFT - installed
+        disables building of tests (by setting BUILD_TESTING=OFF). With
+        testing disabled, the dependency projects xTests is not
+        required (and not searched)
 
     --mingw
         uses explicitly the "MinGW Makefiles" generator
 
+    --msvc-mt
+        when using Visual C++ (MSVC), the static runtime library will be
+        selected; the default is the dynamic runtime library
+
     -m
     --run-make
         executes make after a successful running of CMake
+
+    -s <dir>
+    --stlsoft-root-dir <dir>
+        specifies the STLSoft root-directory, which will be passed to CMake
+        as the variable STLSOFT, and which will override the environment
+        variable STLSOFT (if present)
+
+    -w
+    --wide-strings
+        builds for wide-strings. Default is multibyte strings
 
 
     standard flags:
 
     --help
         displays this help and terminates
-
-IMPORTANT: If you have not previously performed a CMake installation of xTests, the library that STLSoft uses for its own tests, you MUST specify the -E and -T flags. Once you have installed STLSoft, you can then configure/build/install STLSoft, and then come back and prepare STLSoft without -E/-T and exercise its examples and tests.
 
 EOF
 
@@ -121,12 +147,17 @@ cd $CMakeDir
 echo "Executing CMake (in ${CMakeDir})"
 
 if [ $ExamplesDisabled -eq 0 ]; then CMakeBuildExamplesFlag="ON" ; else CMakeBuildExamplesFlag="OFF" ; fi
+if [ $MSVC_MT -eq 0 ]; then CMakeMsvcMtFlag="OFF" ; else CMakeMsvcMtFlag="ON" ; fi
+if [ -z $STLSoftDirGiven ]; then CMakeSTLSoftVariable="" ; else CMakeSTLSoftVariable="-DSTLSOFT=$STLSoftDirGiven/" ; fi
 if [ $TestingDisabled -eq 0 ]; then CMakeBuildTestingFlag="ON" ; else CMakeBuildTestingFlag="OFF" ; fi
 if [ $VerboseMakefile -eq 0 ]; then CMakeVerboseMakefileFlag="OFF" ; else CMakeVerboseMakefileFlag="ON" ; fi
+if [ $WideStrings -eq 0 ]; then CMakeWideStringVariable="" ; else CMakeWideStringVariable="-DPANTHEIOS_USE_WIDE_STRINGS:BOOL=ON" ; fi
 
 if [ $MinGW -ne 0 ]; then
 
   cmake \
+    $CMakeSTLSoftVariable \
+    $CMakeWideStringVariable \
     -DBUILD_EXAMPLES:BOOL=$CMakeBuildExamplesFlag \
     -DBUILD_TESTING:BOOL=$CMakeBuildTestingFlag \
     -DCMAKE_BUILD_TYPE=$Configuration \
@@ -137,10 +168,13 @@ if [ $MinGW -ne 0 ]; then
 else
 
   cmake \
+    $CMakeSTLSoftVariable \
+    $CMakeWideStringVariable \
     -DBUILD_EXAMPLES:BOOL=$CMakeBuildExamplesFlag \
     -DBUILD_TESTING:BOOL=$CMakeBuildTestingFlag \
     -DCMAKE_BUILD_TYPE=$Configuration \
     -DCMAKE_VERBOSE_MAKEFILE:BOOL=$CMakeVerboseMakefileFlag \
+    -DMSVC_USE_MT:BOOL=$CMakeMsvcMtFlag \
     -S $Dir \
     -B $CMakeDir \
     || (cd ->/dev/null ; exit 1)

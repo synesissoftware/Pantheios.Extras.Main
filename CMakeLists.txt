@@ -5,7 +5,7 @@
 # Purpose:  Top-level CMake lists file for Pantheios.Extras.Main
 #
 # Created:  24th October 2024
-# Updated:  24th October 2024
+# Updated:  1st February 2025
 #
 # ######################################################################## #
 
@@ -71,6 +71,18 @@ if(MSVC)
 		set(CMAKE_C_STANDARD 90)
 		set(CMAKE_CXX_STANDARD 98)
 	endif()
+
+	if(MSVC_USE_MT)
+
+		set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+	endif(MSVC_USE_MT)
+else(MSVC)
+
+	if(MSVC_USE_MT)
+
+		# this here just to absorb warning about not using `MSVC_USE_MT` (to
+		# enable **prepare_cmake.sh** to be simple)
+	endif(MSVC_USE_MT)
 endif(MSVC)
 
 
@@ -86,9 +98,30 @@ include(TargetMacros)
 
 
 # ################################################
-# dependencies and options
+# dependencies, features, and options
 
 option(BUILD_EXAMPLES "Build examples" ON)
+
+# ######################################
+# features
+
+if(PANTHEIOS_USE_WIDE_STRINGS)
+
+	add_definitions(-DPANTHEIOS_USE_WIDE_STRINGS)
+	if (WIN32)
+
+		add_definitions(-DUNICODE)
+		add_definitions(-D_UNICODE)
+	endif(WIN32)
+else(PANTHEIOS_USE_WIDE_STRINGS)
+
+	add_definitions(-DPANTHEIOS_NO_USE_WIDE_STRINGS)
+	if (WIN32)
+
+		add_definitions(-D_MBCS)
+	endif(WIN32)
+endif(PANTHEIOS_USE_WIDE_STRINGS)
+
 
 # ######################################
 # dependencies
@@ -104,6 +137,14 @@ option(BUILD_EXAMPLES "Build examples" ON)
 
 # ############################
 # STLSoft
+#
+# We provide flexibility here, as in:
+# 1. if a CMake variable STLSOFT is provided then it is used; otherwise
+# 2. if an environment variable STLSOFT is provided then it then it is
+#    used; otherwise
+# 3. if the package STLSoft (via find_package()) is found then it is
+#    used; otherwise
+# 4. we abort
 
 if(DEFINED STLSOFT)
 
@@ -179,7 +220,7 @@ endif()
 
 if(BUILD_TESTING)
 
-	set(xTests_REQUIRED_VERSION_ 0.25)
+	set(xTests_REQUIRED_VERSION_ 0.26)
 
 	find_package(xTests ${xTests_REQUIRED_VERSION_} REQUIRED)
 
@@ -217,6 +258,13 @@ target_include_directories(Pantheios.Extras.Main INTERFACE
 install(TARGETS Pantheios.Extras.Main
 	EXPORT project-targets
 	PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+)
+
+install(
+	DIRECTORY ${CMAKE_SOURCE_DIR}/include/pantheios/
+	DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/pantheios/
+	FILES_MATCHING
+	PATTERN "*.h*"
 )
 
 
@@ -284,13 +332,6 @@ install(FILES
 	"${CMAKE_CURRENT_BINARY_DIR}/cmake/${EXPORT_NAME}-config.cmake"
 	"${CMAKE_CURRENT_BINARY_DIR}/cmake/${EXPORT_NAME}-config-version.cmake"
 	DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/${EXPORT_NAME}
-)
-
-install(
-	DIRECTORY ${CMAKE_SOURCE_DIR}/include/pantheios/
-	DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/pantheios/
-	FILES_MATCHING
-	PATTERN "*.h*"
 )
 
 
