@@ -19,7 +19,11 @@ if(WIN32)
 	)
 endif(WIN32)
 
-list(APPEND X_GCC_CUSTOM_WARNINGS_TO_BE_SUPPRESSED writable-strings)
+list(APPEND X_GCC_CUSTOM_WARNINGS_TO_BE_SUPPRESSED
+	writable-strings
+	write-strings
+)
+
 define_target_compile_options(test.unit.cpp.main.1)
 
 target_link_libraries(test.unit.cpp.main.1
