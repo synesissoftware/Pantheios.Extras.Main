@@ -1,15 +1,15 @@
 /* /////////////////////////////////////////////////////////////////////////
- * File:        pantheios/extras/main/internal/common.h
+ * File:    pantheios/extras/main/internal/common.h
  *
- * Purpose:     Definition of common features header for the
- *              Pantheios.Extras.Main library.
+ * Purpose: Definition of common features header for the
+ *          Pantheios.Extras.Main library.
  *
- * Created:     6th January 2011
- * Updated:     11th February 2021
+ * Created: 6th January 2011
+ * Updated: 31st January 2025
  *
- * Home:        http://www.pantheios.org/
+ * Home:    http://www.pantheios.org/
  *
- * Copyright (c) 2019-2021, Matthew Wilson and Synesis Information Systems
+ * Copyright (c) 2019-2025, Matthew Wilson and Synesis Information Systems
  * Copyright (c) 2011-2019, Matthew Wilson and Synesis Software
  * All rights reserved.
  *
@@ -57,9 +57,10 @@
 #ifndef PANTHEIOS_DOCUMENTATION_SKIP_SECTION
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_MAJOR    1
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_MINOR    0
-# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_REVISION 11
-# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_EDIT     14
+# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_REVISION 13
+# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_EDIT     16
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
+
 
 /* /////////////////////////////////////////////////////////////////////////
  * includes
@@ -69,13 +70,15 @@
 
 #include <pantheios/extras/main/internal/stlsoft.h>
 
+
 /* /////////////////////////////////////////////////////////////////////////
  * compatibility checks
  */
 
-#if PANTHEIOS_VER < 0x010001db
-# error Pantheios.Extras.Main required Pantheios 1.0.1 beta 219, or later
+#if PANTHEIOS_VER < 0x010001de
+# error Pantheios.Extras.Main required Pantheios 1.0.1 beta 221, or later
 #endif /* !PANTHEIOS_NO_NAMESPACE */
+
 
 /* /////////////////////////////////////////////////////////////////////////
  * version information
@@ -107,13 +110,16 @@
 # define PANTHEIOS_EXTRAS_MAIN_VER_0_1_2                    0x000102ff
 # define PANTHEIOS_EXTRAS_MAIN_VER_0_1_3                    0x000103ff
 # define PANTHEIOS_EXTRAS_MAIN_VER_0_2_0                    0x000200ff
+# define PANTHEIOS_EXTRAS_MAIN_VER_0_2_1_ALPHA_1            0x00020141
+# define PANTHEIOS_EXTRAS_MAIN_VER_0_2_1_ALPHA_2            0x00020142
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 #define PANTHEIOS_EXTRAS_MAIN_VER_MAJOR                     0
 #define PANTHEIOS_EXTRAS_MAIN_VER_MINOR                     2
-#define PANTHEIOS_EXTRAS_MAIN_VER_REVISION                  0
+#define PANTHEIOS_EXTRAS_MAIN_VER_REVISION                  1
 
-#define PANTHEIOS_EXTRAS_MAIN_VER                           PANTHEIOS_EXTRAS_MAIN_VER_0_2_0
+#define PANTHEIOS_EXTRAS_MAIN_VER                           PANTHEIOS_EXTRAS_MAIN_VER_0_2_1_ALPHA_2
+
 
 /* /////////////////////////////////////////////////////////////////////////
  * inclusion

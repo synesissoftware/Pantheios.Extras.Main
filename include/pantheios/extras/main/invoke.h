@@ -1,14 +1,14 @@
 /* /////////////////////////////////////////////////////////////////////////
- * File:        pantheios/extras/main/invoke.h
+ * File:    pantheios/extras/main/invoke.h
  *
- * Purpose:     Definition of the pantheios_extras_main_invoke() function.
+ * Purpose: Definition of the pantheios_extras_main_invoke() function.
  *
- * Created:     29th December 2010
- * Updated:     9th February 2021
+ * Created: 29th December 2010
+ * Updated: 24th October 2024
  *
- * Home:        http://www.pantheios.org/
+ * Home:    http://www.pantheios.org/
  *
- * Copyright (c) 2019-2021, Matthew Wilson and Synesis Information Systems
+ * Copyright (c) 2019-2024, Matthew Wilson and Synesis Information Systems
  * Copyright (c) 2010-2019, Matthew Wilson and Synesis Software
  * All rights reserved.
  *
@@ -58,7 +58,7 @@
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_H_INVOKE_MAJOR     1
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_H_INVOKE_MINOR     2
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_H_INVOKE_REVISION  4
-# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_H_INVOKE_EDIT      16
+# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_H_INVOKE_EDIT      17
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
@@ -95,7 +95,7 @@
   {
     . . . // your "real" main()
   }
-  int main((int argc, char** argv)
+  int main((int argc, char* argv[])
   {
     return <strong>pantheios_extras_main_invoke</strong>(argc, argv, main0, "myprogram", NULL);
   }

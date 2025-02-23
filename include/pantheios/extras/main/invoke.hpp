@@ -1,14 +1,14 @@
 /* /////////////////////////////////////////////////////////////////////////
- * File:        pantheios/extras/main/invoke.hpp
+ * File:    pantheios/extras/main/invoke.hpp
  *
- * Purpose:     Definition of the pantheios::extras::main::invoke overloads.
+ * Purpose: Definition of the pantheios::extras::main::invoke overloads.
  *
- * Created:     29th December 2010
- * Updated:     9th February 2021
+ * Created: 29th December 2010
+ * Updated: 24th October 2024
  *
- * Home:        http://www.pantheios.org/
+ * Home:    http://www.pantheios.org/
  *
- * Copyright (c) 2019-2021, Matthew Wilson and Synesis Information Systems
+ * Copyright (c) 2019-2024, Matthew Wilson and Synesis Information Systems
  * Copyright (c) 2010-2019, Matthew Wilson and Synesis Software
  * All rights reserved.
  *
@@ -57,8 +57,8 @@
 #ifndef PANTHEIOS_DOCUMENTATION_SKIP_SECTION
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE_MAJOR       1
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE_MINOR       5
-# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE_REVISION    2
-# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE_EDIT        33
+# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE_REVISION    3
+# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE_EDIT        34
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
@@ -96,7 +96,7 @@
  */
 
 /* The manner in which Pantheios.Extras.Main reacts to unknown exceptions
- * - via the <code>catch(...) {}</code> clause - is determined by the
+ * - via the <code>catch (...) {}</code> clause - is determined by the
  * following user-definable pre-processor symbols:
  *
  * - PANTHEIOS_EXTRAS_MAIN_NO_CATCHALL
@@ -149,7 +149,9 @@
  *      object destructors).
  */
 
-#if defined(PANTHEIOS_EXTRAS_MAIN_NO_CATCHALL)
+#if 0
+#elif defined(PANTHEIOS_EXTRAS_MAIN_NO_CATCHALL)
+
  /* 1. */
 # ifdef PANTHEIOS_EXTRAS_MAIN_USE_CATCHALL
 #  undef PANTHEIOS_EXTRAS_MAIN_USE_CATCHALL
@@ -160,14 +162,14 @@
 # ifdef PANTHEIOS_EXTRAS_MAIN_CATCHALL_RETHROW_UNKNOWN_EXCEPTIONS
 #  undef PANTHEIOS_EXTRAS_MAIN_CATCHALL_RETHROW_UNKNOWN_EXCEPTIONS
 # endif /* PANTHEIOS_EXTRAS_MAIN_CATCHALL_RETHROW_UNKNOWN_EXCEPTIONS */
-
 #elif defined(PANTHEIOS_EXTRAS_MAIN_USE_CATCHALL)
+
  /* 2. */
 # ifdef PANTHEIOS_EXTRAS_MAIN_NO_CATCHALL
 #  error Pre-processor logic is in error
 # endif /* PANTHEIOS_EXTRAS_MAIN_NO_CATCHALL */
-
 #else /* ? PANTHEIOS_EXTRAS_MAIN_NO_CATCHALL || PANTHEIOS_EXTRAS_MAIN_USE_CATCHALL */
+
  /* 3. */
 # ifdef PANTHEIOS_EXTRAS_MAIN_NO_CATCHALL
 #  error Pre-processor logic is in error
@@ -181,11 +183,11 @@
 # else /* ? NDEBUG */
 #  define PANTHEIOS_EXTRAS_MAIN_NO_CATCHALL
 # endif /* NDEBUG */
-
 #endif /* PANTHEIOS_EXTRAS_MAIN_NO_CATCHALL || PANTHEIOS_EXTRAS_MAIN_USE_CATCHALL */
 
 
 #ifdef PANTHEIOS_EXTRAS_MAIN_USE_CATCHALL
+
  /* 4. */
 # ifdef PANTHEIOS_EXTRAS_MAIN_NO_CATCHALL
 #  error Pre-processor logic is in error
@@ -202,13 +204,13 @@
 #  if defined(PANTHEIOS_EXTRAS_MAIN_CATCHALL_ABSORB_UNKNOWN_EXCEPTIONS)
 #   error Define at most one of PANTHEIOS_EXTRAS_MAIN_CATCHALL_ABSORB_UNKNOWN_EXCEPTIONS and PANTHEIOS_EXTRAS_MAIN_CATCHALL_RETHROW_UNKNOWN_EXCEPTIONS
 #  endif
-
 # else /* PANTHEIOS_EXTRAS_MAIN_CATCHALL_ABSORB_UNKNOWN_EXCEPTIONS || PANTHEIOS_EXTRAS_MAIN_CATCHALL_RETHROW_UNKNOWN_EXCEPTIONS */
+
 /* 4.1 */
 
 # endif /* PANTHEIOS_EXTRAS_MAIN_CATCHALL_ABSORB_UNKNOWN_EXCEPTIONS || PANTHEIOS_EXTRAS_MAIN_CATCHALL_RETHROW_UNKNOWN_EXCEPTIONS */
-
 #endif /* PANTHEIOS_EXTRAS_MAIN_USE_CATCHALL */
+
 
 /* /////////////////////////////////////////////////////////////////////////
  * namespace
@@ -220,6 +222,7 @@ namespace extras
 {
 namespace main
 {
+
 
 /* /////////////////////////////////////////////////////////////////////////
  * helper functions
@@ -234,7 +237,9 @@ namespace ximpl_invoke
     struct invoker
     {
     public:
-        virtual int invoke() = 0;
+        virtual
+        int
+        invoke() = 0;
     };
 
     struct main_invoker
@@ -251,11 +256,13 @@ namespace ximpl_invoke
             , pfnMain(pfnMain)
         {}
     private:
-        main_invoker(main_invoker const& ); // proscribed
-        void operator =(main_invoker const& ); // proscribed
+        main_invoker(main_invoker const&) STLSOFT_COPY_CONSTRUCTION_PROSCRIBED;
+        void operator =(main_invoker const&) STLSOFT_COPY_ASSIGNMENT_PROSCRIBED;
 
     public: // Overriddes
-        /* virtual */ int invoke()
+        /* virtual */
+        int
+        invoke()
         {
             return (*pfnMain)(argc, argv);
         }
@@ -265,8 +272,8 @@ namespace ximpl_invoke
         char const* const* const  argv;
         int (STLSOFT_CDECL* const pfnMain)(int, char const* const*);
     };
-
 # ifdef PANTHEIOS_USE_WIDE_STRINGS
+
     struct wmain_invoker
         : public invoker
     {
@@ -281,11 +288,13 @@ namespace ximpl_invoke
             , pfnMain(pfnMain)
         {}
     private:
-        wmain_invoker(main_invoker const& ); // proscribed
-        void operator =(wmain_invoker const& ); // proscribed
+        wmain_invoker(main_invoker const&) STLSOFT_COPY_CONSTRUCTION_PROSCRIBED;
+        void operator =(main_invoker const&) STLSOFT_COPY_ASSIGNMENT_PROSCRIBED;
 
     public: // Overriddes
-        /* virtual */ int invoke()
+        /* virtual */
+        int
+        invoke()
         {
             return (*pfnMain)(argc, argv);
         }
@@ -296,7 +305,6 @@ namespace ximpl_invoke
         int     (STLSOFT_CDECL* const pfnMain)(int, wchar_t const* const*);
     };
 # endif /* PANTHEIOS_USE_WIDE_STRINGS */
-
 
     inline
     void
@@ -473,24 +481,24 @@ namespace ximpl_invoke
         {
             return invoker.invoke();
         }
-        catch(std::bad_alloc&)
+        catch (std::bad_alloc&)
         {
             on_oom_(PANTHEIOS_SEV_ALERT, programName);
         }
 # ifdef __AFX_H__
-        catch(CMemoryException* px)
+        catch (CMemoryException* px)
         {
             px->Delete();
 
             on_oom_(PANTHEIOS_SEV_ALERT, programName);
         }
 # endif /* __AFX_H__*/
-        catch(std::exception& x)
+        catch (std::exception& x)
         {
             on_exception_(PANTHEIOS_SEV_ALERT, programName, x);
         }
 # ifdef __AFX_H__
-        catch(CException* px)
+        catch (CException* px)
         {
             struct CException_deleter
             {
@@ -514,14 +522,14 @@ namespace ximpl_invoke
         }
 # endif /* __AFX_H__*/
 # ifdef PANTHEIOS_EXTRAS_MAIN_USE_CATCHALL
-        catch(...)
+        catch (...)
         {
             on_catchall_(PANTHEIOS_SEV_EMERGENCY, programName);
 
             // In general, the only sensible reaction to receipt of an
             // unknown exception is to die immediately. Since invoke()
             // is (or should be) the outermost scope of the program, we
-            // do not need to forcibly invoke exit, as that's just about 
+            // do not need to forcibly invoke exit, as that's just about
 #  if defined(PANTHEIOS_EXTRAS_MAIN_CATCHALL_ABSORB_UNKNOWN_EXCEPTIONS)
             ;
 #  elif defined(PANTHEIOS_EXTRAS_MAIN_CATCHALL_RETHROW_UNKNOWN_EXCEPTIONS)
@@ -571,9 +579,11 @@ namespace ximpl_invoke
                 PAN_CHAR_T const* const programName = pantheios_getProcessIdentity();
 
 # ifdef PANTHEIOS_USE_WIDE_STRINGS
+
                 char    programName_m[1001];
 #  ifdef PANTHEIOS_USING_SAFE_STR_FUNCTIONS
                 size_t  cch;
+
                 if (0 == ::wcstombs_s(&cch, programName_m, STLSOFT_NUM_ELEMENTS(programName_m), programName, STLSOFT_NUM_ELEMENTS(programName_m) - 1u))
 #  else /* ? PANTHEIOS_USING_SAFE_STR_FUNCTIONS */
                 size_t  cch = ::wcstombs(programName_m, programName, STLSOFT_NUM_ELEMENTS(programName_m) - 1u);
@@ -653,8 +663,6 @@ namespace ximpl_invoke
     {
         return prepare_invoker_m_(argc, argv, reinterpret_cast<int (STLSOFT_CDECL*)(int, char const* const*)>(pfnMain), programName);
     }
-
-
 # ifdef PANTHEIOS_USE_WIDE_STRINGS
 
     inline
@@ -684,6 +692,7 @@ namespace ximpl_invoke
             char                    arg0_[1 + _MAX_PATH];
 #  ifdef PANTHEIOS_USING_SAFE_STR_FUNCTIONS
             size_t                  cch;
+
             if (0 == ::wcstombs_s(&cch, arg0_, STLSOFT_NUM_ELEMENTS(arg0_), arg0, STLSOFT_NUM_ELEMENTS(arg0_) - 1u))
 #  else /* ? PANTHEIOS_USING_SAFE_STR_FUNCTIONS */
             size_t const            cch     =   ::wcstombs(arg0_, arg0, STLSOFT_NUM_ELEMENTS(arg0_) - 1u);
@@ -720,6 +729,7 @@ namespace ximpl_invoke
             char    programName_m[1001];
 #  ifdef PANTHEIOS_USING_SAFE_STR_FUNCTIONS
             size_t  cch;
+
             if (0 == ::wcstombs_s(&cch, programName_m, STLSOFT_NUM_ELEMENTS(programName_m), programName, STLSOFT_NUM_ELEMENTS(programName_m) - 1u))
 #  else /* ? PANTHEIOS_USING_SAFE_STR_FUNCTIONS */
             size_t  cch = ::wcstombs(programName_m, programName, STLSOFT_NUM_ELEMENTS(programName_m) - 1u);
@@ -747,12 +757,10 @@ namespace ximpl_invoke
     {
         return prepare_invoker_w_(argc, argv, reinterpret_cast<int (STLSOFT_CDECL*)(int, wchar_t const* const*)>(pfnMain), programName);
     }
-
 # endif /* PANTHEIOS_USE_WIDE_STRINGS */
-
 } /* namespace ximpl_invoke */
-
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
+
 
 /* /////////////////////////////////////////////////////////////////////////
  * API functions
@@ -770,7 +778,7 @@ namespace ximpl_invoke
   {
     . . . // your "real" main()
   }
-  int main((int argc, char** argv)
+  int main((int argc, char* argv[])
   {
     return <strong>::pantheios::extras::main::invoke</strong>(argc, argv, main0, "myprogram");
   }
@@ -808,11 +816,11 @@ invoke(
  * Consider the following example:
 \htmlonly
 <pre>
-  int <strong>main0</strong>(int argc, char** argv)
+  int <strong>main0</strong>(int argc, char* argv[])
   {
     . . . // your "real" main()
   }
-  int main((int argc, char** argv)
+  int main((int argc, char* argv[])
   {
     return <strong>::pantheios::extras::main::invoke</strong>(argc, argv, main0, "myprogram");
   }
@@ -856,7 +864,7 @@ invoke(
   {
     . . . // your "real" main()
   }
-  int main((int argc, char** argv)
+  int main((int argc, char* argv[])
   {
     return <strong>::pantheios::extras::main::invoke</strong>(argc, argv, main0);
   }
@@ -894,11 +902,11 @@ invoke(
 <pre>
   extern "C" PAN_CHAR_T const PANTHEIOS_FE_PROCESS_IDENTITY[] = "myprogram";
 
-  int <strong>main0</strong>(int argc, char** argv)
+  int <strong>main0</strong>(int argc, char* argv[])
   {
     . . . // your "real" main()
   }
-  int main((int argc, char** argv)
+  int main((int argc, char* argv[])
   {
     return <strong>::pantheios::extras::main::invoke</strong>(argc, argv, main0);
   }
@@ -983,6 +991,7 @@ invoke(
 # endif /* PANTHEIOS_USE_WIDE_STRINGS */
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
+
 /* /////////////////////////////////////////////////////////////////////////
  * namespace
  */
@@ -990,6 +999,7 @@ invoke(
 } // namespace main
 } // namespace extras
 } // namespace pantheios
+
 
 /* /////////////////////////////////////////////////////////////////////////
  * inclusion
