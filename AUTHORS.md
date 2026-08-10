@@ -1,4 +1,4 @@
-# Pantheios.Extras.Main - Authors
+# Pantheios.Extras.Main - Authors <!-- omit in toc -->
 
 ## Major Contributors:
 

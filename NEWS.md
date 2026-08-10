@@ -1,4 +1,4 @@
- Pantheios.Extras.Main - News <!-- omit in toc -->
+# Pantheios.Extras.Main - News <!-- omit in toc -->
 
 ## Table of Contents <!-- omit in toc -->
 
