@@ -1,1 +1,1 @@
-# Pantheios.Extras.Main - CHANGES <!-- omit in toc -->
+# Pantheios.Extras.Main - Changes <!-- omit in toc -->
