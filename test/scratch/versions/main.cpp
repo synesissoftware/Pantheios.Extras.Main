@@ -1,13 +1,17 @@
 
 #include <pantheios/extras/main.h>
 
+#include <pantheios/pantheios.h>
+
+#include <stlsoft/stlsoft.h>
+
 #include <iomanip>
 #include <iostream>
 
 #include <stdlib.h>
 
 
-#define PROGRAM_NAME                                        "versions"
+#define PROGRAM_NAME                                        "test.scratch.versions"
 
 
 template<
@@ -52,6 +56,20 @@ int main(int /* argc */, char* /* argv */[])
         unsigned const libver = PANTHEIOS_EXTRAS_MAIN_VER;
 
         version(std::cout, "", "Pantheios.Extras.Main", "PANTHEIOS_EXTRAS_MAIN_VER", libver);
+    }
+
+    std::cout << "\n" << "efferent dependencies:" << std::endl;
+
+    {
+        unsigned const libver = PANTHEIOS_VER;
+
+        version(std::cout, "\t", "Pantheios", "PANTHEIOS_VER", libver);
+    }
+
+    {
+        unsigned const libver = _STLSOFT_VER;
+
+        version(std::cout, "\t", "STLSoft", "_STLSOFT_VER", libver);
     }
 
     return EXIT_SUCCESS;
