@@ -9,7 +9,7 @@
 
 | Date                | News Item                                                                          | Details |
 | ------------------- | ---------------------------------------------------------------------------------- | ------- |
-| 13th October 2026   | [**Pantheios.Extras.Main** 0.2.1-beta2](https://github.com/synesissoftware/Pantheios.Extras.Main/releases/tag/0.2.1-beta2) | Tip helpers; modular `ci.yml`; `PANTHEIOS_EXTRAS_MAIN_VER_RELSTATUS` |
+| 13th October 2026   | [**Pantheios.Extras.Main** 0.2.1-beta2](https://github.com/synesissoftware/Pantheios.Extras.Main/releases/tag/0.2.1-beta2) | Tip helpers; modular `ci.yml`; `VER_RELSTATUS`; package `find_dependency` |
 | 9th October 2026    | [**Pantheios.Extras.Main** 0.2.1-beta1](https://github.com/synesissoftware/Pantheios.Extras.Main/releases/tag/0.2.1-beta1) | Phase 4b CMake helpers; `test.scratch.versions` reporter; `PANTHEIOS_EXTRAS_MAIN_VER` |
 | 23rd February 2025  | Pantheios.Extras.Main 0.2.1 (alpha 2) released                                     |         |
 | 17th December 2024  | Pantheios.Extras.Main 0.2.0 released                                               |         |

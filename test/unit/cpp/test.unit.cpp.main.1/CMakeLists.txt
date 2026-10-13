@@ -24,6 +24,10 @@ list(APPEND X_GCC_CUSTOM_WARNINGS_TO_BE_SUPPRESSED
 	write-strings
 )
 
+list(APPEND X_MSVC_CUSTOM_WARNINGS_TO_BE_SUPPRESSED
+	4996
+)
+
 define_target_compile_options(test.unit.cpp.main.1)
 
 target_link_libraries(test.unit.cpp.main.1

@@ -4,7 +4,7 @@
  * Purpose: Implementation file for the example.cpp.wmain library.
  *
  * Created: 13th October 2015
- * Updated: 24th October 2024
+ * Updated: 13th October 2026
  *
  * ////////////////////////////////////////////////////////////////////// */
 
@@ -70,8 +70,8 @@ int main0(int argc, wchar_t* argv[])
         }
     }
 
-    printf(
-        "USAGE: %s {memory|root|other}\n"
+    wprintf(
+        L"USAGE: %s {memory|root|other}\n"
     ,   argv[0]
     );
 

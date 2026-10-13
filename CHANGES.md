@@ -7,6 +7,8 @@
 * Migrated the version low-byte macro to **`PANTHEIOS_EXTRAS_MAIN_VER_RELSTATUS`**, retaining **`PANTHEIOS_EXTRAS_MAIN_VER_ALPHABETA`** as a documentation-skip alias;
 * Gold-copied tip **`run_all_examples.*`** / **`run_all_scratch_tests.*`** (**misc-dev-scripts** `@dfa6add` ATF dialect); left optional **`.sis`** ATF lists absent;
 * Added modular GitHub Actions CI (**`ci.yml`** + **`ci-cell.yml`** + **`install-sis-deps`**): artifact split, execute-bit restore, Windows **`.cmd`** dogfood; deps **`STLSoft shwild xTests Pantheios`** (no **b64**); README CI badge targets **`ci.yml`**;
+* Exported **`Pantheios.Extras.Main`** now **INTERFACE**-links **STLSoft** / **Pantheios** when found as packages, with matching **`find_dependency()`** in the installed config (xTests remains test-only);
+* Gated **`example.cpp.main.MFC`** on **`find_package(MFC)`** and **`example.cpp.wmain`** on **`PANTHEIOS_USE_WIDE_STRINGS`**; MSVC unit-test const/`fopen` hygiene;
 
 
 ## 0.2.1-beta1 - 9th October 2026
