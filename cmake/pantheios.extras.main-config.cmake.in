@@ -1,3 +1,25 @@
 @PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+
+# The public headers include both STLSoft and Pantheios. When either was
+# located as a CMake package at build time, the exported target links its
+# imported target, so the consumer must find the same package. When it was
+# provided as a source tree (STLSOFT / PANTHEIOS), the export names no
+# target and nothing is required here. STLSoft is found first, as
+# Pantheios's own package configuration expects.
+
+if(@PEXTRAS_MAIN_STLSOFT_IS_PACKAGE@)
+
+	find_dependency(STLSoft)
+endif()
+
+if(@PEXTRAS_MAIN_PANTHEIOS_IS_PACKAGE@)
+
+	find_dependency(Pantheios)
+endif()
+
 include("${CMAKE_CURRENT_LIST_DIR}/@EXPORT_NAME@-targets.cmake")
 
+
+# ############################## end of file ############################# #

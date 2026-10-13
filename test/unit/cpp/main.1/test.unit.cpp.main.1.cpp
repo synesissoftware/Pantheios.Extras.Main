@@ -4,7 +4,7 @@
  * Purpose: Implementation file for the test.unit.cpp.main.1 library.
  *
  * Created: 11th January 2011
- * Updated: 24th October 2024
+ * Updated: 13th October 2026
  *
  * ////////////////////////////////////////////////////////////////////// */
 
@@ -185,12 +185,14 @@ int main(int argc, char* argv[])
 namespace
 {
 
-    static char*        args[]  =   { "arg0", NULL };
+    static char         arg0[]  =   "arg0";
+    static char*        args[]  =   { arg0, NULL };
     static int          argc    =   STLSOFT_NUM_ELEMENTS(args) - 1;
     static char**       argv    =   args;
 #ifdef PANTHEIOS_USE_WIDE_STRINGS
 
-    static wchar_t*     wargs[] =   { L"arg0", NULL };
+    static wchar_t      warg0[] =   L"arg0";
+    static wchar_t*     wargs[] =   { warg0, NULL };
     static int          wargc   =   STLSOFT_NUM_ELEMENTS(wargs) - 1;
     static wchar_t**    wargv   =   wargs;
 #endif /* PANTHEIOS_USE_WIDE_STRINGS */
