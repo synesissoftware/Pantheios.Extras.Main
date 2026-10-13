@@ -4,6 +4,12 @@ Git access to the [Pantheios](http://pantheios.org/) **Extras** library **Panthe
  - (un)initialisation of Pantheios library; and
  - catching of unhandled exceptions and issuing of diagnostic log statements and contingent reports
 
+![C/C++](https://img.shields.io/badge/C%2FC%2B%2B-00599C?style=flat&logo=c%2B%2B&logoColor=white)
+[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+[![GitHub release](https://img.shields.io/github/v/release/synesissoftware/Pantheios.Extras.Main.svg)](https://github.com/synesissoftware/Pantheios.Extras.Main/releases/latest)
+[![Last Commit](https://img.shields.io/github/last-commit/synesissoftware/Pantheios.Extras.Main)](https://github.com/synesissoftware/Pantheios.Extras.Main/commits/master)
+[![CI](https://github.com/synesissoftware/Pantheios.Extras.Main/actions/workflows/ci.yml/badge.svg)](https://github.com/synesissoftware/Pantheios.Extras.Main/actions/workflows/ci.yml)
+
 
 ## Table of Contents <!-- omit in toc -->
 

@@ -5,7 +5,7 @@
  *          Pantheios.Extras.Main library.
  *
  * Created: 6th January 2011
- * Updated: 9th October 2026
+ * Updated: 13th October 2026
  *
  * Home:    http://www.pantheios.org/
  *
@@ -57,8 +57,8 @@
 #ifndef PANTHEIOS_DOCUMENTATION_SKIP_SECTION
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_MAJOR    1
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_MINOR    0
-# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_REVISION 15
-# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_EDIT     18
+# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_REVISION 17
+# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_EDIT     20
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 
@@ -96,8 +96,8 @@
  * The patch version number of Pantheios.Extras.Main
  */
 
-/** \def PANTHEIOS_EXTRAS_MAIN_VER_ALPHABETA
- * The alpha/beta number of Pantheios.Extras.Main, in the range 1-0xFE for
+/** \def PANTHEIOS_EXTRAS_MAIN_VER_RELSTATUS
+ * The release status of Pantheios.Extras.Main, in the range 1-0xFE for
  * prerelease versions, and 0xFF for a released version
  */
 
@@ -118,22 +118,24 @@
 # define PANTHEIOS_EXTRAS_MAIN_VER_0_2_1_ALPHA_1            0x00020141
 # define PANTHEIOS_EXTRAS_MAIN_VER_0_2_1_ALPHA_2            0x00020142
 # define PANTHEIOS_EXTRAS_MAIN_VER_0_2_1_BETA_1             0x00020181
+# define PANTHEIOS_EXTRAS_MAIN_VER_0_2_1_BETA_2             0x00020182
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 #define PANTHEIOS_EXTRAS_MAIN_VER_MAJOR                     0
 #define PANTHEIOS_EXTRAS_MAIN_VER_MINOR                     2
 #define PANTHEIOS_EXTRAS_MAIN_VER_PATCH                     1
-#define PANTHEIOS_EXTRAS_MAIN_VER_ALPHABETA                 0x81
+#define PANTHEIOS_EXTRAS_MAIN_VER_RELSTATUS                 0x82
 
 #define PANTHEIOS_EXTRAS_MAIN_VER \
     (0\
         |   (   PANTHEIOS_EXTRAS_MAIN_VER_MAJOR       << 24   ) \
         |   (   PANTHEIOS_EXTRAS_MAIN_VER_MINOR       << 16   ) \
         |   (   PANTHEIOS_EXTRAS_MAIN_VER_PATCH       <<  8   ) \
-        |   (   PANTHEIOS_EXTRAS_MAIN_VER_ALPHABETA   <<  0   ) \
+        |   (   PANTHEIOS_EXTRAS_MAIN_VER_RELSTATUS   <<  0   ) \
     )
 
 #ifndef PANTHEIOS_DOCUMENTATION_SKIP_SECTION
+# define PANTHEIOS_EXTRAS_MAIN_VER_ALPHABETA                PANTHEIOS_EXTRAS_MAIN_VER_RELSTATUS
 # define PANTHEIOS_EXTRAS_MAIN_VER_REVISION                 PANTHEIOS_EXTRAS_MAIN_VER_PATCH
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
