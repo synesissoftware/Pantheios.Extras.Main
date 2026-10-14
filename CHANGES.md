@@ -5,6 +5,7 @@
 
 * Advanced the library version to **0.2.1-beta3** (`PANTHEIOS_EXTRAS_MAIN_VER_0_2_1_BETA_3`, `PANTHEIOS_EXTRAS_MAIN_VER_RELSTATUS` **0x83**);
 * Re-synced tip **`run_all_examples.sh`** / **`run_all_scratch_tests.*`** / **`run_all_unit_tests.sh`** from **misc-dev-scripts** `cmake-helpers` `@0754c23` (kept tip **`run_all_examples.cmd`**);
+* Install **woad** before **Pantheios** in CI (**`install-sis-deps`**) so tip Pantheios configure succeeds;
 
 
 ## 0.2.1-beta2 - 13th October 2026
