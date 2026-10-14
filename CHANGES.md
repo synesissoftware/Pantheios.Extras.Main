@@ -1,12 +1,17 @@
 # Pantheios.Extras.Main - Changes <!-- omit in toc -->
 
 
+## 0.2.1-beta3 - 14th October 2026
+
+* Advanced the library version to **0.2.1-beta3** (`PANTHEIOS_EXTRAS_MAIN_VER_0_2_1_BETA_3`, `PANTHEIOS_EXTRAS_MAIN_VER_RELSTATUS` **0x83**);
+* Re-synced tip **`run_all_examples.sh`** / **`run_all_scratch_tests.*`** / **`run_all_unit_tests.sh`** from **misc-dev-scripts** `cmake-helpers` `@0754c23` (kept tip **`run_all_examples.cmd`**);
+
+
 ## 0.2.1-beta2 - 13th October 2026
 
 * Advanced the library version to **0.2.1-beta2** (`PANTHEIOS_EXTRAS_MAIN_VER_0_2_1_BETA_2`, `PANTHEIOS_EXTRAS_MAIN_VER_RELSTATUS` **0x82**);
 * Migrated the version low-byte macro to **`PANTHEIOS_EXTRAS_MAIN_VER_RELSTATUS`**, retaining **`PANTHEIOS_EXTRAS_MAIN_VER_ALPHABETA`** as a documentation-skip alias;
 * Gold-copied tip **`run_all_examples.*`** / **`run_all_scratch_tests.*`** (**misc-dev-scripts** `@dfa6add` ATF dialect); left optional **`.sis`** ATF lists absent;
-* Re-synced tip **`run_all_examples.sh`** / **`run_all_scratch_tests.*`** / **`run_all_unit_tests.sh`** from **misc-dev-scripts** `cmake-helpers` `@0754c23` (kept tip **`run_all_examples.cmd`**);
 * Added modular GitHub Actions CI (**`ci.yml`** + **`ci-cell.yml`** + **`install-sis-deps`**): artifact split, execute-bit restore, Windows **`.cmd`** dogfood; deps **`STLSoft shwild xTests Pantheios`** (no **b64**); README CI badge targets **`ci.yml`**;
 * Exported **`Pantheios.Extras.Main`** now **INTERFACE**-links **STLSoft** / **Pantheios** when found as packages, with matching **`find_dependency()`** in the installed config (xTests remains test-only);
 * Gated **`example.cpp.main.MFC`** on **`find_package(MFC)`** and **`example.cpp.wmain`** on **`PANTHEIOS_USE_WIDE_STRINGS`**; MSVC unit-test const/`fopen` hygiene;
