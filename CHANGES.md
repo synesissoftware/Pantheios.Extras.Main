@@ -1,6 +1,11 @@
 # Pantheios.Extras.Main - Changes <!-- omit in toc -->
 
 
+## 0.2.1-beta4 - 27th October 2026
+
+* Defined `HAS_<Pkg>` and `HAS_<PKG>` when a Synesis package other than **STLSoft** is detected;
+
+
 ## 0.2.1-beta3 - 14th October 2026
 
 * Advanced the library version to **0.2.1-beta3** (`PANTHEIOS_EXTRAS_MAIN_VER_0_2_1_BETA_3`, `PANTHEIOS_EXTRAS_MAIN_VER_RELSTATUS` **0x83**);

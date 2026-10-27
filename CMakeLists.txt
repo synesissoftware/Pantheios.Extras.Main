@@ -5,7 +5,7 @@
 # Purpose:  Top-level CMake lists file for Pantheios.Extras.Main
 #
 # Created:  24th October 2024
-# Updated:  13th October 2026
+# Updated:  27th October 2026
 #
 # ######################################################################## #
 
@@ -176,6 +176,12 @@ if(DEFINED STLSOFT_INCLUDE_DIR)
 	include_directories(${STLSOFT_INCLUDE_DIR})
 endif()
 
+if(DEFINED STLSOFT_INCLUDE_DIR OR DEFINED STLSoft_FOUND)
+
+	add_compile_definitions(HAS_STLSOFT)
+	add_compile_definitions(HAS_STLSoft)
+endif()
+
 
 # ############################
 # b64
@@ -186,7 +192,10 @@ if(b64_FOUND)
 
     message("-- CMake package b64 found (version ${b64_VERSION})")
 
-    add_compile_definitions(HAS_b64)
+    add_compile_definitions(
+        HAS_b64
+        HAS_B64
+    )
 else(b64_FOUND)
 
     add_compile_definitions(PANTHEIOS_NO_B64)
@@ -220,6 +229,11 @@ else()
 	message("-- CMake package Pantheios found (version ${Pantheios_VERSION}; ${Pantheios_REQUIRED_VERSION_} requested)")
 endif()
 
+add_compile_definitions(
+	HAS_Pantheios
+	HAS_PANTHEIOS
+)
+
 if(DEFINED PANTHEIOS_INCLUDE_DIR)
 
 	include_directories(${PANTHEIOS_INCLUDE_DIR})
@@ -231,11 +245,16 @@ endif()
 
 if(BUILD_TESTING)
 
-	set(xTests_REQUIRED_VERSION_ 0.26)
+	set(xTests_REQUIRED_VERSION_ 0.28)
 
 	find_package(xTests ${xTests_REQUIRED_VERSION_} REQUIRED)
 
 	message("-- CMake package xTests found (version ${xTests_VERSION}; ${xTests_REQUIRED_VERSION_} requested)")
+
+	add_compile_definitions(
+		HAS_xTests
+		HAS_XTESTS
+	)
 endif(BUILD_TESTING)
 
 
