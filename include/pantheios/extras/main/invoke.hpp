@@ -4,11 +4,11 @@
  * Purpose: Definition of the pantheios::extras::main::invoke overloads.
  *
  * Created: 29th December 2010
- * Updated: 24th October 2024
+ * Updated: 29th October 2026
  *
  * Home:    http://www.pantheios.org/
  *
- * Copyright (c) 2019-2024, Matthew Wilson and Synesis Information Systems
+ * Copyright (c) 2019-2026, Matthew Wilson and Synesis Information Systems
  * Copyright (c) 2010-2019, Matthew Wilson and Synesis Software
  * All rights reserved.
  *
@@ -57,8 +57,8 @@
 #ifndef PANTHEIOS_DOCUMENTATION_SKIP_SECTION
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE_MAJOR       1
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE_MINOR       5
-# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE_REVISION    3
-# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE_EDIT        34
+# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE_REVISION    4
+# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE_EDIT        35
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
@@ -82,6 +82,7 @@
 #endif /* __AFX_H__*/
 #include <stlsoft/smartptr/scoped_handle.hpp>
 #include <stlsoft/shims/access/string/std/exception.hpp>
+#include <stlsoft/string/encoding/wcstombs.h>
 
 /* Standard C header files */
 #include <new>
@@ -581,15 +582,9 @@ namespace ximpl_invoke
 # ifdef PANTHEIOS_USE_WIDE_STRINGS
 
                 char    programName_m[1001];
-#  ifdef PANTHEIOS_USING_SAFE_STR_FUNCTIONS
-                size_t  cch;
-
-                if (0 == ::wcstombs_s(&cch, programName_m, STLSOFT_NUM_ELEMENTS(programName_m), programName, STLSOFT_NUM_ELEMENTS(programName_m) - 1u))
-#  else /* ? PANTHEIOS_USING_SAFE_STR_FUNCTIONS */
-                size_t  cch = ::wcstombs(programName_m, programName, STLSOFT_NUM_ELEMENTS(programName_m) - 1u);
+                size_t  cch = stlsoft_C_wcstombs(programName_m, STLSOFT_NUM_ELEMENTS(programName_m), programName, STLSOFT_NUM_ELEMENTS(programName_m) - 1u);
 
                 if (static_cast<size_t>(-1) != cch)
-#  endif /* PANTHEIOS_USING_SAFE_STR_FUNCTIONS */
                 {
                     programName_m[cch] = '\0';
 
@@ -690,15 +685,9 @@ namespace ximpl_invoke
         {
             wchar_t const* const    arg0    =   argv[0];
             char                    arg0_[1 + _MAX_PATH];
-#  ifdef PANTHEIOS_USING_SAFE_STR_FUNCTIONS
-            size_t                  cch;
-
-            if (0 == ::wcstombs_s(&cch, arg0_, STLSOFT_NUM_ELEMENTS(arg0_), arg0, STLSOFT_NUM_ELEMENTS(arg0_) - 1u))
-#  else /* ? PANTHEIOS_USING_SAFE_STR_FUNCTIONS */
-            size_t const            cch     =   ::wcstombs(arg0_, arg0, STLSOFT_NUM_ELEMENTS(arg0_) - 1u);
+            size_t const            cch     =   stlsoft_C_wcstombs(arg0_, STLSOFT_NUM_ELEMENTS(arg0_), arg0, STLSOFT_NUM_ELEMENTS(arg0_) - 1u);
 
             if (static_cast<size_t>(-1) != cch)
-#  endif /* PANTHEIOS_USING_SAFE_STR_FUNCTIONS */
             {
                 arg0_[cch] = '\0';
 
@@ -727,15 +716,9 @@ namespace ximpl_invoke
         if (NULL != programName)
         {
             char    programName_m[1001];
-#  ifdef PANTHEIOS_USING_SAFE_STR_FUNCTIONS
-            size_t  cch;
-
-            if (0 == ::wcstombs_s(&cch, programName_m, STLSOFT_NUM_ELEMENTS(programName_m), programName, STLSOFT_NUM_ELEMENTS(programName_m) - 1u))
-#  else /* ? PANTHEIOS_USING_SAFE_STR_FUNCTIONS */
-            size_t  cch = ::wcstombs(programName_m, programName, STLSOFT_NUM_ELEMENTS(programName_m) - 1u);
+            size_t  cch = stlsoft_C_wcstombs(programName_m, STLSOFT_NUM_ELEMENTS(programName_m), programName, STLSOFT_NUM_ELEMENTS(programName_m) - 1u);
 
             if (static_cast<size_t>(-1) != cch)
-#  endif /* PANTHEIOS_USING_SAFE_STR_FUNCTIONS */
             {
                 programName_m[cch] = '\0';
 
