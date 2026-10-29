@@ -1,11 +1,11 @@
 /* /////////////////////////////////////////////////////////////////////////
- * File:    test.unit.cpp.main.1/test_throw_int_USE_CATCHALL.cpp
+ * File:    test/unit/cpp/main.1/test_throw_int_USE_CATCHALL.cpp
  *
  * Purpose: Unit-test of a variant of the `test_throw_int()` under the
  *          PANTHEIOS_EXTRAS_MAIN_USE_CATCHALL preprocessor option.
  *
  * Created: 24th October 2024
- * Updated: 13th October 2026
+ * Updated: 29th October 2026
  *
  * ////////////////////////////////////////////////////////////////////// */
 

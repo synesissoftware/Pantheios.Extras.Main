@@ -97,7 +97,7 @@ Defect reports, feature requests, and pull requests are welcome on https://githu
 
 * [b64](http://github.com/synesissoftware/b64/) (optional);
 * [Pantheios](http://github.com/synesissoftware/Pantheios/);
-* [STLSoft 1.11](http://github.com/synesissoftware/STLSoft-1.11/);
+* [STLSoft 1.11](http://github.com/synesissoftware/STLSoft/);
 
 
 #### Development dependencies
