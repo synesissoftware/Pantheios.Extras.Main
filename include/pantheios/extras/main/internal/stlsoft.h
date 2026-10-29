@@ -1,14 +1,14 @@
 /* /////////////////////////////////////////////////////////////////////////
- * File:        pantheios/extras/main/internal/stlsoft.h
+ * File:    pantheios/extras/main/internal/stlsoft.h
  *
- * Purpose:     "Entry point" include into the STLSoft libraries.
+ * Purpose: "Entry point" include into the STLSoft libraries.
  *
- * Created:     6th January 2011
- * Updated:     11th February 2021
+ * Created: 6th January 2011
+ * Updated: 29th October 2026
  *
- * Home:        http://www.pantheios.org/
+ * Home:    http://www.pantheios.org/
  *
- * Copyright (c) 2019-2021, Matthew Wilson and Synesis Information Systems
+ * Copyright (c) 2019-2026, Matthew Wilson and Synesis Information Systems
  * Copyright (c) 2011-2019, Matthew Wilson and Synesis Software
  * All rights reserved.
  *
@@ -55,8 +55,8 @@
 #ifndef PANTHEIOS_DOCUMENTATION_SKIP_SECTION
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_STLSOFT_MAJOR     1
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_STLSOFT_MINOR     0
-# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_STLSOFT_REVISION  6
-# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_STLSOFT_EDIT      11
+# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_STLSOFT_REVISION  7
+# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_STLSOFT_EDIT      12
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
@@ -80,24 +80,15 @@
 # error Requires _STLSOFT_VER or STLSOFT_VER to be defined
 #elif defined(_STLSOFT_VER)
 
-# if _STLSOFT_VER < 0x010a0000
+# if _STLSOFT_VER < 0x010B04FF
 
-#  if _STLSOFT_VER < 0x010987ff
-
-#   error Requires STLSoft 1.9.135, or later; 1.10 or later is recommended. (www.stlsoft.org)
-#  endif
-# else /* ? 0x010a0000 */
-
-#  if _STLSOFT_VER < 0x010a019d
-
-#   error Requires 1.10.1 beta-29, or later. (www.stlsoft.org)
-#  endif
-# endif /* 0x010a0000 */
+#  error Requires STLSoft 1.11.4, or later. (www.stlsoft.org)
+# endif
 #elif defined(STLSOFT_VER)
 
-# if STLSOFT_VER < 0x010b0000
+# if STLSOFT_VER < 0x010B04FF
 
-#  error Invalid STLSoft version. (www.stlsoft.org)
+#  error Requires STLSoft 1.11.4, or later. (www.stlsoft.org)
 # endif
 #endif
 

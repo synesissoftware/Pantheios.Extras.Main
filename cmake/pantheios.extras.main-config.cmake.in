@@ -11,7 +11,7 @@ include(CMakeFindDependencyMacro)
 
 if(@PEXTRAS_MAIN_STLSOFT_IS_PACKAGE@)
 
-	find_dependency(STLSoft)
+	find_dependency(STLSoft 1.11.4)
 endif()
 
 if(@PEXTRAS_MAIN_PANTHEIOS_IS_PACKAGE@)

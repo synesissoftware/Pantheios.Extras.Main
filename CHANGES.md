@@ -1,6 +1,12 @@
 # Pantheios.Extras.Main - Changes <!-- omit in toc -->
 
 
+## 0.2.1-beta5 - 30th October 2026
+
+* Required **STLSoft** 1.11.4 or later (`_STLSOFT_VER` >= `0x010B04FF`);
+* Converted the wide-string `wcstombs_s` / `wcstombs` splits in **invoke.hpp** to `stlsoft_C_wcstombs()`;
+
+
 ## 0.2.1-beta4 - 27th October 2026
 
 * Defined `HAS_<Pkg>` and `HAS_<PKG>` when a Synesis package other than **STLSoft** is detected;
