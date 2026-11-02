@@ -1,6 +1,12 @@
 # Pantheios.Extras.Main - Changes <!-- omit in toc -->
 
 
+## 0.2.1-beta6 - 2nd November 2026
+
+* Required **STLSoft** 1.11.5 or later (`_STLSOFT_VER` >= `0x010B05FF`);
+* **xTests** minimum is **0.28.2**;
+* added `PANTHEIOS_EXTRAS_MAIN_VER_0_2_1_BETA_6`;
+
 ## 0.2.1-beta5 - 30th October 2026
 
 * Required **STLSoft** 1.11.4 or later (`_STLSOFT_VER` >= `0x010B04FF`);
