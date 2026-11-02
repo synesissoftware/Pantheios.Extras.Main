@@ -4,7 +4,7 @@
  * Purpose: "Entry point" include into the STLSoft libraries.
  *
  * Created: 6th January 2011
- * Updated: 29th October 2026
+ * Updated: 2nd November 2026
  *
  * Home:    http://www.pantheios.org/
  *
@@ -80,15 +80,15 @@
 # error Requires _STLSOFT_VER or STLSOFT_VER to be defined
 #elif defined(_STLSOFT_VER)
 
-# if _STLSOFT_VER < 0x010B04FF
+# if _STLSOFT_VER < 0x010B05FF
 
-#  error Requires STLSoft 1.11.4, or later. (www.stlsoft.org)
+#  error Requires STLSoft 1.11.5, or later. (www.stlsoft.org)
 # endif
 #elif defined(STLSOFT_VER)
 
-# if STLSOFT_VER < 0x010B04FF
+# if STLSOFT_VER < 0x010B05FF
 
-#  error Requires STLSoft 1.11.4, or later. (www.stlsoft.org)
+#  error Requires STLSoft 1.11.5, or later. (www.stlsoft.org)
 # endif
 #endif
 
