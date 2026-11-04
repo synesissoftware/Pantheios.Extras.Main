@@ -4,7 +4,7 @@
  * Purpose: Implementation file for the test.unit.cpp.main.1 library.
  *
  * Created: 11th January 2011
- * Updated: 29th October 2026
+ * Updated: 4th November 2026
  *
  * ////////////////////////////////////////////////////////////////////// */
 
@@ -186,15 +186,13 @@ namespace
 {
 
     static char         arg0[]  =   "arg0";
-    static char*        args[]  =   { arg0, NULL };
-    static int          argc    =   STLSOFT_NUM_ELEMENTS(args) - 1;
-    static char**       argv    =   args;
+    static char*        argv[]  =   { arg0, NULL };
+    static int          argc    =   STLSOFT_NUM_ELEMENTS(argv) - 1;
 #ifdef PANTHEIOS_USE_WIDE_STRINGS
 
     static wchar_t      warg0[] =   L"arg0";
-    static wchar_t*     wargs[] =   { warg0, NULL };
-    static int          wargc   =   STLSOFT_NUM_ELEMENTS(wargs) - 1;
-    static wchar_t**    wargv   =   wargs;
+    static wchar_t*     wargv[] =   { warg0, NULL };
+    static int          wargc   =   STLSOFT_NUM_ELEMENTS(wargv) - 1;
 #endif /* PANTHEIOS_USE_WIDE_STRINGS */
 } // anonymous namespace
 
@@ -211,7 +209,7 @@ static void test_returns_EXIT_SUCCESS()
 {
     struct inner
     {
-        static int fn(int argc, char** argv)
+        static int fn(int argc, char* argv[])
         {
             XTESTS_TEST_INTEGER_EQUAL(1, argc);
             XTESTS_TEST_MULTIBYTE_STRING_EQUAL("arg0", argv[0]);
@@ -230,7 +228,7 @@ static void test_returns_EXIT_FAILURE()
 {
     struct inner
     {
-        static int fn(int, char**)
+        static int fn(int, char* [])
         {
           return EXIT_FAILURE;
         };
@@ -245,7 +243,7 @@ static void test_throws_std_runtime_error()
 {
     struct inner
     {
-        static int fn(int, char**)
+        static int fn(int, char* [])
         {
             throw std::runtime_error("oops");
 
@@ -262,7 +260,7 @@ static void test_throws_std_bad_alloc()
 {
     struct inner
     {
-        static int fn(int, char**)
+        static int fn(int, char* [])
         {
             throw std::bad_alloc();
 

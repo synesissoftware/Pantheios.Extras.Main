@@ -9,6 +9,7 @@
 
 | Date                | News Item                                                                          | Details |
 | ------------------- | ---------------------------------------------------------------------------------- | ------- |
+| 4th November 2026   | [**Pantheios.Extras.Main** 0.2.1](https://github.com/synesissoftware/Pantheios.Extras.Main/releases/tag/0.2.1) | `char*[]` forwarders; coloured versions; **Pantheios** `0x010001FF` |
 | 2nd November 2026   | [**Pantheios.Extras.Main** 0.2.1-beta6](https://github.com/synesissoftware/Pantheios.Extras.Main/releases/tag/0.2.1-beta6) | **STLSoft** **1.11.5**; **xTests** **0.28.2** |
 | 30th October 2026   | [**Pantheios.Extras.Main** 0.2.1-beta5](https://github.com/synesissoftware/Pantheios.Extras.Main/releases/tag/0.2.1-beta5) | **STLSoft** 1.11.4; `stlsoft_C_wcstombs()` in **invoke.hpp** |
 | 27th October 2026   | Release of [Pantheios.Extras.Main 0.2.1-beta4](https://github.com/synesissoftware/Pantheios.Extras.Main/releases/tag/0.2.1-beta4) | `HAS_<Pkg>` / `HAS_<PKG>` for detected Synesis packages |
