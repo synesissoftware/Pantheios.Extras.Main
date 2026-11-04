@@ -4,11 +4,11 @@
  * Purpose: Definition of the pantheios_extras_main_invoke() function.
  *
  * Created: 29th December 2010
- * Updated: 24th October 2024
+ * Updated: 4th November 2026
  *
  * Home:    http://www.pantheios.org/
  *
- * Copyright (c) 2019-2024, Matthew Wilson and Synesis Information Systems
+ * Copyright (c) 2019-2026, Matthew Wilson and Synesis Information Systems
  * Copyright (c) 2010-2019, Matthew Wilson and Synesis Software
  * All rights reserved.
  *
@@ -58,7 +58,7 @@
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_H_INVOKE_MAJOR     1
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_H_INVOKE_MINOR     2
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_H_INVOKE_REVISION  4
-# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_H_INVOKE_EDIT      17
+# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_H_INVOKE_EDIT      18
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
@@ -91,7 +91,7 @@
  * Consider the following example:
 \htmlonly
 <pre>
-  int <strong>main0</strong>(int argc, char const* const* argv)
+  int <strong>main0</strong>(int argc, char* argv[])
   {
     . . . // your "real" main()
   }
@@ -120,8 +120,8 @@ STLSOFT_INLINE
 int
 pantheios_extras_main_invoke(
     int         argc
-,   char**      argv
-,   int       (*pfnMain)(int, char**)
+,   char*       argv[]
+,   int       (*pfnMain)(int, char*[])
 ,   char const* programName
 ,   void*       reserved
 )

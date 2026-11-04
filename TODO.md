@@ -8,7 +8,7 @@
 
 ## General:
 
-- [ ] parameters such as `char**` to be changed to `char*[]`;
+* [x] ~~~parameters such as `char**` to be changed to `char*[]`~~~ - ✅;
 
 
 <!-- ########################### end of file ########################### -->

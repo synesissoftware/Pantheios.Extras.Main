@@ -5,7 +5,7 @@
  *          PANTHEIOS_EXTRAS_MAIN_USE_CATCHALL preprocessor option.
  *
  * Created: 24th October 2024
- * Updated: 29th October 2026
+ * Updated: 4th November 2026
  *
  * ////////////////////////////////////////////////////////////////////// */
 
@@ -100,15 +100,13 @@ namespace
 {
 
     static char         arg0[]  =   "arg0";
-    static char*        args[]  =   { arg0, NULL };
-    static int          argc    =   STLSOFT_NUM_ELEMENTS(args) - 1;
-    static char**       argv    =   args;
+    static char*        argv[]  =   { arg0, NULL };
+    static int          argc    =   STLSOFT_NUM_ELEMENTS(argv) - 1;
 #ifdef PANTHEIOS_USE_WIDE_STRINGS
 
     static wchar_t      warg0[] =   L"arg0";
-    static wchar_t*     wargs[] =   { warg0, NULL };
-    static int          wargc   =   STLSOFT_NUM_ELEMENTS(wargs) - 1;
-    static wchar_t**    wargv   =   wargs;
+    static wchar_t*     wargv[] =   { warg0, NULL };
+    static int          wargc   =   STLSOFT_NUM_ELEMENTS(wargv) - 1;
 #endif /* PANTHEIOS_USE_WIDE_STRINGS */
 } // anonymous namespace
 
@@ -122,7 +120,7 @@ void test_throw_int_USE_CATCHALL(void)
 {
     struct inner
     {
-        static int fn(int, char**)
+        static int fn(int, char* [])
         {
             throw 12345;
 

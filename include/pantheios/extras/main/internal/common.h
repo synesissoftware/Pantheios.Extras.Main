@@ -5,7 +5,7 @@
  *          Pantheios.Extras.Main library.
  *
  * Created: 6th January 2011
- * Updated: 2nd November 2026
+ * Updated: 4th November 2026
  *
  * Home:    http://www.pantheios.org/
  *
@@ -58,7 +58,7 @@
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_MAJOR    1
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_MINOR    0
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_REVISION 19
-# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_EDIT     24
+# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_INTERNAL_H_COMMON_EDIT     25
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 
@@ -75,8 +75,8 @@
  * compatibility checks
  */
 
-#if PANTHEIOS_VER < 0x010001de
-# error Pantheios.Extras.Main required Pantheios 1.0.1 beta 221, or later
+#if PANTHEIOS_VER < 0x010001FF
+# error Pantheios.Extras.Main requires Pantheios 1.0.1 or later
 #endif /* !PANTHEIOS_NO_NAMESPACE */
 
 
@@ -123,12 +123,13 @@
 # define PANTHEIOS_EXTRAS_MAIN_VER_0_2_1_BETA_4             0x00020184
 # define PANTHEIOS_EXTRAS_MAIN_VER_0_2_1_BETA_5             0x00020185
 # define PANTHEIOS_EXTRAS_MAIN_VER_0_2_1_BETA_6             0x00020186
+# define PANTHEIOS_EXTRAS_MAIN_VER_0_2_1                    0x000201FF
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 #define PANTHEIOS_EXTRAS_MAIN_VER_MAJOR                     0
 #define PANTHEIOS_EXTRAS_MAIN_VER_MINOR                     2
 #define PANTHEIOS_EXTRAS_MAIN_VER_PATCH                     1
-#define PANTHEIOS_EXTRAS_MAIN_VER_RELSTATUS                 0x86
+#define PANTHEIOS_EXTRAS_MAIN_VER_RELSTATUS                 0xFF
 
 #define PANTHEIOS_EXTRAS_MAIN_VER \
     (0\

@@ -1,10 +1,10 @@
 /* /////////////////////////////////////////////////////////////////////////
- * File:    example.cpp.main.1.cpp
+ * File:    examples/cpp/example.cpp.main.1/example.cpp.main.1.cpp
  *
  * Purpose: Implementation file for the example.cpp.main.1 library.
  *
  * Created: 5th January 2011
- * Updated: 24th October 2024
+ * Updated: 4th November 2026
  *
  * ////////////////////////////////////////////////////////////////////// */
 
@@ -87,7 +87,7 @@ int main(int argc, char* argv[])
 
 #else // ? USE_wmain
 
-int main0(int argc, wchar_t** argv)
+int main0(int argc, wchar_t* argv[])
 {
     /* do the "main" business of main() here, without worrying about
      * initialising Pantheios libraries
@@ -122,7 +122,7 @@ int main0(int argc, wchar_t** argv)
     return EXIT_SUCCESS;
 }
 
-int wmain(int argc, wchar_t** argv)
+int wmain(int argc, wchar_t* argv[])
 {
     return pantheios::extras::main::invoke(argc, argv, main0);
 }

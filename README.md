@@ -14,6 +14,7 @@ Git access to the [Pantheios](http://pantheios.org/) **Extras** library **Panthe
 ## Table of Contents <!-- omit in toc -->
 
 - [Introduction](#introduction)
+- [Developer Experience](#developer-experience)
 - [Installation](#installation)
 - [Components](#components)
   - [C API / core library](#c-api--core-library)
@@ -30,7 +31,36 @@ Git access to the [Pantheios](http://pantheios.org/) **Extras** library **Panthe
 
 ## Introduction
 
-**Diagnosticism** is a standalone library of simple components for aiding in diagnostics for C and C++ projects.
+**Pantheios.Extras.Main** invokes a program's `main` (and `wmain` / MFC entry points) inside Pantheios initialisation and uninitialisation, and reports unhandled exceptions.
+
+
+## Developer Experience
+
+**STLSoft** 1.11.5 and **Pantheios** 1.0.1 must already be installed (or visible to CMake). The shortest build is:
+
+```bash
+./prepare_cmake.sh
+./build_cmake.sh
+```
+
+```cpp
+#include <pantheios/extras/main.hpp>
+#include <stdlib.h>
+
+extern "C" char const PANTHEIOS_FE_PROCESS_IDENTITY[] = "myprogram";
+
+int main0(int argc, char* argv[])
+{
+    return EXIT_SUCCESS;
+}
+
+int main(int argc, char* argv[])
+{
+    return pantheios::extras::main::invoke(argc, argv, main0);
+}
+```
+
+Further build and install paths are in [INSTALL.md](./INSTALL.md).
 
 
 ## Installation
@@ -48,8 +78,8 @@ file.
 int
 pantheios_extras_main_invoke(
     int         argc
-,   char**      argv
-,   int       (*pfnMain)(int, char**)
+,   char*       argv[]
+,   int       (*pfnMain)(int, char*[])
 ,   char const* programName
 ,   void*       reserved
 );
@@ -62,16 +92,16 @@ pantheios_extras_main_invoke(
 int
 invoke(
     int                 argc
-,   char**              argv
-,   int (STLSOFT_CDECL* pfnMain)(int, char**)
+,   char*               argv[]
+,   int (STLSOFT_CDECL* pfnMain)(int, char*[])
 ,   char const*         programName
 );
 
 int
 invoke(
     int                 argc
-,   char**              argv
-,   int (STLSOFT_CDECL* pfnMain)(int, char**)
+,   char*               argv[]
+,   int (STLSOFT_CDECL* pfnMain)(int, char*[])
 );
 ```
 

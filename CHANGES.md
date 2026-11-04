@@ -1,6 +1,16 @@
 # Pantheios.Extras.Main - Changes <!-- omit in toc -->
 
 
+## 0.2.1 - 4th November 2026
+
+* Changed process-argument forwarders from `char**` to `char*[]` (wide entry points use `wchar_t*[]`);
+* Removed the obsolete **pantheios.extras.main.vc6.dsw**, **pantheios.extras.main.vc9.sln**, and **pantheios.extras.main.vc10.sln** IDE files;
+* Required **Pantheios** 1.0.1 or later (`PANTHEIOS_VER` >= `0x010001FF`);
+* Defined `PANTHEIOS_EXTRAS_MAIN_VER_0_2_1` (`0x000201FF`);
+* Added a **Developer Experience** section to **README.md**;
+* Linked test-only **woad** and coloured **test.scratch.versions** (including `WOAD_VER`);
+
+
 ## 0.2.1-beta6 - 2nd November 2026
 
 * Required **STLSoft** 1.11.5 or later (`_STLSOFT_VER` >= `0x010B05FF`);

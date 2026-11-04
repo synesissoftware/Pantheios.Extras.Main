@@ -5,7 +5,7 @@
 # Purpose:  Top-level CMake lists file for Pantheios.Extras.Main
 #
 # Created:  24th October 2024
-# Updated:  2nd November 2026
+# Updated:  4th November 2026
 #
 # ######################################################################## #
 
@@ -132,6 +132,7 @@ endif(PANTHEIOS_USE_WIDE_STRINGS)
 #
 # optional:
 # - b64 - may be needed by Pantheios;
+# - woad - required for testing (already required by Pantheios);
 # - xTests - required for testing;
 
 
@@ -241,6 +242,28 @@ endif()
 
 
 # ############################
+# woad
+#
+# Test-only. Pantheios already requires woad, so consumers of this
+# library do not. The scratch versions reporter uses it for SGR colour
+# and to print WOAD_VER.
+
+if(BUILD_TESTING)
+
+	set(woad_REQUIRED_VERSION_ 0.2.1)
+
+	find_package(woad ${woad_REQUIRED_VERSION_} REQUIRED)
+
+	message("-- CMake package woad found (version ${woad_VERSION}; ${woad_REQUIRED_VERSION_} requested)")
+
+	add_compile_definitions(
+		HAS_woad
+		HAS_WOAD
+	)
+endif(BUILD_TESTING)
+
+
+# ############################
 # xTests
 
 if(BUILD_TESTING)
@@ -286,7 +309,8 @@ target_include_directories(Pantheios.Extras.Main INTERFACE
 )
 
 # The public headers include both STLSoft and Pantheios, so consumers
-# require them. xTests (test-only) is deliberately NOT on this interface.
+# require them. woad and xTests (test-only) are deliberately NOT on this
+# interface.
 if(PEXTRAS_MAIN_STLSOFT_IS_PACKAGE)
 
 	target_link_libraries(Pantheios.Extras.Main INTERFACE

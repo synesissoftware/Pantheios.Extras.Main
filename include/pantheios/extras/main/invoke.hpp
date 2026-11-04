@@ -4,7 +4,7 @@
  * Purpose: Definition of the pantheios::extras::main::invoke overloads.
  *
  * Created: 29th December 2010
- * Updated: 29th October 2026
+ * Updated: 4th November 2026
  *
  * Home:    http://www.pantheios.org/
  *
@@ -58,7 +58,7 @@
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE_MAJOR       1
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE_MINOR       5
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE_REVISION    4
-# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE_EDIT        35
+# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE_EDIT        36
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
@@ -249,8 +249,8 @@ namespace ximpl_invoke
     public: // Construction
         main_invoker(
             int                 argc
-        ,   char const* const*  argv
-        ,   int (STLSOFT_CDECL* pfnMain)(int, char const* const*)
+        ,   char const* const   argv[]
+        ,   int (STLSOFT_CDECL* pfnMain)(int, char const* const[])
         )
             : argc(argc)
             , argv(argv)
@@ -271,7 +271,7 @@ namespace ximpl_invoke
     private: // Fields
         int const                 argc;
         char const* const* const  argv;
-        int (STLSOFT_CDECL* const pfnMain)(int, char const* const*);
+        int (STLSOFT_CDECL* const pfnMain)(int, char const* const[]);
     };
 # ifdef PANTHEIOS_USE_WIDE_STRINGS
 
@@ -281,8 +281,8 @@ namespace ximpl_invoke
     public: // Construction
         wmain_invoker(
             int                     argc
-        ,   wchar_t const* const*   argv
-        ,   int     (STLSOFT_CDECL* pfnMain)(int, wchar_t const* const*)
+        ,   wchar_t const* const    argv[]
+        ,   int     (STLSOFT_CDECL* pfnMain)(int, wchar_t const* const[])
         )
             : argc(argc)
             , argv(argv)
@@ -303,7 +303,7 @@ namespace ximpl_invoke
     private: // Fields
         int const                     argc;
         wchar_t const* const* const   argv;
-        int     (STLSOFT_CDECL* const pfnMain)(int, wchar_t const* const*);
+        int     (STLSOFT_CDECL* const pfnMain)(int, wchar_t const* const[]);
     };
 # endif /* PANTHEIOS_USE_WIDE_STRINGS */
 
@@ -631,8 +631,8 @@ namespace ximpl_invoke
     int
     prepare_invoker_m_(
         int                 argc
-    ,   char const* const*  argv
-    ,   int (STLSOFT_CDECL* pfnMain)(int, char const* const*)
+    ,   char const* const   argv[]
+    ,   int (STLSOFT_CDECL* pfnMain)(int, char const* const[])
     ,   char const*         programName
     )
     {
@@ -651,12 +651,12 @@ namespace ximpl_invoke
     int
     prepare_invoker_m_(
         int                 argc
-    ,   char**              argv
-    ,   int (STLSOFT_CDECL* pfnMain)(int, char**)
+    ,   char*               argv[]
+    ,   int (STLSOFT_CDECL* pfnMain)(int, char*[])
     ,   char const*         programName
     )
     {
-        return prepare_invoker_m_(argc, argv, reinterpret_cast<int (STLSOFT_CDECL*)(int, char const* const*)>(pfnMain), programName);
+        return prepare_invoker_m_(argc, argv, reinterpret_cast<int (STLSOFT_CDECL*)(int, char const* const[])>(pfnMain), programName);
     }
 # ifdef PANTHEIOS_USE_WIDE_STRINGS
 
@@ -664,8 +664,8 @@ namespace ximpl_invoke
     int
     prepare_invoker_w_(
         int                     argc
-    ,   wchar_t const* const*   argv
-    ,   int (STLSOFT_CDECL*     pfnMain)(int, wchar_t const* const*)
+    ,   wchar_t const* const    argv[]
+    ,   int (STLSOFT_CDECL*     pfnMain)(int, wchar_t const* const[])
     ,   char const*             programName
     )
     {
@@ -702,8 +702,8 @@ namespace ximpl_invoke
     int
     prepare_invoker_w_(
         int                     argc
-    ,   wchar_t const* const*   argv
-    ,   int (STLSOFT_CDECL*     pfnMain)(int, wchar_t const* const*)
+    ,   wchar_t const* const    argv[]
+    ,   int (STLSOFT_CDECL*     pfnMain)(int, wchar_t const* const[])
     ,   wchar_t const*          programName
     )
     {
@@ -733,12 +733,12 @@ namespace ximpl_invoke
     int
     prepare_invoker_w_(
         int                     argc
-    ,   wchar_t**               argv
-    ,   int (STLSOFT_CDECL*     pfnMain)(int, wchar_t**)
+    ,   wchar_t*                argv[]
+    ,   int (STLSOFT_CDECL*     pfnMain)(int, wchar_t*[])
     ,   wchar_t const*          programName
     )
     {
-        return prepare_invoker_w_(argc, argv, reinterpret_cast<int (STLSOFT_CDECL*)(int, wchar_t const* const*)>(pfnMain), programName);
+        return prepare_invoker_w_(argc, argv, reinterpret_cast<int (STLSOFT_CDECL*)(int, wchar_t const* const[])>(pfnMain), programName);
     }
 # endif /* PANTHEIOS_USE_WIDE_STRINGS */
 } /* namespace ximpl_invoke */
@@ -757,7 +757,7 @@ namespace ximpl_invoke
  * Consider the following example:
 \htmlonly
 <pre>
-  int <strong>main0</strong>(int argc, char const* const* argv)
+  int <strong>main0</strong>(int argc, char* argv[])
   {
     . . . // your "real" main()
   }
@@ -783,8 +783,8 @@ inline
 int
 invoke(
     int                 argc
-,   char const* const*  argv
-,   int (STLSOFT_CDECL* pfnMain)(int, char const* const*)
+,   char const* const   argv[]
+,   int (STLSOFT_CDECL* pfnMain)(int, char const* const[])
 ,   char const*         programName
 )
 {
@@ -825,8 +825,8 @@ inline
 int
 invoke(
     int                 argc
-,   char**              argv
-,   int (STLSOFT_CDECL* pfnMain)(int, char**)
+,   char*               argv[]
+,   int (STLSOFT_CDECL* pfnMain)(int, char*[])
 ,   char const*         programName
 )
 {
@@ -843,7 +843,7 @@ invoke(
 <pre>
   extern "C" PAN_CHAR_T const PANTHEIOS_FE_PROCESS_IDENTITY[] = "myprogram";
 
-  int <strong>main0</strong>(int argc, char const* const* argv)
+  int <strong>main0</strong>(int argc, char* argv[])
   {
     . . . // your "real" main()
   }
@@ -868,8 +868,8 @@ inline
 int
 invoke(
     int                 argc
-,   char const* const*  argv
-,   int (STLSOFT_CDECL* pfnMain)(int, char const* const*)
+,   char const* const   argv[]
+,   int (STLSOFT_CDECL* pfnMain)(int, char const* const[])
 )
 {
     return ximpl_invoke::prepare_invoker_m_(argc, argv, pfnMain, NULL);
@@ -910,8 +910,8 @@ inline
 int
 invoke(
     int                 argc
-,   char**              argv
-,   int (STLSOFT_CDECL* pfnMain)(int, char**)
+,   char*               argv[]
+,   int (STLSOFT_CDECL* pfnMain)(int, char*[])
 )
 {
     return ximpl_invoke::prepare_invoker_m_(argc, argv, pfnMain, NULL);
@@ -930,8 +930,8 @@ inline
 int
 invoke(
     int                     argc
-,   wchar_t const* const*   argv
-,   int (STLSOFT_CDECL*     pfnMain)(int, wchar_t const* const*)
+,   wchar_t const* const    argv[]
+,   int (STLSOFT_CDECL*     pfnMain)(int, wchar_t const* const[])
 ,   wchar_t const*          programName
 )
 {
@@ -942,8 +942,8 @@ inline
 int
 invoke(
     int                     argc
-,   wchar_t**               argv
-,   int (STLSOFT_CDECL*     pfnMain)(int, wchar_t**)
+,   wchar_t*                argv[]
+,   int (STLSOFT_CDECL*     pfnMain)(int, wchar_t*[])
 ,   wchar_t const*          programName
 )
 {
@@ -954,8 +954,8 @@ inline
 int
 invoke(
     int                     argc
-,   wchar_t const* const*   argv
-,   int (STLSOFT_CDECL*     pfnMain)(int, wchar_t const* const*)
+,   wchar_t const* const    argv[]
+,   int (STLSOFT_CDECL*     pfnMain)(int, wchar_t const* const[])
 )
 {
     return ximpl_invoke::prepare_invoker_w_(argc, argv, pfnMain, static_cast<char const*>(NULL));
@@ -965,8 +965,8 @@ inline
 int
 invoke(
     int                     argc
-,   wchar_t**               argv
-,   int (STLSOFT_CDECL*     pfnMain)(int, wchar_t**)
+,   wchar_t*                argv[]
+,   int (STLSOFT_CDECL*     pfnMain)(int, wchar_t*[])
 )
 {
     return ximpl_invoke::prepare_invoker_w_(argc, argv, pfnMain, NULL);
