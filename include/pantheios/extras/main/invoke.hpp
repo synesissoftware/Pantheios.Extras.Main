@@ -4,7 +4,7 @@
  * Purpose: Definition of the pantheios::extras::main::invoke overloads.
  *
  * Created: 29th December 2010
- * Updated: 4th November 2026
+ * Updated: 6th November 2026
  *
  * Home:    http://www.pantheios.org/
  *
@@ -58,7 +58,7 @@
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE_MAJOR       1
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE_MINOR       5
 # define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE_REVISION    4
-# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE_EDIT        36
+# define PANTHEIOS_EXTRAS_MAIN_VER_PANTHEIOS_EXTRAS_MAIN_HPP_INVOKE_EDIT        37
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 /* /////////////////////////////////////////////////////////////////////////
@@ -741,7 +741,7 @@ namespace ximpl_invoke
         return prepare_invoker_w_(argc, argv, reinterpret_cast<int (STLSOFT_CDECL*)(int, wchar_t const* const[])>(pfnMain), programName);
     }
 # endif /* PANTHEIOS_USE_WIDE_STRINGS */
-} /* namespace ximpl_invoke */
+} // namespace ximpl_invoke
 #endif /* !PANTHEIOS_DOCUMENTATION_SKIP_SECTION */
 
 
