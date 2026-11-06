@@ -4,7 +4,7 @@
  * Purpose: Implementation file for the test.unit.cpp.main.1 library.
  *
  * Created: 11th January 2011
- * Updated: 4th November 2026
+ * Updated: 5th November 2026
  *
  * ////////////////////////////////////////////////////////////////////// */
 
@@ -55,8 +55,8 @@ namespace util {
     ,   T2 const&
     )
     {}
-} /* namespace util */
-} /* namespace pantheios */
+} // namespace util
+} // namespace pantheios
 
 namespace
 {

@@ -5,7 +5,7 @@
  *          PANTHEIOS_EXTRAS_MAIN_USE_CATCHALL preprocessor option.
  *
  * Created: 24th October 2024
- * Updated: 4th November 2026
+ * Updated: 5th November 2026
  *
  * ////////////////////////////////////////////////////////////////////// */
 
@@ -46,8 +46,8 @@ namespace core {
 
     extern "C"
     void exitProcess_stub___NO_CATCHALL__(int sc);
-} /* namespace core */
-} /* namespace pantheios */
+} // namespace core
+} // namespace pantheios
 
 #include <pantheios/pantheios.h>
 
@@ -88,8 +88,8 @@ namespace core {
     {
         exit_status_stub = sc;
     }
-} /* namespace core */
-} /* namespace pantheios */
+} // namespace core
+} // namespace pantheios
 
 
 /* /////////////////////////////////////////////////////////////////////////
